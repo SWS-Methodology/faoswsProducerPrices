@@ -1,0 +1,687 @@
+"fcl","fcl_cpc_parlink","cpc","cpc_fcl_parlink","description","suafbs_convfact","suafbs_notes","fclcpc_convfact","production_notes"
+NA,NA,"01199.01",NA,"teff",1,"Teff is not in FCL.",1,"Although Teff is not in the FCL, data may be avaialble in the Production Questionnaire (Ethiopia)"
+"0020",NA,"F0020",NA,"bread",1,NA,0,"N/A"
+"0022",NA,"F0022",NA,"pastry",1,NA,0,NA
+"0235",NA,"F0235",NA,"prepared nuts",1,NA,0,NA
+"0262",NA,"F0262",NA,"olives preserved",1,NA,0,NA
+"0472",NA,"F0472",NA,"vegetables preserved nes (o/t vinegar)",1,NA,0,NA
+"0473",NA,"F0473",NA,"vegetables frozen",1,NA,0,NA
+"0475",NA,"F0475",NA,"vegetables preserved (frozen)",1,NA,0,NA
+"0623",NA,"F0623",NA,"fruit prepared n.e.c.",1,NA,0,NA
+"0665",NA,"F0665",NA,"cocoa powder and cake",1,NA,0,NA
+"0666",NA,"F0666",NA,"chocolate products nes",1,NA,0,NA
+"0769",NA,"F0769",NA,"cotton waste",1,NA,0,NA
+"0875",NA,"F0875",NA,"beef and veal preparations nes",1,NA,0,NA
+"0994",NA,"F0994",NA,"wool grease and lanolin",1,NA,0,NA
+"1009",NA,"F1009",NA,"wool, hair waste",1,NA,0,NA
+"1042",NA,"F1042",NA,"pig meat preparations",1,NA,0,NA
+"1061",NA,"F1061",NA,"poultry meat preparations ",1,NA,0,NA
+"1172",NA,"F1172",NA,"meat prepared n.e.c.",1,NA,0,NA
+"1217",NA,"F1217",NA,"leather, used and waste",1,NA,0,NA
+"1223",NA,"F1223",NA,"oil from fish and marine mammals",1,NA,0,NA
+"1232",NA,"F1232",NA,"food preparations n.e.c.",1,NA,0,NA
+"1243",NA,"F1243",NA,"fat preparations n.e.c.",1,NA,0,NA
+"1275",NA,"F1275",NA,"hydrogenated oils and fats",1,NA,0,NA
+"1293",NA,"F1293",NA,"crude organic material n.e.c.",1,NA,0,NA
+"1294",NA,"F1294",NA,"seeds for planting",1,NA,0,NA
+"0016",NA,"23110",NA,"wheat and meslin flour",1,"Includes groats, meal and pellets of wheat (23130.01).",1,"Does not include beer of barley non alcoholic (24490)"
+"0038",NA,"23120.01",NA,"flour of rice",1,"Includes groats, meal and pellets of rice (23130.02)",1,"Does not include beer of maize non alcoholic (24490)"
+"0048",NA,"23120.02",NA,"barley flour and grits",1,"Includes groats, meal and pellets of barley (23130.03)",1,"Does not include beer of millet non alcoholic (24490)"
+"0051",NA,"24310.01",NA,"beer of barley, malted",1,"Includes beer of barley non alcoholic (24490)",1,"Does not include beer of sorghum non alcoholic (24490)"
+"0058",NA,"23120.03",NA,"flour of maize",1,"Includes groats, meal and pellets of maize (23130.04)",1,NA
+"0066",NA,"24310.02",NA,"beer of maize, malted",1,"Includes beer of maize non alcoholic (24490)",1,NA
+"0072",NA,"23120.04",NA,"flour of rye",1,"Includes groats, meal and pellets of rye (23130.05)",1,NA
+"0080",NA,"23120.05",NA,"flour of millet",1,"Includes groats, meal and pellets of millet (23130.06)",1,NA
+"0082",NA,"24310.03",NA,"beer of millet, malted",1,"Includes beer of millet non alcoholic (24490)",1,NA
+"0084",NA,"23120.06",NA,"flour of sorghum",1,"Includes groats, meal and pellets of sorghum (23130.07)",1,NA
+"0086",NA,"24310.04",NA,"beer of sorghum, malted",1,"Includes beer of sorghum non alcoholic (24490)",1,NA
+"0090",NA,"23120.07",NA,"flour of buckwheat",1,"Includes groats, meal and pellets of buckwheat (23130.08)",1,NA
+"0095",NA,"23120.08",NA,"flour of fonio",1,"Includes groats, meal and pellets of fonio (23130.09)",1,"Includes other oleaginous fruits, n.e.c. (01499.90)"
+"0098",NA,"23120.09",NA,"flour of triticale",1,"Includes groats, meal and pellets of triticale (23130.10)",1,"Includes: Other leafy or stem vegetables n.e.c.; Other fruit-bearing vegetables n.e.c.; Other green leguminous vegetables; Other root, bulb and tuberous vegetables, n.e.c. (01219.90; 01239.90; 01249; 01259)"
+"0104",NA,"23120.10",NA,"flour of mixed grain",1,"Includes groats, meal and pellets of mixed grain (23130.11)",1,"Includes information on blackberries, mulberries and loganberries (01353.02)"
+"0111",NA,"23120.90",NA,"flour of cereals nes",1,"Includes groats, meal and pellets of cereals nes (23130.90)",1,"Includes sparkling wine"
+"0220",NA,"01373",NA,"chestnuts, in shell",1,"Includes shelled (21429.03)",1,"Includes dates dried (21419.03)"
+"0223",NA,"01375",NA,"pistachios, in shell",1,"Includes shelled (21429.04)",1,NA
+"0226",NA,"01379.01",NA,"areca nuts ",1,"Includes shelled (21429.05)",1,"Includes Other tropical and subtropical fruits, n.e.c. (01319)"
+"0234",NA,"01379.90",NA,"other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",1,"Includes shelled (21429.90)",1,"Includes natural water and bottled waters, not sweetened or flavoured"
+"0268",NA,"21631.01",NA,"sunflower-seed oil, crude",1,"includes refined oil (21632.01)",1,"Includes Green tea (not fermented), black tea (fermented) and partly fermented tea, in immediate packings of a content not exceeding 3 kg (23913)"
+"0271",NA,"21641.01",NA,"rapeseed or canola oil , crude",1,"includes refined oil (21642.01)",1,"Production questionnaire explanatory notes specifies: ""Production data of spices should be reported in terms of ripe, dried/powdered products"""
+"0281",NA,"21631.02",NA,"safflower-seed oil, crude",1,"includes refined oil (21632.02)",1,"Production questionnaire explanatory notes specifies: ""Production data of spices should be reported in terms of ripe, dried/powdered products"""
+"0293",NA,"21641.02",NA,"mustardseed oil, crude",1,"includes refined oil (21642.02)",1,"Production questionnaire explanatory notes specifies: ""Production data of spices should be reported in terms of ripe, dried/powdered products"""
+"0339",NA,"01449.90",NA,"other oil seeds, n.e.c.",1,"Includes other oleaginous fruits, n.e.c. (01499.90)",1,"Production questionnaire explanatory notes specifies: ""Production data of spices should be reported in terms of ripe, dried/powdered products"""
+"1069",NA,"21122",NA,"meat of ducks, fresh or chilled",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"1073",NA,"21123",NA,"meat of geese, fresh or chilled",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"0463",NA,"01290.90",NA,"other vegetables, fresh n.e.c.",1,"Includes: Other leafy or stem vegetables n.e.c.; Other fruit-bearing vegetables n.e.c.; Other green leguminous vegetables; Other root, bulb and tuberous vegetables, n.e.c. (01219.90; 01239.90; 01249; 01259)",1,"Production questionnaire explanatory notes specifies: ""Production data of spices should be reported in terms of ripe, dried/powdered products"""
+"0558",NA,"01355.90",NA,"other berries and fruits of the genus vaccinium",1,"Includes information on blackberries, mulberries and loganberries (01353.02)",1,"Production questionnaire explanatory notes specifies: ""Production data of spices should be reported in terms of ripe, dried/powdered products"""
+"0564",NA,"24212.02",NA,"wine",1,"Includes sparkling wine",1,"Production questionnaire explanatory notes specifies: ""Production data of spices should be reported in terms of ripe, dried/powdered products"""
+"0577",NA,"01314",NA,"dates",1,"Includes dates dried (21419.03)",1,"Production questionnaire explanatory notes specifies: ""Production data of spices should be reported in terms of ripe, dried/powdered products"""
+"0603",NA,"01319",NA,"other tropical fruits, n.e.c.",1,"The descriptor is modified for FAO purpose (the original CPC descriptor is ""other tropical and subtropical fruits, n.e.c"".).
+Only includes tropical and excludes subtropical fruits (subtropical fruits are under 01359.90). ",1,"Includes fibre and tow (26190.03)"
+"0619",NA,"01359.90",NA,"other fruits n.e.c. ",1,"Includes other subtropical fruits, n.e.c. (originally under 01319)",1,"Includes processed but not spun; tow and waste of these fibres (26190.04)"
+"0631",NA,"17400",NA,"ice and snow",1,"Includes natural water and bottled waters, not sweetened or flavoured",1,"Includes processed but not spun; tow and waste of these fibres (26170.01)"
+"0667",NA,"01620",NA,"tea leaves",1,"includes Green tea (not fermented), black tea (fermented) and partly fermented tea, in immediate packings of a content not exceeding 3 kg (23913)",1,"Includes processed but not spun; tow and waste of these fibres (26170.02)"
+"0687",NA,"01651",NA,"pepper (piper spp.), raw",1,"includes processed",1,"Includes processed but not spun; tow and waste of these fibres (26190.05)"
+"0689",NA,"01652",NA,"chillies and peppers, dry (capsicum spp. and pimenta spp.), raw",1,"includes processed",1,"Includes processed but not spun; tow and waste of these fibres (26190.06)"
+"0692",NA,"01658",NA,"vanilla, raw",1,"includes processed",1,"Includes processed but not spun; tow and waste of these fibres (26190.07)"
+"0693",NA,"01655",NA,"cinnamon and cinnamon-tree flowers, raw",1,"includes processed",1,"Includes processed but not spun; tow and waste of these fibres (26190.08)"
+"0698",NA,"01656",NA,"cloves (whole stems), raw",1,"includes processed",1,"Includes processed but not spun; tow and waste of these fibres (26190.09)"
+"0702",NA,"01653",NA,"nutmeg, mace, cardamoms, raw",1,"includes processed",1,"Includes processed but not spun; tow and waste of these fibres (26190.90)"
+"0711",NA,"01654",NA,"anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",1,"includes processed",1,"Production questionnaire explanatory notes specifies: ""Production data should relates to farm sales weight of unmanufactured dry tobacco leaves"""
+"0720",NA,"01657",NA,"ginger, raw",1,"includes processed",1,NA
+"0777",NA,"01929.02",NA,"true hemp, raw or retted",1,"Includes fibre and tow (26190.03)",1,NA
+"0778",NA,"01929.03",NA,"kapok fibre, raw",1,"Includes processed but not spun; tow and waste of these fibres (26190.04)",1,NA
+"0780",NA,"01922.01",NA,"jute, raw or retted",1,"Includes processed but not spun; tow and waste of these fibres (26170.01)",1,"includes pulled wool"
+"0782",NA,"01922.02",NA,"kenaf, and other textile bast fibres, raw or retted ",1,"Includes processed but not spun; tow and waste of these fibres (26170.02)",1,NA
+"0788",NA,"01929.04",NA,"ramie, raw or retted",1,"Includes processed but not spun; tow and waste of these fibres (26190.05)",1,NA
+"0789",NA,"01929.05",NA,"sisal, raw",1,"Includes processed but not spun; tow and waste of these fibres (26190.06)",1,"Includes Guidea fowls (02155)"
+"0800",NA,"01929.06",NA,"agave fibres, raw, n.e.c. ",1,"Includes processed but not spun; tow and waste of these fibres (26190.07)",1,"Includes meat of guinea fowl fresh or chilled (21125)"
+"0809",NA,"01929.07",NA,"abaca, manila hemp, raw",1,"Includes processed but not spun; tow and waste of these fibres (26190.08)",1,NA
+"0813",NA,"01929.08",NA,"coir, raw",1,"Includes processed but not spun; tow and waste of these fibres (26190.09)",1,NA
+"0821",NA,"01929.90",NA,"other fibre crops, raw, n.e.c.",1,"Includes processed but not spun; tow and waste of these fibres (26190.90)",1,NA
+"0826",NA,"01970",NA,"unmanufactured tobacco",1,"Production questionnaire explanatory notes specifies: ""Production data should relates to farm sales weight of unmanufactured dry tobacco leaves""",1,NA
+"0867",NA,"21111.01",NA,"meat of cattle with the bone, fresh or chilled",1,"Includes meat frozen (21131.01)",1,NA
+"0870",NA,"21111.02",NA,"meat of cattle boneless, fresh or chilled",1,"Includes meat frozen (21111.02)",1,NA
+"0947",NA,"21112",NA,"meat of buffalo, fresh or chilled",1,"Includes meat frozen (21132)",1,NA
+"0977",NA,"21115",NA,"meat of sheep, fresh or chilled",1,"Includes meat frozen (21135)",1,NA
+"0987",NA,"02941",NA,"shorn wool, greasy, including fleece-washed shorn wool",1,"includes pulled wool",1,NA
+"1017",NA,"21116",NA,"meat of goat, fresh or chilled",1,"Includes meat frozen (21136)",1,NA
+"1035",NA,"21113.01",NA,"meat of pig with the bone, fresh or chilled",1,"Includes meat frozen (21133.01)",1,NA
+"1038",NA,"21113.02",NA,"meat of pig boneless, fresh or chilled",1,"Includes meat frozen (21133.02)",NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"1057",NA,"02151",NA,"chickens",1,"Includes Guidea fowls (02155)",NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"1058",NA,"21121",NA,"meat of chickens, fresh or chilled",1,"Includes meat of chicken frozen and meat of guinea fowl fresh, chilled or frozen (21141, 21125, 21145)",NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"0096",NA,"39120.10",NA,"bran of fonio",1,NA,1,NA
+"1080",NA,"21124",NA,"meat of turkeys, fresh or chilled",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"1097",NA,"21118.01",NA,"horse meat, fresh or chilled",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"0108",NA,"01199.90",NA,"other cereals n.e.c.",1,NA,1,NA
+"1108",NA,"21118.02",NA,"meat of asses, fresh or chilled",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"1111",NA,"21118.03",NA,"meat of mules, fresh or chilled",1,"Includes meat frozen (21138.03)",NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"1127",NA,"21117.01",NA,"meat of camels, fresh or chilled",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"1141",NA,"21114",NA,"meat of rabbits and hares, fresh or chilled",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"1151",NA,"21119.01",NA,"meat of other domestic rodents, fresh or chilled",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"1158",NA,"21117.02",NA,"meat of other domestic camelids, fresh or chilled",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"1163",NA,"21170.02",NA,"game meat, fresh, chilled or frozen",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"1166",NA,"21170.92",NA,"other meat n.e.c. (excluding mammals), fresh, chilled or frozen",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"1167",NA,"21170.93",NA,"offals n.e.c. (excluding mammals),fresh, chilled or frozen",1,"Includes mammals! (21159.90)",NA,"No data available, for production and trade: suggested deletion of these categories"
+"1169",NA,"02199.10",NA,"other live animals non food, n.e.c.",1,"Includes reptiles (02195) and other mammals n.e.c. (02192.90)",NA,"No data available, for production and trade: suggested deletion of these categories"
+"1171",NA,"02199.20",NA,"other live animals, n.e.c.",1,"Includes other ruminants n.e.c. (02129) and ostriches and emus (02193)",NA,"No data available, for production and trade: suggested deletion of these categories"
+"0015",NA,"0111",NA,"wheat",1,NA,1,NA
+"0017",NA,"39120.01",NA,"bran of wheat",1,NA,1,NA
+"0018",NA,"23710",NA,"uncooked pasta, not stuffed or otherwise prepared",1,NA,1,NA
+"0019",NA,"23140.01",NA,"germ of wheat",1,NA,1,NA
+"0021",NA,"23140.02",NA,"bulgur",1,NA,1,NA
+"0023",NA,"23220.01",NA,"starch of wheat",1,NA,1,NA
+"0024",NA,"23220.02",NA,"wheat gluten",1,NA,1,NA
+"0026",NA,"24230.01",NA,"wheat-fermented beverages",1,NA,1,NA
+"0027",NA,"0113",NA,"rice",1,NA,1,NA
+"0028",NA,"23162",NA,"husked rice",1,NA,1,NA
+"0029",NA,"23161.01",NA,"rice, milled (husked)",1,NA,1,NA
+"0031",NA,"23161.02",NA,"rice, milled",1,NA,1,NA
+"0032",NA,"23161.03",NA,"rice, broken",1,NA,1,NA
+"0033",NA,"39130.01",NA,"rice, gluten",1,NA,1,NA
+"0034",NA,"23220.03",NA,"starch of rice",1,NA,1,NA
+"0035",NA,"39120.02",NA,"bran of rice",1,NA,1,NA
+"0036",NA,"21691.01",NA,"oil of rice bran",1,NA,1,NA
+"0037",NA,"21910.01",NA,"cake of rice bran",1,NA,1,NA
+"0039",NA,"24230.02",NA,"rice-fermented beverages",1,NA,1,NA
+"0041",NA,"23140.03",NA,"breakfast cereals",1,NA,1,NA
+"0044",NA,"0115",NA,"barley",1,NA,1,NA
+"0045",NA,"23140.04",NA,"pot barley",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"0046",NA,"23140.05",NA,"barley, pearled",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"0047",NA,"39120.03",NA,"bran of barley",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"0049",NA,"24320",NA,"malt, whether or not roasted",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"0050",NA,"23999.01",NA,"malt extract",1,NA,1,NA
+"0056",NA,"0112",NA,"maize (corn)",1,NA,1,NA
+"0057",NA,"23140.06",NA,"germ of maize",1,NA,1,NA
+"0059",NA,"39120.04",NA,"bran of maize",1,NA,1,"Definitions in the production questionnaire specify that ""White Maize used mainly for food is included in Maize"" "
+"0060",NA,"21691.02",NA,"oil of maize",1,NA,1,"Not included in production questionnaire. Popcorn data are only for USA 1961-1981"
+"0061",NA,"21910.02",NA,"cake of maize",1,NA,1,NA
+"0063",NA,"39130.02",NA,"maize gluten",1,NA,1,NA
+"0064",NA,"23220.04",NA,"starch of maize",1,NA,1,NA
+"0067",NA,"0112",NA,"maize (corn)",1,"In the new SWS, FCL 0067 is grouped with 0112.",1,NA
+"0068",NA,"0112",NA,"maize (corn)",1,"In the new SWS, FCL 0067 is grouped with 0112 (it is noted that popcorn in primary equivalent for FBS is part of cereals nes, and not of maize)",1,NA
+"0071",NA,"0116",NA,"rye",1,NA,1,NA
+"0073",NA,"39120.05",NA,"bran of rye",1,NA,1,NA
+"0075",NA,"0117",NA,"oats",1,NA,1,NA
+"0076",NA,"23140.07",NA,"oats, rolled",1,NA,1,NA
+"0077",NA,"39120.06",NA,"bran of oats",1,NA,1,NA
+"0079",NA,"0118",NA,"millet",1,NA,1,NA
+"0081",NA,"39120.07",NA,"bran of millet",1,NA,1,NA
+"0083",NA,"0114",NA,"sorghum",1,NA,1,NA
+"0085",NA,"39120.08",NA,"bran of sorghum",1,NA,1,NA
+"0089",NA,"01192",NA,"buckwheat",1,NA,1,NA
+"0091",NA,"39120.09",NA,"bran of buckwheat",1,NA,1,NA
+"0092",NA,"01194",NA,"quinoa",1,NA,1,NA
+"0094",NA,"01193",NA,"fonio",1,NA,1,NA
+"0097",NA,"01191",NA,"triticale",1,NA,1,NA
+"0099",NA,"39120.11",NA,"bran of triticale",1,NA,1,NA
+"0101",NA,"01195",NA,"canary seed",1,NA,1,NA
+"0103",NA,"01199.02",NA,"mixed grain",1,NA,1,NA
+"0105",NA,"39120.12",NA,"bran of mixed grain",1,NA,1,NA
+"0109",NA,"23991.01",NA,"infant food",1,NA,1,NA
+"0110",NA,"23490.01",NA,"communion wafers, empty cachets of a kind suitable for pharmaceutical use, sealing wafers, rice paper and similar products.",1,NA,1,NA
+"0112",NA,"39120.13",NA,"bran of cereals nes",1,NA,1,NA
+"0113",NA,"23140.08",NA,"cereal preparations",1,NA,1,NA
+"0114",NA,"23180",NA,"mixes and doughs for the preparation of bakers' wares",1,NA,1,NA
+"0115",NA,"23999.02",NA,"food preparations of flour, meal or malt extract",1,NA,1,NA
+"0116",NA,"01510",NA,"potatoes",1,NA,1,NA
+"0117",NA,"21392",NA,"flour, meal, powder, flakes, granules and pellets of potatoes",1,NA,1,NA
+"0118",NA,"21313",NA,"potatoes, frozen",1,NA,1,NA
+"0119",NA,"23220.05",NA,"starch of potatoes",1,NA,1,NA
+"0120",NA,"39130.03",NA,"potato offals",1,NA,1,NA
+"0121",NA,"23230.01",NA,"tapioca of potatoes",1,NA,1,NA
+"0122",NA,"01530",NA,"sweet potatoes",1,NA,1,NA
+"0125",NA,"01520.01",NA,"cassava, fresh",1,NA,1,NA
+"0126",NA,"23170.01",NA,"flour of cassava",1,NA,1,NA
+"0127",NA,"23230.02",NA,"tapioca of cassava",1,NA,1,NA
+"0128",NA,"01520.02",NA,"cassava, dried",1,NA,1,NA
+"0129",NA,"23220.06",NA,"starch of cassava",1,NA,1,NA
+"0135",NA,"01591",NA,"yautia ",1,NA,1,NA
+"0136",NA,"01550",NA,"taro ",1,NA,1,NA
+"0137",NA,"01540",NA,"yams",1,NA,1,NA
+"0149",NA,"01599.10",NA,"edible roots and tubers with high starch or inulin content, n.e.c., fresh",1,NA,1,NA
+"0150",NA,"23170.02",NA,"flour of roots and tubers nes",1,NA,1,NA
+"0151",NA,"01599.20",NA,"edible roots and tubers with high starch or inulin content, n.e.c., dry",1,NA,1,NA
+"0154",NA,"23210.01",NA,"fructose, chemically pure",1,NA,1,NA
+"0155",NA,"23210.02",NA,"maltose, chemically pure",1,NA,1,NA
+"0156",NA,"01802",NA,"sugar cane",1,NA,1,NA
+"0157",NA,"01801",NA,"sugar beet",1,NA,1,NA
+"0158",NA,"23511.01",NA,"cane sugar, entrifugal",1,NA,1,NA
+"0159",NA,"23512",NA,"beet sugar",1,NA,1,NA
+"0160",NA,"23530",NA,"refined cane or beet sugar, in solid form, containing added flavouring or colouring matter; maple sugar and maple syrup",1,NA,1,NA
+"0161",NA,"01809",NA,"other sugar crops n.e.c.",1,NA,1,NA
+"0162",NA,"2351f",NA,"raw cane or beet sugar (centrifugal only)",NA,NA,NA,NA
+"0163",NA,"23511.02",NA,"cane sugar, non-centrifugal",1,NA,1,NA
+"0164",NA,"23520",NA,"refined sugar",1,NA,1,NA
+"0165",NA,"23540",NA,"molasses (from beet, cane and maize)",1,NA,1,NA
+"0166",NA,"23210.03",NA,"other fructose and syrup",1,NA,1,NA
+"0167",NA,"23210.04",NA,"sugar and syrups nes",1,NA,1,NA
+"0168",NA,"23670.01",NA,"sugar confectionery",1,NA,1,NA
+"0169",NA,"39140.01",NA,"beet pulp",1,NA,1,NA
+"0170",NA,"39140.02",NA,"bagasse",1,NA,1,NA
+"0172",NA,"23210.05",NA,"glucose and dextrose",1,NA,1,NA
+"0173",NA,"23210.06",NA,"lactose",1,NA,1,NA
+"0174",NA,"23210.07",NA,"glucose and glucose syrup; fructose and fructose syrup; lactose and lactose syrup; invert sugar; sugars and sugar syrups n.e.c.; artificial honey; caramel",1,NA,1,NA
+"0175",NA,"23210.08",NA,"isoglucose",1,NA,1,NA
+"0176",NA,"01701",NA,"beans, dry",1,NA,1,NA
+"0181",NA,"01702",NA,"broad beans and horse beans, dry",1,NA,1,NA
+"0187",NA,"01705",NA,"peas, dry",1,NA,1,NA
+"0191",NA,"01703",NA,"chick peas, dry",1,NA,1,NA
+"0195",NA,"01706",NA,"cow peas, dry",1,NA,1,NA
+"0197",NA,"01707",NA,"pigeon peas, dry",1,NA,1,NA
+"0201",NA,"01704",NA,"lentils, dry",1,NA,1,NA
+"0203",NA,"01708",NA,"bambara beans, dry",1,NA,1,NA
+"0205",NA,"01709.01",NA,"vetches",1,NA,1,NA
+"0210",NA,"01709.02",NA,"lupins ",1,NA,1,NA
+"0211",NA,"01709.90",NA,"other pulses n.e.c.",1,NA,1,NA
+"0212",NA,"23170.03",NA,"flour of pulses",1,NA,1,NA
+"0213",NA,"39120.14",NA,"bran of pulses",1,NA,1,NA
+"0216",NA,"01377",NA,"brazil nuts, in shell",1,NA,1,NA
+"0217",NA,"01372",NA,"cashew nuts, in shell",1,NA,1,NA
+"0221",NA,"01371",NA,"almonds, in shell",1,NA,1,NA
+"0222",NA,"01376",NA,"walnuts, in shell",1,NA,1,NA
+"0224",NA,"01379.02",NA,"kola nuts",1,NA,1,NA
+"0225",NA,"01374",NA,"hazelnuts, in shell",1,NA,1,NA
+"0229",NA,"21429.01",NA,"brazil nuts, shelled",1,NA,1,NA
+"0230",NA,"21424",NA,"cashew nuts, shelled",1,NA,1,NA
+"0231",NA,"21422",NA,"almonds, shelled",1,NA,1,NA
+"0232",NA,"21429.02",NA,"walnuts, shelled",1,NA,1,NA
+"0233",NA,"21423",NA,"hazelnuts, shelled",1,NA,1,NA
+"0236",NA,"0141",NA,"soya beans",1,NA,1,NA
+"0237",NA,"2161",NA,"soya bean oil",1,NA,1,NA
+"0238",NA,"21910.03",NA,"cake of  soya beans",1,NA,1,NA
+"0239",NA,"23995.01",NA,"soya sauce",1,NA,1,NA
+"0240",NA,"23995.02",NA,"soya paste",1,NA,1,NA
+"0241",NA,"23999.03",NA,"soya curd",1,NA,1,NA
+"0242",NA,"0142",NA,"groundnuts, excluding shelled",1,NA,1,NA
+"0243",NA,"21421",NA,"groundnuts, shelled",1,NA,1,NA
+"0244",NA,"2162",NA,"groundnut oil",1,NA,1,NA
+"0245",NA,"21910.04",NA,"cake of  groundnuts",1,NA,1,NA
+"0246",NA,"21495.01",NA,"prepared groundnuts",1,NA,1,NA
+"0247",NA,"21495.02",NA,"peanut butter",1,NA,1,NA
+"0249",NA,"01460",NA,"coconuts, in shell",1,NA,1,NA
+"0250",NA,"21429.07",NA,"coconuts, desiccated",1,NA,1,NA
+"0251",NA,"01492",NA,"copra",1,NA,1,NA
+"0252",NA,"2166",NA,"coconut oil",1,NA,1,NA
+"0253",NA,"21910.05",NA,"cake of copra",1,NA,1,NA
+"0254",NA,"01491.01",NA,"oil palm fruit",1,NA,1,NA
+"0256",NA,"01491.02",NA,"palm kernels",1,NA,1,NA
+"0257",NA,"2165",NA,"palm oil",1,NA,1,NA
+"0258",NA,"21691.14",NA,"oil of palm kernel",1,NA,1,NA
+"0259",NA,"21910.06",NA,"cake of  palm kernel",1,NA,1,NA
+"0260",NA,"01450",NA,"olives",1,NA,1,NA
+"0261",NA,"2167",NA,"olive oil",1,NA,1,NA
+"0263",NA,"01499.01",NA,"karite nuts (sheanuts)",1,NA,1,NA
+"0264",NA,"21691.03",NA,"butter of karite nuts",1,NA,1,NA
+"0265",NA,"01447",NA,"castor oil seeds",1,NA,1,NA
+"0266",NA,"21691.04",NA,"oil of castor beans",1,NA,1,NA
+"0267",NA,"01445",NA,"sunflower seed",1,NA,1,NA
+"0269",NA,"21910.07",NA,"cake of  sunflower seed",1,NA,1,NA
+"0270",NA,"01443",NA,"rapeseed or colza seed",1,NA,1,NA
+"0272",NA,"21910.08",NA,"cake of  rapeseed",1,NA,1,NA
+"0273",NA,"21910.09",NA,"olive residues",1,NA,1,NA
+"0274",NA,"21673",NA,"oil of olive residues",1,NA,1,NA
+"0275",NA,"01499.02",NA,"tung nuts",1,NA,1,NA
+"0276",NA,"21691.05",NA,"oil of tung nuts",1,NA,1,NA
+"0277",NA,"01499.03",NA,"jojoba seeds",1,NA,1,NA
+"0278",NA,"21691.06",NA,"jojoba oil",1,NA,1,NA
+"0280",NA,"01446",NA,"safflower seed",1,NA,1,NA
+"0282",NA,"21910.10",NA,"cake of  safflowerseed",1,NA,1,NA
+"0289",NA,"01444",NA,"sesame seed",1,NA,1,NA
+"0290",NA,"21691.07",NA,"oil of sesame seed",1,NA,1,NA
+"0291",NA,"21910.11",NA,"cake of  sesame seed",1,NA,1,NA
+"0292",NA,"01442",NA,"mustard seed",1,NA,1,NA
+"0294",NA,"21910.12",NA,"cake of  mustard seed",1,NA,1,NA
+"0295",NA,"23995.03",NA,"flour of mustard seed",1,NA,1,NA
+"0296",NA,"01448",NA,"poppy seed",1,NA,1,NA
+"0297",NA,"21691.08",NA,"oil of poppy seed",1,NA,1,NA
+"0298",NA,"21910.13",NA,"cake of  poppy seed",1,NA,1,NA
+"0299",NA,"01449.01",NA,"melonseed",1,NA,1,NA
+"0305",NA,"01499.04",NA,"tallowtree seeds",1,NA,1,NA
+"0306",NA,"21691.09",NA,"vegetable tallow",1,NA,1,NA
+"0307",NA,"21691.10",NA,"stillingia oil",1,NA,1,NA
+"0310",NA,"01499.05",NA,"kapok fruit",1,NA,1,NA
+"0311",NA,"01499.06",NA,"kapokseed in shell",1,NA,1,NA
+"0312",NA,"01499.07",NA,"kapokseed, shelled",1,NA,1,NA
+"0313",NA,"21691.11",NA,"oil of kapok",1,NA,1,NA
+"0314",NA,"21910.14",NA,"cake of kapok",1,NA,1,NA
+"0328",NA,"01921.01",NA,"seed cotton, unginned",1,NA,1,NA
+"0329",NA,"0143",NA,"cottonseed",1,NA,1,NA
+"0331",NA,"2168",NA,"cottonseed oil",1,NA,1,NA
+"0332",NA,"21910.15",NA,"cake of  cottonseed",1,NA,1,NA
+"0333",NA,"01441",NA,"linseed",1,NA,1,NA
+"0334",NA,"21691.12",NA,"oil of linseed",1,NA,1,NA
+"0335",NA,"21910.16",NA,"cake of  linseed",1,NA,1,NA
+"0336",NA,"01449.02",NA,"hempseed",1,NA,1,NA
+"0337",NA,"21691.13",NA,"oil of hempseed",1,NA,1,NA
+"0338",NA,"21910.17",NA,"cake of hempseed",1,NA,1,NA
+"0340",NA,"21691.90",NA,"other oil of vegetable origin, crude n.e.c.",1,NA,1,NA
+"0341",NA,"21910.90",NA,"cake of oilseeds nes",1,NA,1,NA
+"0343",NA,"21920",NA,"flours and meals of oil seeds or oleaginous fruits, except those of mustard",1,NA,1,NA
+"0358",NA,"01212",NA,"cabbages",1,NA,1,NA
+"0366",NA,"01216",NA,"artichokes",1,NA,1,NA
+"0367",NA,"01211",NA,"asparagus",1,NA,1,NA
+"0372",NA,"01214",NA,"lettuce and chicory",1,NA,1,NA
+"0373",NA,"01215",NA,"spinach",1,NA,1,NA
+"0378",NA,"01219.01",NA,"cassava leaves",1,NA,1,NA
+"0388",NA,"01234",NA,"tomatoes",1,NA,1,NA
+"0390",NA,"21321",NA,"tomato juice",1,NA,1,NA
+"0391",NA,"21399.01",NA,"paste of tomatoes",1,NA,1,NA
+"0392",NA,"21399.02",NA,"tomatoes, peeled (o/t vinegar)",1,NA,1,NA
+"0393",NA,"01213",NA,"cauliflowers and broccoli",1,NA,1,NA
+"0394",NA,"01235",NA,"pumpkins, squash and gourds",1,NA,1,NA
+"0397",NA,"01232",NA,"cucumbers and gherkins",1,NA,1,NA
+"0399",NA,"01233",NA,"eggplants (aubergines)",1,NA,1,NA
+"0401",NA,"01231",NA,"chillies and peppers, green (capsicum spp. and pimenta spp.)",1,NA,1,NA
+"0402",NA,"01253.01",NA,"onions and shallots, green",1,NA,1,NA
+"0403",NA,"01253.02",NA,"onions and shallots, dry (excluding dehydrated)",1,NA,1,NA
+"0406",NA,"01252",NA,"green garlic",1,NA,1,NA
+"0407",NA,"01254",NA,"leeks and other alliaceous vegetables",1,NA,1,NA
+"0414",NA,"01241.90",NA,"other beans, green",1,NA,1,NA
+"0417",NA,"01242",NA,"peas, green",1,NA,1,NA
+"0420",NA,"01243",NA,"broad beans and horse beans, green ",1,NA,1,NA
+"0423",NA,"01241.01",NA,"string beans ",1,NA,1,NA
+"0426",NA,"01251",NA,"carrots and turnips",1,NA,1,NA
+"0430",NA,"01239.01",NA,"okra ",1,NA,1,NA
+"0446",NA,"01290.01",NA,"green corn (maize) ",1,NA,1,NA
+"0447",NA,"21319.01",NA,"sweet corn, frozen",1,NA,1,NA
+"0448",NA,"21399.03",NA,"sweet corn, prepared or preserved",1,NA,1,NA
+"0449",NA,"01270",NA,"mushrooms and truffles",1,NA,1,NA
+"0450",NA,"21393.01",NA,"dried mushrooms",1,NA,1,NA
+"0451",NA,"21397.01",NA,"canned mushrooms",1,NA,1,NA
+"0459",NA,"01691",NA,"chicory roots ",1,NA,1,NA
+"0460",NA,"01990.01",NA,"vegetable products, fresh or dry nes",1,NA,1,NA
+"0461",NA,"01356",NA,"locust beans (carobs)",1,NA,1,NA
+"0466",NA,"21329",NA,"other vegetable juices",1,NA,1,NA
+"0469",NA,"21393.90",NA,"vegetables, dehydrated",1,NA,1,NA
+"0471",NA,"21340",NA,"vegetables, pulses and potatoes, preserved by vinegar or acetic acid",1,NA,1,NA
+"0474",NA,"21330.90",NA,"other vegetables provisionally preserved",1,NA,1,NA
+"0476",NA,"23991.02",NA,"homogenized vegetable preparations",1,NA,1,NA
+"0486",NA,"01312",NA,"bananas",1,NA,1,NA
+"0489",NA,"01313",NA,"plantains and others",1,NA,1,NA
+"0490",NA,"01323",NA,"oranges",1,NA,1,NA
+"0491",NA,"21431.01",NA,"orange juice",1,NA,1,NA
+"0492",NA,"21431.02",NA,"orange juice, concentrated",1,NA,1,NA
+"0495",NA,"01324",NA,"tangerines, mandarins, clementines",1,NA,1,NA
+"0496",NA,"21439.01",NA,"juice of tangerine",1,NA,1,NA
+"0497",NA,"01322",NA,"lemons and limes",1,NA,1,NA
+"0498",NA,"21439.02",NA,"juice of lemon",1,NA,1,NA
+"0499",NA,"21439.03",NA,"lemon juice, concentrated",1,NA,1,NA
+"0507",NA,"01321",NA,"pomelos and grapefruits",1,NA,1,NA
+"0509",NA,"21432",NA,"grapefruit juice",1,NA,1,NA
+"0510",NA,"21432.01",NA,"grapefruit juice, concentrated",1,NA,1,NA
+"0512",NA,"01329",NA,"other citrus fruit, n.e.c.",1,NA,1,NA
+"0513",NA,"21439.04",NA,"juice of citrus fruit nes",1,NA,1,NA
+"0514",NA,"21439.05",NA,"citrus juice, concentrated nes",1,NA,1,NA
+"0515",NA,"01341",NA,"apples",1,NA,1,NA
+"0517",NA,"24230.03",NA,"cider and other fermented beverages",1,NA,1,NA
+"0518",NA,"21435.01",NA,"apple juice",1,NA,1,NA
+"0519",NA,"21435.02",NA,"apple juice, concentrated",1,NA,1,NA
+"0521",NA,"01342.01",NA,"pears",1,NA,1,NA
+"0523",NA,"01342.02",NA,"quinces",1,NA,1,NA
+"0526",NA,"01343",NA,"apricots",1,NA,1,NA
+"0527",NA,"21419.01",NA,"apricots, dried",1,NA,1,NA
+"0530",NA,"01344.01",NA,"sour cherries",1,NA,1,NA
+"0531",NA,"01344.02",NA,"cherries",1,NA,1,NA
+"0534",NA,"01345",NA,"peaches and nectarines",1,NA,1,NA
+"0536",NA,"01346",NA,"plums and sloes",1,NA,1,NA
+"0537",NA,"21412",NA,"plums, dried",1,NA,1,NA
+"0538",NA,"21439.06",NA,"juice of plum",1,NA,1,NA
+"0539",NA,"21439.07",NA,"juice of plum, concentrated",1,NA,1,NA
+"0541",NA,"01349.20",NA,"other stone fruits",1,NA,1,NA
+"0542",NA,"01349.10",NA,"other pome fruits",1,NA,1,NA
+"0544",NA,"01354",NA,"strawberries",1,NA,1,NA
+"0547",NA,"01353.01",NA,"raspberries",1,NA,1,NA
+"0549",NA,"01351.02",NA,"gooseberries ",1,NA,1,NA
+"0550",NA,"01351.01",NA,"currants",1,NA,1,NA
+"0552",NA,"01355.01",NA,"blueberries",1,NA,1,NA
+"0554",NA,"01355.02",NA,"cranberries",1,NA,1,NA
+"0560",NA,"01330",NA,"grapes",1,NA,1,NA
+"0561",NA,"21411",NA,"raisins",1,NA,1,NA
+"0562",NA,"21434",NA,"grape juice",1,NA,1,NA
+"0563",NA,"24212.01",NA,"must of grape",1,NA,1,NA
+"0565",NA,"24220",NA,"vermouth and other wine of fresh grapes flavoured with plats or aromatic substances",1,NA,1,NA
+"0566",NA,"39120.18",NA,"marc of grape",1,NA,1,NA
+"0567",NA,"01221",NA,"watermelons",1,NA,1,NA
+"0568",NA,"01229",NA,"cantaloupes and other melons",1,NA,1,NA
+"0569",NA,"01315",NA,"figs",1,NA,1,NA
+"0570",NA,"21419.02",NA,"figs, dried",1,NA,1,NA
+"0571",NA,"01316",NA,"mangoes, guavas, mangosteens",1,NA,1,NA
+"0572",NA,"01311",NA,"avocados",1,NA,1,NA
+"0574",NA,"01318",NA,"pineapples",1,NA,1,NA
+"0575",NA,"21491",NA,"pineapples, otherwise prepared or preserved",1,NA,1,NA
+"0576",NA,"21433",NA,"pineapple juice",1,NA,1,NA
+"0580",NA,"21433.01",NA,"juice of pineapples, concentrated",1,NA,1,NA
+"0583",NA,"21439.08",NA,"juice of mango",1,NA,1,NA
+"0584",NA,"21499.01",NA,"mango pulp",1,NA,1,NA
+"0587",NA,"01359.01",NA,"persimmons",1,NA,1,NA
+"0591",NA,"01359.02",NA,"cashewapple",1,NA,1,NA
+"0592",NA,"01352",NA,"kiwi fruit",1,NA,1,NA
+"0600",NA,"01317",NA,"papayas",1,NA,1,NA
+"0604",NA,"21419.91",NA,"other tropical fruit, dried",1,NA,1,NA
+"0620",NA,"21419.99",NA,"other fruit n.e.c., dried",1,NA,1,NA
+"0622",NA,"21439.9",NA,"juice of fruits n.e.c.",1,NA,1,NA
+"0624",NA,"23170.04",NA,"flour of fruits",1,NA,1,NA
+"0625",NA,"23670.02",NA,"fruit, nuts, peel, sugar preserved",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"0626",NA,"23991.03",NA,"homogenized cooked fruit, prepared",1,NA,1,NA
+"0628",NA,"39120.15",NA,"pulp, waste of fruit for feed",1,NA,1,NA
+"0629",NA,"39120.16",NA,"beet tops",1,NA,1,NA
+"0630",NA,"39120.17",NA,"cane tops",1,NA,1,NA
+"0632",NA,"24110",NA,"undenatured ethyl alcohol of an alcoholic strength by volume of 80% vol or higher",1,NA,1,NA
+"0633",NA,"24490",NA,"other non-alcoholic caloric beverages n.e.c",1,"Includes non alcoholic beer.",1,NA
+"0634",NA,"2413",NA,"undenatured ethyl alcohol of an alcoholic strength by volume of less than 80% vol; spirits, liqueurs and other spirituous beverages",1,NA,1,NA
+"0635",NA,"01913",NA,"cereal straw, husks, unprepared, ground, pressed, or in the form of pellets",1,NA,1,NA
+"0636",NA,"01911",NA,"maize for forage",1,NA,1,NA
+"0637",NA,"01919.01",NA,"sorghum, for forage",1,NA,1,NA
+"0638",NA,"01919.02",NA,"rye grass, for forage",1,NA,1,NA
+"0639",NA,"01919.91",NA,"other grasses, for forage",1,NA,1,NA
+"0640",NA,"01919.03",NA,"clover, for forage",1,NA,1,NA
+"0641",NA,"01912",NA,"alfalfa for forage",1,NA,1,NA
+"0642",NA,"01919.94",NA,"other oilseeds, for forage",1,NA,1,NA
+"0643",NA,"01919.92",NA,"other legumes, for forage",1,NA,1,NA
+"0644",NA,"01919.04",NA,"cabbage, for forage",1,NA,1,NA
+"0645",NA,"01919.93",NA,"mixed grass and legumes, for forage",1,NA,1,NA
+"0646",NA,"01919.05",NA,"turnips, for forage",1,NA,1,NA
+"0647",NA,"01919.06",NA,"beet, for forage",1,NA,1,NA
+"0648",NA,"01919.07",NA,"carrots, for forage",1,NA,1,NA
+"0649",NA,"01919.08",NA,"swedes, for forage",1,NA,1,NA
+"0650",NA,"39120.92",NA,"leaves, tops and vines n.e.c.",1,NA,1,NA
+"0651",NA,"01919.96",NA,"other forage products, n.e.c.",1,NA,1,NA
+"0652",NA,"39120.91",NA,"vegetable products for feed nes",1,NA,1,NA
+"0653",NA,"39170.01",NA,"food wastes",1,NA,1,NA
+"0654",NA,"39160",NA,"brewing or distilling dregs and waste",1,NA,1,NA
+"0655",NA,"01919.95",NA,"other forage crops, n.e.c.",1,NA,1,NA
+"0656",NA,"01610",NA,"coffee, green",1,NA,1,NA
+"0657",NA,"23911",NA,"coffee, decaffeinated or roasted",1,NA,1,NA
+"0658",NA,"23912.01",NA,"coffee substitutes",1,NA,1,NA
+"0659",NA,"23912.02",NA,"coffee extracts",1,NA,1,NA
+"0660",NA,"39150.01",NA,"coffee husks and skins",1,NA,1,NA
+"0661",NA,"01640",NA,"cocoa beans",1,NA,1,NA
+"0662",NA,"23610.01",NA,"cocoa paste not defatted",1,NA,1,NA
+"0663",NA,"39150.02",NA,"cocoa husks and shells",1,NA,1,NA
+"0664",NA,"23620",NA,"cocoa butter, fat and oil",1,NA,1,NA
+"0671",NA,"01630",NA,"maté leaves",1,NA,1,NA
+"0672",NA,"23914",NA,"extracts, essences and concentrates of tea or mate, and preparations with a basis thereof or with a basis of tea or maté",1,NA,1,NA
+"0674",NA,"01930.04",NA,"tea nes (herbal tea)",1,NA,1,NA
+"0677",NA,"01659",NA,"hop cones",1,NA,1,NA
+"0723",NA,"01699",NA,"other stimulant, spice and aromatic crops, n.e.c. ",1,NA,1,NA
+"0737",NA,"35410.01",NA,"oil of citronella",1,NA,1,NA
+"0748",NA,"01930.01",NA,"peppermint, spearmint",1,NA,1,NA
+"0753",NA,"35410.90",NA,"essential oils nes",1,NA,1,NA
+"0754",NA,"01930.02",NA,"pyrethrum, dried flowers",1,NA,1,NA
+"0755",NA,"23999.04",NA,"pyrethrum extract",1,NA,1,NA
+"0756",NA,"01930.03",NA,"pyrethrum marc",1,NA,1,NA
+"0767",NA,"01921.02",NA,"cotton lint, ginned",1,NA,1,NA
+"0768",NA,"26160",NA,"cotton, carded or combed",1,NA,1,NA
+"0770",NA,"21800",NA,"cotton linters",1,NA,1,NA
+"0771",NA,"01929.01",NA,"flax, raw or retted",1,NA,1,NA
+"0773",NA,"26190.01",NA,"flax, processed but not spun",1,NA,1,NA
+"0774",NA,"26190.02",NA,"flax tow and waste",1,NA,1,NA
+"0828",NA,"25020.01",NA,"cigarettes",1,NA,1,NA
+"0829",NA,"25020.02",NA,"cigars and cheroots",1,NA,1,NA
+"0831",NA,"25090",NA,"other manufactured tobacco and manufactured tobacco substitutes; homogenized or reconstituted tobacco; tobacco extracts and essences",1,NA,1,NA
+"0836",NA,"01950.01",NA,"natural rubber in primary forms",1,NA,1,NA
+"0837",NA,"01950.02",NA,"natural rubber in other forms",1,NA,1,NA
+"0839",NA,"03211",NA,"balata, gutta-percha, guayule, chicle and similar natural gums in primary forms or in plates, sheets or strip",1,NA,1,NA
+"0840",NA,"23319.01",NA,"compound feed, cattle",1,NA,1,NA
+"0841",NA,"23319.02",NA,"compound feed, poultry",1,NA,1,NA
+"0842",NA,"23319.03",NA,"compound feed, pigs",1,NA,1,NA
+"0843",NA,"23311",NA,"dog or cat food, put up for retail sale",1,NA,1,NA
+"0845",NA,"23319.04",NA,"compound feed nes",1,NA,1,NA
+"0846",NA,"39130.04",NA,"gluten feed and meal",1,NA,1,NA
+"0849",NA,"23319.05",NA,"feed yeast",1,NA,1,NA
+"0850",NA,"23319.06",NA,"feed supplements",1,NA,1,NA
+"0851",NA,"23319.07",NA,"non-protein nitrogens",1,NA,1,NA
+"0852",NA,"23319.08",NA,"other concentrates nes",1,NA,1,NA
+"0853",NA,"23319.09",NA,"vitamins",1,NA,1,NA
+"0854",NA,"23319.10",NA,"feed additives",1,NA,1,NA
+"0855",NA,"23319.11",NA,"feed minerals",1,NA,1,NA
+"0857",NA,"01919.09",NA,"hay for forage, from grasses",1,NA,1,NA
+"0858",NA,"01919.10",NA,"hay for forage, from legumes",1,NA,1,NA
+"0859",NA,"01919.11",NA,"hay for forage, from other crops n.e.c.",1,NA,1,NA
+"0862",NA,"23320",NA,"lucerne (alfalfa) meal and pellets",1,NA,1,NA
+"0866",NA,"02111",NA,"cattle",1,NA,1,NA
+"0868",NA,"21151",NA,"edible offal of cattle, fresh, chilled or frozen",1,NA,1,NA
+"0869",NA,"21512",NA,"cattle fat, unrendered",1,NA,1,NA
+"0871",NA,"21512.01",NA,"cattle, butcher fat",1,NA,1,NA
+"0872",NA,"21182",NA,"bovine meat, salted, dried or smoked",1,NA,1,NA
+"0873",NA,"21185",NA,"extracts and juices of meat, fish, crustaceans, molluscs or other aquatic invertebrates",1,NA,1,NA
+"0874",NA,"21184.01",NA,"sausages and similar products of meat, offal or blood of beef and veal",1,NA,1,NA
+"0877",NA,"23991.04",NA,"homogenized meat preparations",1,NA,1,NA
+"0882",NA,"02211",NA,"raw milk of cattle",1,NA,1,NA
+"0883",NA,"22110.01",NA,"standardized milk",1,NA,1,NA
+"0885",NA,"22120",NA,"cream, fresh",1,NA,1,NA
+"0886",NA,"22241.01",NA,"butter of cow milk",1,NA,1,NA
+"0887",NA,"22241.02",NA,"ghee from cow milk",1,NA,1,NA
+"0888",NA,"22110.02",NA,"skim milk of cows",1,NA,1,NA
+"0889",NA,"22222.01",NA,"whole milk, condensed",1,NA,1,NA
+"0890",NA,"22130.03",NA,"whey, condensed",1,NA,1,NA
+"0891",NA,"22230.01",NA,"yoghurt",1,NA,1,NA
+"0892",NA,"22230.02",NA,"yoghurt, with additives",1,NA,1,NA
+"0893",NA,"22230.03",NA,"buttermilk, curdled and acidified milk",1,NA,1,NA
+"0894",NA,"22221.01",NA,"whole milk, evaporated",1,NA,1,NA
+"0895",NA,"22221.02",NA,"skim milk, evaporated",1,NA,1,NA
+"0896",NA,"22222.02",NA,"skim milk, condensed",1,NA,1,NA
+"0897",NA,"22211",NA,"whole milk powder",1,NA,1,NA
+"0898",NA,"22212",NA,"skim milk and whey powder",1,NA,1,NA
+"0899",NA,"22230.04",NA,"buttermilk, dry",1,NA,1,NA
+"0900",NA,"22130.02",NA,"whey, dry",1,NA,1,NA
+"0901",NA,"22251.01",NA,"cheese from whole cow milk",1,NA,1,NA
+"0903",NA,"22130.01",NA,"whey, fresh",1,NA,1,NA
+"0904",NA,"22251.02",NA,"cheese from skimmed cow milk",1,NA,1,NA
+"0905",NA,"22251.03",NA,"whey cheese",1,NA,1,NA
+"0907",NA,"22251.04",NA,"processed cheese",1,NA,1,NA
+"0908",NA,"22110.03",NA,"reconstituted milk",1,NA,1,NA
+"0909",NA,"22290",NA,"dairy products n.e.c.",1,NA,1,NA
+"0910",NA,"22270",NA,"ice cream and other edible ice",1,NA,1,NA
+"0916",NA,"23993.01",NA,"egg albumin",1,NA,1,NA
+"0917",NA,"22260",NA,"casein",1,NA,1,NA
+"0919",NA,"02951.01",NA,"raw hides and skins of cattle",1,NA,1,NA
+"0920",NA,"02951.04",NA,"hides, wet-salted of cattle",1,NA,1,NA
+"0921",NA,"02951.05",NA,"hides, dry-salted of cattle",1,NA,1,NA
+"0922",NA,"02951.91",NA,"hides of cattle, n.e.c.",1,NA,1,NA
+"0927",NA,"02951.02",NA,"raw hides and skins of calves",1,NA,1,NA
+"0928",NA,"02951.06",NA,"skins, wet-salted of calves",1,NA,1,NA
+"0929",NA,"02951.07",NA,"skins, dry-salted of calves",1,NA,1,NA
+"0930",NA,"02951.92",NA,"skins of calves. n.e.c.",1,NA,1,NA
+"0944",NA,"21111.01i",NA,"meat of cattle with the bone, fresh or chilled (indigenous)",1,NA,1,NA
+"0945",NA,"21111.01b",NA,"meat of cattle with the bone, fresh or chilled (biological)",1,NA,1,NA
+"0946",NA,"02112",NA,"buffalo",1,NA,1,NA
+"0948",NA,"21152",NA,"edible offal of buffalo, fresh, chilled or frozen",1,NA,1,NA
+"0949",NA,"21513",NA,"buffalo fat, unrendered",1,NA,1,NA
+"0951",NA,"02212",NA,"raw milk of buffalo",1,NA,1,NA
+"0952",NA,"22242.01",NA,"butter of buffalo milk",1,NA,1,NA
+"0953",NA,"22242.02",NA,"ghee, from buffalo milk",1,NA,1,NA
+"0954",NA,"22110.04",NA,"skim milk of buffalo",1,NA,1,NA
+"0955",NA,"22252",NA,"cheese from milk of buffalo, fresh or processed",1,NA,1,NA
+"0957",NA,"02951.03",NA,"raw hides and skins of buffaloes",1,NA,1,NA
+"0958",NA,"02951.08",NA,"hides, wet-salted of buffalo",1,NA,1,NA
+"0959",NA,"02951.09",NA,"hides, dry-salted of buffalo",1,NA,1,NA
+"0972",NA,"21112i",NA,"meat of buffalo, fresh or chilled (indigenous)",1,NA,1,NA
+"0973",NA,"21112b",NA,"meat of buffalo, fresh or chilled (biological)",1,NA,1,NA
+"0976",NA,"02122",NA,"sheep",1,NA,1,NA
+"0978",NA,"21155",NA,"edible offal of sheep, fresh, chilled or frozen",1,NA,1,NA
+"0979",NA,"21514",NA,"sheep fat, unrendered",1,NA,1,NA
+"0982",NA,"02291",NA,"raw milk of sheep",1,NA,1,NA
+"0983",NA,"22249.01",NA,"butter and ghee of sheep milk",1,NA,1,NA
+"0984",NA,"22253",NA,"cheese from milk of sheep, fresh or processed",1,NA,1,NA
+"0985",NA,"22110.05",NA,"skim sheep milk",1,NA,1,NA
+"0988",NA,"26130",NA,"wool, degreased or carbonized, not carded or combed",1,NA,1,NA
+"0995",NA,"02953",NA,"raw hides and skins of sheep or lambs",1,NA,1,NA
+"0996",NA,"02953.03",NA,"skins, wet-salted of sheep",1,NA,1,NA
+"0997",NA,"02953.04",NA,"skins, dry-salted of sheep",1,NA,1,NA
+"0998",NA,"02953.90",NA,"skins of sheep, n.e.c.",1,NA,1,NA
+"0999",NA,"02953.01",NA,"raw hides and skins of sheep or lambs, with wool",1,NA,1,NA
+"1002",NA,"02955.01",NA,"karakul skins",1,NA,1,NA
+"0878",FALSE,"21189.01",FALSE,"liver preparations",1,"",1,""
+"1007",NA,"39213",NA,"garnetted stock of wool or of fine or coarse animal hair",1,NA,1,NA
+"1008",NA,"26150.01",NA,"hair, carded, combed",1,NA,1,NA
+"1010",NA,"26150.02",NA,"wool tops",1,NA,1,NA
+"1012",NA,"21115i",NA,"meat of sheep, fresh or chilled (indigenous)",1,NA,1,NA
+"1013",NA,"21115b",NA,"meat of sheep, fresh or chilled (biological)",1,NA,1,NA
+"1016",NA,"02123",NA,"goats",1,NA,1,NA
+"1018",NA,"21156",NA,"edible offal of goat, fresh, chilled or frozen",1,NA,1,NA
+"1019",NA,"21515",NA,"goat fat, unrendered",1,NA,1,NA
+"1020",NA,"02292",NA,"raw milk of goats",1,NA,1,NA
+"1021",NA,"22254",NA,"cheese from milk of goats, fresh or processed",1,NA,1,NA
+"1022",NA,"22249.02",NA,"butter of goat milk",1,NA,1,NA
+"1023",NA,"22110.06",NA,"skim milk of goat",1,NA,1,NA
+"1025",NA,"02954",NA,"raw hides and skins of goats or kids",1,NA,1,NA
+"1026",NA,"02954.01",NA,"skins, wet-salted (goats)",1,NA,1,NA
+"1027",NA,"02954.02",NA,"skins, dry-salted (goats)",1,NA,1,NA
+"1028",NA,"02954.90",NA,"skins n.e.c., goats",1,NA,1,NA
+"1030",NA,"02943.01",NA,"fine goat hair",1,NA,1,NA
+"1031",NA,"02942.02",NA,"coarse goat hair",1,NA,1,NA
+"1032",NA,"21116i",NA,"meat of goat, fresh or chilled (indigenous)",1,NA,1,NA
+"1033",NA,"21116b",NA,"meat of goat, fresh or chilled (biological)",1,NA,1,NA
+"1034",NA,"02140",NA,"swine / pigs",1,NA,1,NA
+"1036",NA,"21153",NA,"edible offal of pigs, fresh, chilled or frozen",1,NA,1,NA
+"1037",NA,"21511.01",NA,"fat of pigs",1,NA,1,NA
+"1039",NA,"21181",NA,"pig meat, cuts, salted, dried or smoked (bacon and ham)",1,NA,1,NA
+"1040",NA,"21511.02",NA,"pig, butcher fat",1,NA,1,NA
+"1041",NA,"21184.02",NA,"sausages and similar products of meat, offal or blood of pig",1,NA,1,NA
+"1043",NA,"21521",NA,"pig fat, rendered",1,NA,1,NA
+"1044",NA,"02959.01",NA,"raw skins of swine",1,NA,1,NA
+"1045",NA,"02959.03",NA,"skins, wet-salted of pigs",1,NA,1,NA
+"1046",NA,"02959.04",NA,"skins, dry-salted of pigs",1,NA,1,NA
+"1047",NA,"02959.05",NA,"skins of pigs, n.e.c.",1,NA,1,NA
+"1055",NA,"21113.01i",NA,"meat of pig with the bone, fresh or chilled (indigenous)",1,NA,1,NA
+"1056",NA,"21113.01b",NA,"meat of pig with the bone, fresh or chilled (biological)",1,NA,1,NA
+"1059",NA,"21160.01",NA,"edible offals and liver of chickens and guinea fowl, fresh, chilled or frozen",1,NA,1,NA
+"1062",NA,"0231",NA,"hen eggs in shell, fresh",1,NA,1,NA
+"1063",NA,"23993.02",NA,"eggs, liquid",1,NA,1,NA
+"1064",NA,"23993.03",NA,"eggs, dried",1,NA,1,NA
+"1065",NA,"21511.03",NA,"fat of poultry",1,NA,1,NA
+"1066",NA,"21522",NA,"poultry fat, rendered",1,NA,1,NA
+"1068",NA,"02154",NA,"ducks",1,NA,1,NA
+"1070",NA,"21122i",NA,"meat of ducks, fresh or chilled (indigenous)",1,NA,1,NA
+"1071",NA,"21122b",NA,"meat of ducks, fresh or chilled (biological)",1,NA,1,NA
+"1072",NA,"02153",NA,"geese",1,NA,1,NA
+"1074",NA,"21160.02",NA,"edible offals and liver of geese, fresh, chilled or frozen",1,NA,1,NA
+"1075",NA,"21160.03",NA,"edible offals and liver of ducks, fresh, chilled or frozen",1,NA,1,NA
+"1077",NA,"21123i",NA,"meat of geese, fresh or chilled (indigenous)",1,NA,1,NA
+"1078",NA,"21123b",NA,"meat of geese, fresh or chilled (biological)",1,NA,1,NA
+"1079",NA,"02152",NA,"turkeys",1,NA,NA,"Official data not avaialble for production. Not included in the production questionnaire."
+"1081",NA,"21160.04",NA,"edible offals and liver of turkey,fresh, chilled or frozen",1,NA,1,NA
+"1083",NA,"02194",NA,"other birds",1,NA,1,NA
+"1084",NA,"21170.01i",NA,"meat of pigeons and other birds n.e.c., fresh, chilled or frozen (indigenous)",1,NA,1,NA
+"1085",NA,"21170.01b",NA,"meat of pigeons and other birds n.e.c., fresh, chilled or frozen (biological)",1,NA,1,NA
+"1087",NA,"21124i",NA,"meat of turkeys, fresh or chilled (indigenous)",1,NA,1,NA
+"1088",NA,"21124b",NA,"meat of turkeys, fresh or chilled (biological)",1,NA,1,NA
+"1089",NA,"21170.01",NA,"meat of pigeons and other birds n.e.c., fresh, chilled or frozen",1,NA,1,NA
+"1091",NA,"0232",NA,"eggs from other birds in shell, fresh, n.e.c.",1,NA,1,NA
+"1094",NA,"21121i",NA,"meat of chickens, fresh or chilled (indigenous)",1,NA,1,NA
+"1095",NA,"21121b",NA,"meat of chickens, fresh or chilled (biological)",1,NA,1,NA
+"1096",NA,"02131",NA,"horses",1,NA,1,NA
+"1098",NA,"21159.01",NA,"edible offals of horses and other equines,  fresh, chilled or frozen",1,NA,1,NA
+"1100",NA,"39110.01",NA,"hair of horses",1,NA,1,NA
+"1102",NA,"02952.01",NA,"raw hides and skins of horses",1,NA,1,NA
+"1103",NA,"02952.04",NA,"hides, wet-salted of horses",1,NA,1,NA
+"1104",NA,"02952.05",NA,"hides, dry-salted of horses",1,NA,1,NA
+"1105",NA,"02952.91",NA,"hides of horses, n.e.c.",1,NA,1,NA
+"1107",NA,"02132",NA,"asses",1,NA,1,NA
+"1109",NA,"02952.02",NA,"raw hides and skins of asses",1,NA,1,NA
+"1110",NA,"02133",NA,"mules and hinnies",1,NA,1,NA
+"1112",NA,"02952.03",NA,"raw hides and skins of mules",1,NA,1,NA
+"1120",NA,"21118.01i",NA,"horse meat, fresh or chilled (indigenous)",1,NA,1,NA
+"1060",FALSE,"21189.02",FALSE,"fatty liver preparations",1,"",1,""
+"1121",NA,"21118.01b",NA,"horse meat, fresh or chilled (biological)",1,NA,1,NA
+"1122",NA,"21118.02i",NA,"meat of asses, fresh or chilled (indigenous)",1,NA,1,NA
+"1123",NA,"21118.02b",NA,"meat of asses, fresh or chilled (biological)",1,NA,1,NA
+"1124",NA,"21118.03i",NA,"meat of mules, fresh or chilled (indigenous)",1,NA,1,NA
+"1125",NA,"21118.03b",NA,"meat of mules, fresh or chilled (biological)",1,NA,1,NA
+"1126",NA,"02121.01",NA,"camels",1,NA,1,NA
+"1128",NA,"21159.02",NA,"edible offals of camels and other camelids, fresh, chilled or frozen",1,NA,1,NA
+"1129",NA,"21519.02",NA,"fat of camels",1,NA,1,NA
+"1130",NA,"02293",NA,"raw milk of camel",1,NA,1,NA
+"1133",NA,"02959.02",NA,"raw skins of camels",1,NA,1,NA
+"1134",NA,"02959.06",NA,"hides, wet-salted of camels",1,NA,1,NA
+"1135",NA,"02959.07",NA,"hides, dry-salted of camels",1,NA,1,NA
+"1136",NA,"02959.08",NA,"hides of camels, n.e.c.",1,NA,1,NA
+"1137",NA,"21117.01i",NA,"meat of camels, fresh or chilled (indigenous)",1,NA,1,NA
+"1138",NA,"21117.01b",NA,"meat of camels, fresh or chilled (biological)",1,NA,1,NA
+"1140",NA,"02191",NA,"rabbits and hares",1,NA,1,NA
+"1144",NA,"21114i",NA,"meat of rabbits and hares, fresh or chilled (indigenous)",1,NA,1,NA
+"1145",NA,"21114b",NA,"meat of rabbits and hares, fresh or chilled (biological)",1,NA,1,NA
+"1146",NA,"02955.02",NA,"rabbit skins",1,NA,1,NA
+"1150",NA,"02192.01",NA,"other rodents",1,NA,1,NA
+"1154",NA,"21119.01i",NA,"meat of other domestic rodents, fresh or chilled (indigenous)",1,NA,0,"Not included in the production questionnaire."
+"1155",NA,"21119.01b",NA,"meat of other domestic rodents, fresh or chilled (biological)",1,NA,1,NA
+"1157",NA,"02121.02",NA,"other camelids",1,NA,1,NA
+"1160",NA,"21519.03",NA,"fat of other camelids",1,NA,1,NA
+"1161",NA,"21117.02i",NA,"meat of other domestic camelids, fresh or chilled (indigenous)",1,NA,1,NA
+"1162",NA,"21117.02b",NA,"meat of other domestic camelids, fresh or chilled (biological)",1,NA,NA,NA
+"1164",NA,"21183",NA,"other meat and edible meat offal, salted, in brine, dried or smoked; edible flours and meals of meat or meat offal",1,NA,NA,NA
+"1168",NA,"21529.03",NA,"animal oils and fats nes",1,NA,NA,NA
+"1173",NA,"21190.01",NA,"meat meal",1,NA,NA,NA
+"1174",NA,"21291",NA,"flours, meals and pellets, inedible, of fish, crustaceans, molluscs or other aquatic invertebrates",1,NA,NA,NA
+"1175",NA,"21190.02",NA,"blood meal",1,NA,NA,NA
+"1176",NA,"02920",NA,"snails, fresh, chilled, frozen, dried, salted or in brine, except sea snails",1,NA,NA,NA
+"1181",NA,"02196",NA,"bees",1,NA,NA,NA
+"1182",NA,"02910",NA,"natural honey",1,NA,NA,NA
+"1183",NA,"02960.01",NA,"beeswax",1,NA,NA,NA
+"1185",NA,"02944",NA,"silk-worm cocoons suitable for reeling",1,NA,NA,NA
+"1186",NA,"26110",NA,"raw silk (not thrown)",1,NA,NA,NA
+"1187",NA,"39211",NA,"silk waste",1,NA,NA,NA
+"1195",NA,"02955.90",NA,"other raw furskins n.e.c.",1,NA,NA,NA
+"1213",NA,"02959.91",NA,"other raw skins of other animals, fresh",1,NA,NA,NA
+"1214",NA,"02959.20",NA,"hides, wet-salted n.e.c.",1,NA,NA,NA
+"1215",NA,"02959.30",NA,"hides, dry-salted n.e.c.",1,NA,NA,NA
+"1216",NA,"02959.99",NA,"other raw skins of other animals, preserved",1,NA,NA,NA
+"1218",NA,"02943.02",NA,"fine hair, n.e.c. ",1,NA,NA,NA
+"1219",NA,"02942.90",NA,"other coarse animal hair ",1,NA,NA,NA
+"1221",NA,"21529.02",NA,"lard stearine and lard oil",1,NA,NA,NA
+"1222",NA,"21932.01",NA,"degras",1,NA,NA,NA
+"1225",NA,"21523",NA,"tallow",1,NA,NA,NA
+"1241",NA,"21700.01",NA,"liquid margarine",1,NA,NA,NA
+"1242",NA,"21700.02",NA,"margarine and shortening",1,NA,NA,NA
+"1259",NA,"39170.02",NA,"food waste, prep. for feed",1,NA,NA,NA
+"1273",NA,"21693.02",NA,"castor oil, hydrogenated",1,NA,NA,NA
+"1274",NA,"34550",NA,"animal or vegetable fats and oils and their fractions, chemically modified, except those hydrogenated, inter-esterified, re-esterified or elaidinized; inedible mixtures or preparations of animal or vegetable fats or oils
+",1,NA,NA,NA
+"1276",NA,"34120",NA,"industrial monocarboxylic fatty acids; acid oils from refining
+",1,NA,NA,NA
+"1277",NA,"21932.02",NA,"residues of fatty substances",1,NA,NA,NA
+"1291",NA,"03219.01",NA,"arabic gum",1,NA,NA,NA
+"1292",NA,"03219.90",NA,"other lac, resins, balsams, natural gums and other resins n.e.c.",1,NA,NA,NA
+"1295",NA,"02960.02",NA,"spermaceti",1,NA,NA,NA
+"1296",NA,"21931",NA,"vegetable waxes (other than triglycerides), whether or not refined or coloured",1,NA,NA,NA
