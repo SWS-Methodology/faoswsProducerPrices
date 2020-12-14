@@ -1,0 +1,315 @@
+country_code,country,cpc2convert,item2convert,cpc_reference,item_reference,tcf
+8,Albania,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.53
+8,Albania,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.75
+8,Albania,21116,"Meat indigenous, goat",21116b,"Meat live weight, goat",0.58
+8,Albania,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.68
+8,Albania,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.56
+8,Albania,21124,"Meat indigenous, turkey",21124b,"Meat live weight, turkey ",0.72
+12,Algeria,21111.01b,"Meat live weight, cattle",21111.01,"Meat indigenous, cattle",1.92
+12,Algeria,21121b,"Meat live weight, chicken",21121,"Meat indigenous, chicken",1.32
+31,Azerbaijan,143,Cottonseed,1921.01,Seed cotton,5.88
+31,Azerbaijan,232,"Eggs, other bird, in shell",231," Eggs, hen, in shell",1
+31,Azerbaijan,21111.01b,"Meat live weight, cattle",21111.01,"Meat indigenous, cattle",1.72
+31,Azerbaijan,21121b,"Meat live weight, chicken",21121,"Meat indigenous, chicken",1.4
+31,Azerbaijan,21118.01b,"Meat live weight, horse",21118.01,"Meat indigenous, horse",2.13
+31,Azerbaijan,21113.01b,"Meat live weight, pig",21113.01,"Meat indigenous, pig",2.5
+31,Azerbaijan,21115b,"Meat live weight, sheep",21115,"Meat indigenous, sheep",1.3
+31,Azerbaijan,21124b,"Meat live weight, turkey",21124,"Meat indigenous, turkey",1.72
+36,Australia,1195,Canary seed,1191, Triticale,1
+36,Australia,1359.01,Persimmons,1352, Kiwi fruit,1
+36,Australia,1342.02,Quinces,1342.01, Pears,1
+36,Australia,1290.9,"Vegetables, fresh nes",1290.01," Maize, green",1
+40,Austria,1355.9,Berries nes,1351.02, Currants,1
+51,Armenia,232,"Eggs, other bird, in shell",231," Eggs, hen, in shell",1
+51,Armenia,112,Maize,111, Wheat,1
+51,Armenia,21114b,"Meat live weight, rabbit",21114,"Meat indigenous, rabbit",1.32
+56,Belgium,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.54
+56,Belgium,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.72
+56,Belgium,21118.01,"Meat indigenous, horse",21118.01b,"Meat live weight, horse",0.49
+56,Belgium,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.79
+56,Belgium,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.5
+68,Bolivia (Plurinational State of),23511.01,"Sugar, cane, raw, centrifugal",1802,Sugar cane,0.04
+70,Bosnia and Herzegovina,21111.01b,"Meat live weight, cattle",21111.01,"Meat indigenous, cattle",1.67
+70,Bosnia and Herzegovina,21121b,"Meat live weight, chicken",21121,"Meat indigenous, chicken",1.33
+70,Bosnia and Herzegovina,21113.01b,"Meat live weight, pig",21113.01,"Meat indigenous, pig",1.23
+70,Bosnia and Herzegovina,21115b,"Meat live weight, sheep",21115,"Meat indigenous, sheep",1.92
+70,Bosnia and Herzegovina,21124b,"Meat live weight, turkey",21124,"Meat indigenous, turkey",1.33
+100,Bulgaria,143,Cottonseed,1921.02,Cotton lint,12.5
+100,Bulgaria,21112,"Meat indigenous, buffalo",21112b,"Meat live weight, buffalo",0.51
+100,Bulgaria,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.51
+100,Bulgaria,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.72
+100,Bulgaria,21116,"Meat indigenous, goat",21116b,"Meat live weight, goat",0.42
+100,Bulgaria,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.66
+100,Bulgaria,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.42
+100,Bulgaria,1921.01,Seed cotton,1921.02,Cotton lint,3.33
+112,Belarus,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.57
+112,Belarus,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.76
+112,Belarus,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.76
+112,Belarus,21411,Raisins,1355.9, Berries nes,1
+124,Canada,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.5
+124,Canada,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.82
+124,Canada,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.82
+124,Canada,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.5
+124,Canada,21124,"Meat indigenous, turkey",21124b,"Meat live weight, turkey ",0.82
+124,Canada,23512,Sugar Raw Centrifugal,1801,Sugar beet,0.14
+144,Sri Lanka,21112b,"Meat live weight, buffalo",21112,"Meat indigenous, buffalo",2
+144,Sri Lanka,21116,"Meat indigenous, goat",21116b,"Meat live weight, goat",0.57
+144,Sri Lanka,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.69
+144,Sri Lanka,21121b,"Meat live weight, chicken",21121,"Meat indigenous, chicken",1.32
+152,Chile,21118.01,"Meat indigenous, horse",21118.01b,"Meat live weight, horse",0.49
+188,Costa Rica,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.49
+191,Croatia,1706,"Cow peas, dry",1703, Chick peas,1
+191,Croatia,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.53
+191,Croatia,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.74
+191,Croatia,21116,"Meat indigenous, goat",21116b,"Meat live weight, goat",0.5
+191,Croatia,21118.01,"Meat indigenous, horse",21118.01b,"Meat live weight, horse",0.54
+191,Croatia,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.77
+191,Croatia,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.5
+191,Croatia,1709.01,Vetches,1706," Peas, dry",1
+196,Cyprus,1329,"Fruit, citrus nes",1322, Lemons and limes,1
+196,Cyprus,1252,Garlic,1234, Tomatoes,1
+196,Cyprus,21111.01b,"Meat live weight, cattle",21111.01,"Meat indigenous, cattle",1.89
+196,Cyprus,21121b,"Meat live weight, chicken",21121,"Meat indigenous, chicken",1.32
+196,Cyprus,21116b,"Meat live weight, goat",21116,"Meat indigenous, goat",1.89
+196,Cyprus,21113.01b,"Meat live weight, pig",21113.01,"Meat indigenous, pig",1.35
+196,Cyprus,21114b,"Meat live weight, rabbit",21114,"Meat indigenous, rabbit",1.35
+196,Cyprus,21115b,"Meat live weight, sheep",21115,"Meat indigenous, sheep",2.04
+203,Czechia,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.55
+203,Czechia,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.75
+203,Czechia,21122,"Meat indigenous, duck",21122b,"Meat live weight, duck",0.72
+203,Czechia,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.75
+203,Czechia,21124,"Meat indigenous, turkey",21124b,"Meat live weight, turkey ",0.81
+208,Denmark,21118.01b,"Meat live weight, horse",21118.01,"Meat indigenous, horse",2.17
+218,Ecuador,1801,Sugar beet,1802, Sugar cane,1
+231,Ethiopia,1253.01,"Onions, shallots, green",1253.02," Onions, dry",1
+233,Estonia,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.78
+242,Fiji,21111.01b,"Meat live weight, cattle",21111.01,"Meat indigenous, cattle",2.15
+242,Fiji,21121b,"Meat live weight, chicken",21121,"Meat indigenous, chicken",1.8
+242,Fiji,21113.01b,"Meat live weight, pig",21113.01,"Meat indigenous, pig",1.29
+242,Fiji,21115b,"Meat live weight, sheep",21115,"Meat indigenous, sheep",1.89
+246,Finland,21111.01b,"Meat live weight, cattle",21111.01,"Meat indigenous, cattle",1.92
+246,Finland,21121b,"Meat live weight, chicken",21121,"Meat indigenous, chicken",1.33
+246,Finland,21113.01b,"Meat live weight, pig",21113.01,"Meat indigenous, pig",1.33
+246,Finland,21115b,"Meat live weight, sheep",21115,"Meat indigenous, sheep",2.22
+246,Finland,1709.9,"Pulses, nes",1705," Peas, dry",1
+250,France,21111.01b,"Meat live weight, cattle",21111.01,"Meat indigenous, cattle",1.92
+250,France,21121b,"Meat live weight, chicken",21121,"Meat indigenous, chicken",1.33
+250,France,21122b,"Meat live weight, duck",21122,"Meat indigenous, duck",1.35
+250,France,21123b,"Meat live weight, goose",21123,"Meat indigenous, geese",1.33
+250,France,21118.01b,"Meat live weight, horse",21118.01,"Meat indigenous, horse",1.85
+250,France,21113.01b,"Meat live weight, pig",21113.01,"Meat indigenous, pig",1.35
+250,France,21114b,"Meat live weight, rabbit",21114,"Meat indigenous, rabbit",1.35
+250,France,21115b,"Meat live weight, sheep",21115,"Meat indigenous, sheep",2
+250,France,21124b,"Meat live weight, turkey",21124,"Meat indigenous, turkey",1.33
+268,Georgia,21121b,"Meat live weight, chicken",21121,"Meat indigenous, chicken",1.39
+275,Occupied Palestinian Territory ,21116,"Meat indigenous, goat",21116b,"Meat live weight, goat",0.49
+275,Occupied Palestinian Territory ,1699,"Spices, nes",1651, Pepper (piper spp.),1
+276,Germany,1442,Mustard seed,1443, Rapeseed,1
+300,Greece,1921.02,Cotton lint,1921.01,Seed cotton,0.33
+300,Greece,143,Cottonseed,1921.01,Seed cotton,6.67
+300,Greece,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.66
+300,Greece,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.88
+300,Greece,21116,"Meat indigenous, goat",21116b,"Meat live weight, goat",0.35
+300,Greece,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.8
+300,Greece,21114,"Meat indigenous, rabbit",21114b,"Meat live weight, rabbit",0.6
+300,Greece,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.3
+348,Hungary,232,"Eggs, other bird, in shell",231," Eggs, hen, in shell",1
+348,Hungary,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.57
+348,Hungary,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.71
+348,Hungary,21122,"Meat indigenous, duck",21122b,"Meat live weight, duck",0.77
+348,Hungary,21123,"Meat indigenous, geese",21123b,"Meat live weight, goose",0.77
+348,Hungary,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.82
+348,Hungary,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.48
+348,Hungary,21124,"Meat indigenous, turkey",21124b,"Meat live weight, turkey ",0.77
+348,Hungary,1442,Mustard seed,1443, Rapeseed,1
+352,Iceland,21111.01b,"Meat live weight, cattle",21111.01,"Meat indigenous, cattle",1.67
+352,Iceland,21121b,"Meat live weight, chicken",21121,"Meat indigenous, chicken",1.35
+352,Iceland,21118.01b,"Meat live weight, horse",21118.01,"Meat indigenous, horse",1.92
+352,Iceland,21113.01b,"Meat live weight, pig",21113.01,"Meat indigenous, pig",1.32
+352,Iceland,21115b,"Meat live weight, sheep",21115,"Meat indigenous, sheep",2.08
+360,Indonesia,21112,"Meat indigenous, buffalo",21112b,"Meat live weight, buffalo",0.46
+360,Indonesia,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.46
+360,Indonesia,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.85
+360,Indonesia,21122,"Meat indigenous, duck",21122b,"Meat live weight, duck",0.72
+360,Indonesia,21116,"Meat indigenous, goat",21116b,"Meat live weight, goat",0.78
+360,Indonesia,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.8
+364,Iran (Islamic Republic of),21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.5
+364,Iran (Islamic Republic of),21116,"Meat indigenous, goat",21116b,"Meat live weight, goat",0.52
+364,Iran (Islamic Republic of),21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.5
+364,Iran (Islamic Republic of),1290.9,"Vegetables, fresh nes",1234, Tomatoes,1
+372,Ireland,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.52
+376,Israel,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.53
+376,Israel,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.77
+376,Israel,21116,"Meat indigenous, goat",21116b,"Meat live weight, goat",0.48
+376,Israel,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.76
+376,Israel,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.5
+376,Israel,21124,"Meat indigenous, turkey",21124b,"Meat live weight, turkey ",0.79
+376,Israel,21411,Raisins,1330,Grapes,0.18
+376,Israel,1921.01,Seed cotton,143,Cottonseed,0.25
+380,Italy,1329,"Fruit, citrus nes",1322, Lemons and limes,1
+380,Italy,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.75
+380,Italy,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.79
+398,Kazakhstan,1701,"Beans, dry",1705," Peas, dry",1
+398,Kazakhstan,1703,Chick peas,1705," Peas, dry",1
+398,Kazakhstan,21117.01,"Meat indigenous, camel",21117.01b,"Meat live weight, camel",0.54
+398,Kazakhstan,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.53
+398,Kazakhstan,21118.01,"Meat indigenous, horse",21118.01b,"Meat live weight, horse",0.54
+398,Kazakhstan,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.64
+398,Kazakhstan,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.46
+398,Kazakhstan,21116b,"Meat live weight, goat",21115b," Meat live weight, sheep",1
+398,Kazakhstan,1253.01,"Onions, shallots, green",1253.02," Onions, dry",1
+398,Kazakhstan,1709.9,"Pulses, nes",1702," Beans, dry",1
+440,Lithuania,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.57
+440,Lithuania,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.76
+440,Lithuania,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.76
+440,Lithuania,21114,"Meat indigenous, rabbit",21114b,"Meat live weight, rabbit",0.79
+440,Lithuania,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.44
+442,Luxembourg,1701,"Beans, dry",1709.9," Pulses, nes",1
+442,Luxembourg,1199.9,"Cereals, nes",1199.02," Grain, mixed",1
+458,Malaysia,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.67
+470,Malta,21111.01b,"Meat live weight, cattle",21111.01,"Meat indigenous, cattle",1.75
+470,Malta,21121b,"Meat live weight, chicken",21121,"Meat indigenous, chicken",1.33
+470,Malta,21113.01b,"Meat live weight, pig",21113.01,"Meat indigenous, pig",1.27
+470,Malta,21114b,"Meat live weight, rabbit",21114,"Meat indigenous, rabbit",1.41
+480,Mauritius,21115,"Meat indigenous, sheep",21116," Meat indigenous, goat",1
+480,Mauritius,21111.01b,"Meat live weight, cattle",21111.01,"Meat indigenous, cattle",2.17
+480,Mauritius,21121b,"Meat live weight, chicken",21121,"Meat indigenous, chicken",1.31
+480,Mauritius,21122b,"Meat live weight, duck",21122,"Meat indigenous, duck",1.31
+480,Mauritius,21116b,"Meat live weight, goat",21116,"Meat indigenous, goat",2.08
+480,Mauritius,21113.01b,"Meat live weight, pig",21113.01,"Meat indigenous, pig",1.25
+480,Mauritius,21115b,"Meat live weight, sheep",21115,"Meat indigenous, sheep",1.33
+484,Mexico,1921.02,Cotton lint,1921.01,Seed cotton,0.35
+484,Mexico,143,Cottonseed,1921.01,Seed cotton,2.74
+496,Mongolia,21117.01,"Meat indigenous, camel",21117.01b,"Meat live weight, camel",0.39
+496,Mongolia,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.5
+496,Mongolia,21116,"Meat indigenous, goat",21116b,"Meat live weight, goat",0.44
+496,Mongolia,21118.01,"Meat indigenous, horse",21118.01b,"Meat live weight, horse",0.5
+496,Mongolia,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.61
+496,Mongolia,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.42
+524,Nepal,21112b,"Meat live weight, buffalo",21112,"Meat indigenous, buffalo",2
+524,Nepal,21121b,"Meat live weight, chicken",21121,"Meat indigenous, chicken",1.33
+524,Nepal,21122b,"Meat live weight, duck",21122,"Meat indigenous, duck",1.33
+524,Nepal,21116b,"Meat live weight, goat",21116,"Meat indigenous, goat",2
+524,Nepal,21113.01b,"Meat live weight, pig",21113.01,"Meat indigenous, pig",2
+524,Nepal,21115b,"Meat live weight, sheep",21115,"Meat indigenous, sheep",2
+524,Nepal,1921.01,Seed cotton,1921.02,Cotton lint,3.03
+528,Netherlands,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.54
+528,Netherlands,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.78
+528,Netherlands,21118.01,"Meat indigenous, horse",21118.01b,"Meat live weight, horse",0.42
+528,Netherlands,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.65
+528,Netherlands,21114,"Meat indigenous, rabbit",21114b,"Meat live weight, rabbit",0.78
+528,Netherlands,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.49
+554,New Zealand,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.5
+554,New Zealand,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.75
+554,New Zealand,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.72
+554,New Zealand,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.5
+578,Norway,21111.01b,"Meat live weight, cattle",21111.01,"Meat indigenous, cattle",1.92
+578,Norway,21121b,"Meat live weight, chicken",21121,"Meat indigenous, chicken",1.33
+578,Norway,21122b,"Meat live weight, duck",21122,"Meat indigenous, duck",1.33
+578,Norway,21116b,"Meat live weight, goat",21116,"Meat indigenous, goat",2.22
+578,Norway,21118.01b,"Meat live weight, horse",21118.01,"Meat indigenous, horse",1.96
+578,Norway,21113.01b,"Meat live weight, pig",21113.01,"Meat indigenous, pig",1.33
+578,Norway,21114b,"Meat live weight, rabbit",21114,"Meat indigenous, rabbit",1.33
+578,Norway,21115b,"Meat live weight, sheep",21115,"Meat indigenous, sheep",2.22
+578,Norway,21124b,"Meat live weight, turkey",21124,"Meat indigenous, turkey",1.33
+600,Paraguay,143,Cottonseed,1921.01,Seed cotton,6.67
+608,Philippines,21112,"Meat indigenous, buffalo",21112b,"Meat live weight, buffalo",0.5
+608,Philippines,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.5
+608,Philippines,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.77
+608,Philippines,21122,"Meat indigenous, duck",21122b,"Meat live weight, duck",0.77
+608,Philippines,21116,"Meat indigenous, goat",21116b,"Meat live weight, goat",0.43
+608,Philippines,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.7
+608,Philippines,2165,"Oil, palm",1491.01,"Oil, palm fruit",0.28
+608,Philippines,1802,Sugar cane,23511.01,"Sugar, cane, raw, centrifuga",10.87
+616,Poland,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.52
+616,Poland,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.69
+616,Poland,21122,"Meat indigenous, duck",21122b,"Meat live weight, duck",0.69
+616,Poland,21123,"Meat indigenous, geese",21123b,"Meat live weight, goose",0.69
+616,Poland,21118.01,"Meat indigenous, horse",21118.01b,"Meat live weight, horse",0.55
+616,Poland,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.77
+616,Poland,21114,"Meat indigenous, rabbit",21114b,"Meat live weight, rabbit",0.57
+616,Poland,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.55
+616,Poland,21124,"Meat indigenous, turkey",21124b,"Meat live weight, turkey ",0.69
+620,Portugal,21116,"Meat indigenous, goat",21116b,"Meat live weight, goat",0.5
+620,Portugal,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.55
+620,Portugal,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.75
+620,Portugal,21114,"Meat indigenous, rabbit",21114b,"Meat live weight, rabbit",0.75
+620,Portugal,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.5
+620,Portugal,21124,"Meat indigenous, turkey",21124b,"Meat live weight, turkey ",1.33
+620,Portugal,21113.01b,"Meat live weight, pig",21113.01,"Meat indigenous, pig",1.32
+642,Romania,1342.02,Quinces,1341, Apples,1
+643,Russian Federation,21116,"Meat indigenous, goat",21116b,"Meat live weight, goat",0.49
+646,Rwanda,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.66
+646,Rwanda,21111.01b,"Meat live weight, cattle",21111.01,"Meat indigenous, cattle",2.22
+646,Rwanda,21116b,"Meat live weight, goat",21116,"Meat indigenous, goat",2.5
+646,Rwanda,21113.01b,"Meat live weight, pig",21113.01,"Meat indigenous, pig",2.22
+646,Rwanda,21115b,"Meat live weight, sheep",21115,"Meat indigenous, sheep",2
+646,Rwanda,2292,"Milk, whole fresh goat",2211," Milk, whole fresh cow",1
+646,Rwanda,2291,"Milk, whole fresh sheep",2211," Milk, whole fresh cow",1
+688,Serbia,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.53
+688,Serbia,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.75
+688,Serbia,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.78
+688,Serbia,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.58
+703,Slovakia,232,"Eggs, other bird, in shell",231," Eggs, hen, in shell",1
+703,Slovakia,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.7
+703,Slovakia,21124,"Meat indigenous, turkey",21124b,"Meat live weight, turkey ",0.7
+703,Slovakia,21111.01b,"Meat live weight, cattle",21111.01,"Meat indigenous, cattle",1.85
+703,Slovakia,21113.01b,"Meat live weight, pig",21113.01,"Meat indigenous, pig",1.18
+703,Slovakia,2292,"Milk, whole fresh goat",2211," Milk, whole fresh cow",1
+703,Slovakia,1353.01,Raspberries,1354, Strawberries,1
+704,Viet Nam,21112b,"Meat live weight, buffalo",21112,"Meat indigenous, buffalo",2
+704,Viet Nam,21111.01b,"Meat live weight, cattle",21111.01,"Meat indigenous, cattle",1.85
+704,Viet Nam,21121b,"Meat live weight, chicken",21121,"Meat indigenous, chicken",1.2
+704,Viet Nam,21122b,"Meat live weight, duck",21122,"Meat indigenous, duck",1.2
+704,Viet Nam,21116b,"Meat live weight, goat",21116,"Meat indigenous, goat",2.22
+704,Viet Nam,21118.01b,"Meat live weight, horse",21118.01,"Meat indigenous, horse",2.13
+704,Viet Nam,21113.01b,"Meat live weight, pig",21113.01,"Meat indigenous, pig",1.52
+705,Slovenia,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.5
+705,Slovenia,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.7
+705,Slovenia,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.7
+705,Slovenia,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.5
+724,Spain,1921.02,Cotton lint,1921.01,Seed cotton,0.32
+724,Spain,143,Cottonseed,1921.01,Seed cotton,4
+724,Spain,21122,"Meat indigenous, duck",21122b,"Meat live weight, duck",0.75
+724,Spain,21124,"Meat indigenous, turkey",21124b,"Meat live weight, turkey ",0.83
+724,Spain,21118.02b,"Meat live weight, ass",21118.02,"Meat indigenous, ass",2
+724,Spain,21118.01b,"Meat live weight, horse",21118.01,"Meat indigenous, horse",2
+724,Spain,21118.03b,"Meat live weight, mule",21118.03,"Meat indigenous, mule",2
+724,Spain,21113.01b,"Meat live weight, pig",21113.01,"Meat indigenous, pig",1.75
+756,Switzerland,1199.02,"Grain, mixed",115,Barley,1
+756,Switzerland,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.68
+756,Switzerland,21124,"Meat indigenous, turkey",21124b,"Meat live weight, turkey",0.68
+756,Switzerland,2291,"Milk, whole fresh sheep",2211," Milk, whole fresh cow",1
+764,Thailand,21112,"Meat indigenous, buffalo",21112b,"Meat live weight, buffalo",0.5
+764,Thailand,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.54
+764,Thailand,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.8
+764,Thailand,21122,"Meat indigenous, duck",21121b,"Meat live weight, chicken",0.8
+764,Thailand,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.69
+768,Togo,1599,"Roots and tubers, nes",1540, Yams,1
+804,Ukraine,232,"Eggs, other bird, in shell",231," Eggs, hen, in shell",1
+804,Ukraine,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.59
+804,Ukraine,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.73
+804,Ukraine,21116,"Meat indigenous, goat",21116b,"Meat live weight, goat",0.43
+804,Ukraine,21118.01,"Meat indigenous, horse",21118.01b,"Meat live weight, horse",0.6
+804,Ukraine,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.73
+804,Ukraine,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.43
+804,Ukraine,2293,"Milk, whole fresh camel",2211," Milk, whole fresh cow",1
+804,Ukraine,2292,"Milk, whole fresh goat",2211," Milk, whole fresh cow",1
+804,Ukraine,2291,"Milk, whole fresh sheep",2211," Milk, whole fresh cow",1
+804,Ukraine,1253.01,"Onions, shallots, green",1253.02," Onions, dry",1
+804,Ukraine,1709.9,"Pulses, nes",1702," Beans, dry",1
+807,The former Yugoslav Republic of Macedonia,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.54
+807,The former Yugoslav Republic of Macedonia,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.75
+807,The former Yugoslav Republic of Macedonia,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.79
+807,The former Yugoslav Republic of Macedonia,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.79
+807,The former Yugoslav Republic of Macedonia,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.54
+807,The former Yugoslav Republic of Macedonia,21121,"Meat indigenous, chicken",21121b,"Meat live weight, chicken",0.75
+807,The former Yugoslav Republic of Macedonia,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.79
+807,The former Yugoslav Republic of Macedonia,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.79
+826,United Kingdom,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.45
+826,United Kingdom,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.76
+826,United Kingdom,21115,"Meat indigenous, sheep",21115b,"Meat live weight, sheep",0.51
+840,United States of America,21111.01,"Meat indigenous, cattle",21111.01b,"Meat live weight, cattle",0.57
+840,United States of America,21113.01,"Meat indigenous, pig",21113.01b,"Meat live weight, pig",0.71
+840,United States of America,1921.01,Seed cotton,143,Cottonseed,0.25
+858,Uruguay,21114b,"Meat live weight, rabbit",21114,"Meat indigenous, rabbit",1.22

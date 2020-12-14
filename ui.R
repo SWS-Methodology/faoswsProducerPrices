@@ -2,15 +2,15 @@ tagList(
  # shinythemes::themeSelector(),
   navbarPage(
      # theme = "flatly",  # <--- To use a theme, uncomment this
-     "shinythemes",
+     "Producer Prices Tool",
 #-- Overview ----
-    tabPanel("Overview",
+    tabPanel("Outlier",
              column(12,
                     column(3,
                            selectInput(inputId = "btn_country",
                                        label = 'Country',
                                        choices = c('', country_input$label), 
-                                       selected = '')
+                                       selected = 'Iran (Islamic Republic of) - 364')
                            ),
                     column(2,
                            uiOutput('btn_year')
@@ -20,7 +20,8 @@ tagList(
                            )
                     ),
                tabsetPanel(
-                 tabPanel("Compare data", fluid = TRUE,
+#-- Compare data ----
+                 tabPanel("Validation", fluid = TRUE,
                           column(12,
                                  
                                          # textInput("txt", "Text input:", "general"),
@@ -37,18 +38,31 @@ tagList(
                                         DT::dataTableOutput('out_tab_comp')
                                  )
                           ),
-                 tabPanel("Check of data", 
+#-- Check data ----
+                 tabPanel("Compare groups", 
                           column(12,
                                  column(2,
                                         radioButtons(inputId = "btn_break",
                                                      label = 'Change of currency',
                                                      choices = c(Yes = 'y', No = 'n'),
-                                                     selected = 'n'), # To do is to put the B flag at the country values!
+                                                     selected = 'n',
+                                                     inline = T), # To do is to put the B flag at the country values!
                                         
                                         conditionalPanel(condition = "input.btn_break == 'y' ",
                                                          textInput(inputId = 'btn_manual_break', 
                                                                    label = 'Add metadata to change of currency', 
-                                                                   value = NA)),
+                                                                   value = NA),
+                                                         selectInput(inputId = "btn_breakyear",
+                                                                     label = 'Year of change',
+                                                                     choices = c("", years_input),
+                                                                     selected = max(as.numeric(years_input)))
+                                                         ),
+                                        radioButtons(inputId = "btn_conversion",
+                                                     label = 'Conversion needed',
+                                                     choices = c(Yes = 'y', No = 'n'),
+                                                     selected = 'n',
+                                                     inline = T), # To do is to put the B flag at the country values!
+                                        
                                         actionBttn(inputId = 'validateQuest',
                                                    label = 'Validate series',
                                                    style = "unite", 
@@ -56,28 +70,15 @@ tagList(
                                                    )
                                         ),
                                  column(10,
-                                        rHandsontableOutput("rawData"))
-                          )),
-                 tabPanel("Product insight", 
-                          column(12,
-                                 column(3,
-                                        uiOutput('btn_missing'),
-                                        uiOutput('btn_product'),
-                                        h5('LCU/t'),
-                                        DT::dataTableOutput('YPtab')),
-                                 column(9,
-                                        plotOutput('gg_plot_YP')
-                                        
-                                        )
-                                 )
-                          
-                          )
+                                        DT::dataTableOutput("rawData"))
+                          ))
                )
             # )
     ),
 #-- Missing data imputation ----
-    tabPanel('Missing data imputation',
+    tabPanel('Imputation',
              tabsetPanel(
+#-- Commodity Group Information ----
                tabPanel("Commodity Group Information",
                         column(12,
                                column(3,
@@ -93,6 +94,7 @@ tagList(
                                       conditionalPanel("input.btn_gR == '5'",
                                                        uiOutput('out_btn_manual')))
                         )),
+#-- Auxiliary Information ----
                tabPanel('Auxiliary Information',
              
                     column(4,
@@ -115,6 +117,7 @@ tagList(
                     tableOutput("contents")
                     )
                ),
+#-- Price Ratios ----
              tabPanel('Price Ratios')
              )
              ),
