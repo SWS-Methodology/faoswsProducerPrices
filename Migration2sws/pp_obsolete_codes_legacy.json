@@ -1,0 +1,198 @@
+{
+    "type": "datatable",
+    "data": {
+        "id": "pp_obsolete_codes_legacy",
+        "label": {
+            "en": "pp_obsolete_codes_legacy"
+        },
+        "description": {
+            "en": "This datatable contains data for products not in use in the current FAOSTAT and CPC classifications."
+        },
+        "contacts": [
+            "charlotte.taglioni@fao.org"
+        ],
+        "domains": [
+            "prod_prices"
+        ],
+        "columns": [
+            {
+                "id": "fk_datahistory_areacode_area",
+                "label": {
+                    "en": "fk_datahistory_areacode_area"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "smalltext"
+            },
+            {
+                "id": "fk_datahistory_itemcode_item",
+                "label": {
+                    "en": "fk_datahistory_itemcode_item"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "smalltext"
+            },
+            {
+                "id": "fk_datahistory_elementcode_element",
+                "label": {
+                    "en": "fk_datahistory_elementcode_element"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "smalltext"
+            },
+            {
+                "id": "datahistory_year",
+                "label": {
+                    "en": "datahistory_year"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "smalltext"
+            },
+            {
+                "id": "datahistory_value",
+                "label": {
+                    "en": "datahistory_value"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "decimal"
+            },
+            {
+                "id": "fk_datahistory_symbolcode_symbol",
+                "label": {
+                    "en": "fk_datahistory_symbolcode_symbol"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "smalltext"
+            },
+            {
+                "id": "datahistory_note",
+                "label": {
+                    "en": "datahistory_note"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "text"
+            },
+            {
+                "id": "fk_datahistory_datasourceissueid_datasourceissue",
+                "label": {
+                    "en": "fk_datahistory_datasourceissueid_datasourceissue"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "smalltext"
+            },
+            {
+                "id": "datahistory_author",
+                "label": {
+                    "en": "datahistory_author"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "text"
+            },
+            {
+                "id": "datahistory_updatedate",
+                "label": {
+                    "en": "datahistory_updatedate"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "text"
+            },
+            {
+                "id": "datahistory_recordno",
+                "label": {
+                    "en": "datahistory_recordno"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "integer"
+            },
+            {
+                "id": "fk_datahistory_sourceid_sources",
+                "label": {
+                    "en": "fk_datahistory_sourceid_sources"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "smalltext"
+            },
+            {
+                "id": "datahistory_sourcevolume",
+                "label": {
+                    "en": "datahistory_sourcevolume"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "text"
+            },
+            {
+                "id": "datahistory_sourcenote",
+                "label": {
+                    "en": "datahistory_sourcenote"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "smalltext"
+            },
+            {
+                "id": "fk_datahistory_currencycode_currency",
+                "label": {
+                    "en": "fk_datahistory_currencycode_currency"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "smalltext"
+            },
+            {
+                "id": "datahistory_supervisor",
+                "label": {
+                    "en": "datahistory_supervisor"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "text"
+            },
+            {
+                "id": "datahistory_validateflag",
+                "label": {
+                    "en": "datahistory_validateflag"
+                },
+                "description": {
+                    "en": ""
+                },
+                "type": "smalltext"
+            }
+        ],
+        "mapping": {
+            "schema": "datatables"
+        },
+        "plugins": [],
+        "harvesters": [],
+        "facets": [
+            "removable"
+        ]
+    }
+}
