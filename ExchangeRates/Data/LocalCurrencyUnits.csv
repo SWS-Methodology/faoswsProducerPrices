@@ -1,261 +1,267 @@
-Identifier;Code;Start_Year;End_Year;Public;Type;Name_En;Name_Fr;Name_Es;Name_Ar;Name_Zh;Name_Ru;ShortName_En;ShortName_Fr;ShortName_Es;ShortName_Ar;ShortName_Zh;ShortName_Ru;Definition;ScopeNote;HistoryNote;EditorialNote;SubSet
-4;AFA;1,925;2,003;;;Afghani;Afghani;Afghani;;;;Afghani;Afghani;Afghani;;;;;;;;
-8;ALL;1,965;;;;Lek;Lek;Lek;;;;Lek;Lek;Lek;;;;;;;;
-12;DZD;;;;;Algerian Dinar;Algerian Dinar;Algerian Dinar;;;;Algerian Dinar;Algerian Dinar;Algerian Dinar;;;;;;;;
-20;ADP;1,869;2,001;;;Andorran Peseta;Andorran Peseta;Andorran Peseta;;;;Andorran Peseta;Andorran Peseta;Andorran Peseta;;;;;;;;
-24;AON;1,990;1,995;;;New Kwanza;Kwanza Nouveau;Kwanza Nuevo;;;;New Kwanza;Kwanza Nouveau;Kwanza Nuevo;;;;;;;;
-31;AZM;1,992;2,005;;;Azerbaijan Manat;Azerbaijan Manat;Azerbaijan Manat;;;;Azerbaijan Manat;Azerbaijan Manat;Azerbaijan Manat;;;;;;;;
-32;ARS;1,992;;;;Argentine Peso;Argentine Peso;Argentine Peso;;;;Argentine Peso;Argentine Peso;Argentine Peso;;;;;;;;
-36;AUD;;;;;Australian Dollar;Australian Dollar;Australian Dollar;;;;Australian Dollar;Australian Dollar;Australian Dollar;;;;;;;;
-40;ATS;;1,998;;;Schilling;Schilling;Schilling;;;;Schilling;Schilling;Schilling;;;;;;;;
-44;BSD;;;;;Bahamian Dollar;Bahamian Dollar;Bahamian Dollar;;;;Bahamian Dollar;Bahamian Dollar;Bahamian Dollar;;;;;;;;
-48;BHD;;;;;Bahraini Dinar;Bahraini Dinar;Bahraini Dinar;;;;Bahraini Dinar;Bahraini Dinar;Bahraini Dinar;;;;;;;;
-50;BDT;;;;;Taka;Taka;Taka;;;;Taka;Taka;Taka;;;;;;;;
-51;AMD;;;;;Armenian Dram;Armenian Dram;Armenian Dram;;;;Armenian Dram;Armenian Dram;Armenian Dram;;;;;;;;
-52;BBD;;;;;Barbados Dollar;Barbados Dollar;Barbados Dollar;;;;Barbados Dollar;Barbados Dollar;Barbados Dollar;;;;;;;;
-56;BEF;;1,998;;;Belgian Franc;Belgian Franc;Belgian Franc;;;;Belgian Franc;Belgian Franc;Belgian Franc;;;;;;;;
-60;BMD;;;;;Bermudian Dollar;Bermudian Dollar;Bermudian Dollar;;;;Bermudian Dollar;Bermudian Dollar;Bermudian Dollar;;;;;;;;
-64;BTN;;;;;Ngultrum;Ngultrum;Ngultrum;;;;Ngultrum;Ngultrum;Ngultrum;;;;;;;;
-68;BOB;1,987;;;;Boliviano;Boliviano;Boliviano;;;;Boliviano;Boliviano;Boliviano;;;;;;;;
-70;BAD;1,992;1,998;;;Bosnia and Herzegovina dinar;Bosnia and Herzegovina dinar;Bosnia and Herzegovina dinar;;;;Bosnia and Herzegovina dinar;Bosnia and Herzegovina dinar;Bosnia and Herzegovina dinar;;;;;;;;
-72;BWP;;;;;Pula;Pula;Pula;;;;Pula;Pula;Pula;;;;;;;;
-76;BRR;1,993;1,994;;;Cruziero Real;Cruziero Real;Cruziero Real;;;;Cruziero Real;Cruziero Real;Cruziero Real;;;;;;;;
-84;BZD;;;;;Belize Dollar;Belize Dollar;Belize Dollar;;;;Belize Dollar;Belize Dollar;Belize Dollar;;;;;;;;
-90;SBD;;;;;Solomon Islands Dollar;Solomon Islands Dollar;Solomon Islands Dollar;;;;Solomon Islands Dollar;Solomon Islands Dollar;Solomon Islands Dollar;;;;;;;;
-96;BND;;;;;Brunei Dollar;Brunei Dollar;Brunei Dollar;;;;Brunei Dollar;Brunei Dollar;Brunei Dollar;;;;;;;;
-100;BGL;1,962;1,999;;;Bulgarian Lev;Bulgarian Lev;Bulgarian Lev;;;;Bulgarian Lev;Bulgarian Lev;Bulgarian Lev;;;;;;;;
-104;MMK;1,990;;;;Kyat;Kyat;Kyat;;;;Kyat;Kyat;Kyat;;;;;;;;
-108;BIF;;;;;Burundi Franc;Burundi Franc;Burundi Franc;;;;Burundi Franc;Burundi Franc;Burundi Franc;;;;;;;;
-112;BYB;1,992;1,999;;;Belarusian Ruble;Belarusian Ruble;Belarusian Ruble;;;;Belarusian Ruble;Belarusian Ruble;Belarusian Ruble;;;;;;;;
-116;KHR;;;;;Riel;Riel;Riel;;;;Riel;Riel;Riel;;;;;;;;
-124;CAD;;;;;Canadian Dollar;Canadian Dollar;Canadian Dollar;;;;Canadian Dollar;Canadian Dollar;Canadian Dollar;;;;;;;;
-132;CVE;;;;;Cabo Verde Escudo;Cabo Verde Escudo;Cabo Verde Escudo;;;;Cabo Verde Escudo;Cabo Verde Escudo;Cabo Verde Escudo;;;;;;;;
-136;KYD;;;;;Cayman Islands Dollar;Cayman Islands Dollar;Cayman Islands Dollar;;;;Cayman Islands Dollar;Cayman Islands Dollar;Cayman Islands Dollar;;;;;;;;
-144;LKR;;;;;Sri Lanka Rupee;Sri Lanka Rupee;Sri Lanka Rupee;;;;Sri Lanka Rupee;Sri Lanka Rupee;Sri Lanka Rupee;;;;;;;;
-152;CLP;;;;;Chilean Peso;Chilean Peso;Chilean Peso;;;;Chilean Peso;Chilean Peso;Chilean Peso;;;;;;;;
-156;CNY;;;;;Yuan Renminbi;Yuan Renminbi;Yuan Renminbi;;;;Yuan Renminbi;Yuan Renminbi;Yuan Renminbi;;;;;;;;
-170;COP;;;;;Colombian Peso;Colombian Peso;Colombian Peso;;;;Colombian Peso;Colombian Peso;Colombian Peso;;;;;;;;
-174;KMF;;;;;Comorian Franc ;Comorian Franc ;Comorian Franc ;;;;Comorian Franc ;Comorian Franc ;Comorian Franc ;;;;;;;;
-180;ZRN;1,993;1,998;;;New Zaire;New Zaire;New Zaire;;;;New Zaire;New Zaire;New Zaire;;;;;;;;
-188;CRC;;;;;Costa Rican Colon;Costa Rican Colon;Costa Rican Colon;;;;Costa Rican Colon;Costa Rican Colon;Costa Rican Colon;;;;;;;;
-191;HRK;1,995;;;;Kuna;Kuna;Kuna;;;;Kuna;Kuna;Kuna;;;;;;;;
-192;CUP;;;;;Cuban Peso;Cuban Peso;Cuban Peso;;;;Cuban Peso;Cuban Peso;Cuban Peso;;;;;;;;
-196;CYP;;2,006;;;Cypriot Pound;Cypriot Pound;Cypriot Pound;;;;Cypriot Pound;Cypriot Pound;Cypriot Pound;;;;;;;;
-200;CSK;;1,993;;;Czechoslovak Koruna;Czechoslovak Koruna;Czechoslovak Koruna;;;;Czechoslovak Koruna;Czechoslovak Koruna;Czechoslovak Koruna;;;;;;;;
-203;CZK;1,993;;;;Czech Koruna;Czech Koruna;Czech Koruna;;;;Czech Koruna;Czech Koruna;Czech Koruna;;;;;;;;
-208;DKK;;;;;Danish Krone;Danish Krone;Danish Krone;;;;Danish Krone;Danish Krone;Danish Krone;;;;;;;;
-214;DOP;;;;;Dominican Peso;Dominican Peso;Dominican Peso;;;;Dominican Peso;Dominican Peso;Dominican Peso;;;;;;;;
-218;ECS;;2,000;;;Ecuadorian Sucre;Ecuadorian Sucre;Ecuadorian Sucre;;;;Ecuadorian Sucre;Ecuadorian Sucre;Ecuadorian Sucre;;;;;;;;
-222;SVC;1,891;2,001;;;El Salvador Colon;El Salvador Colon;El Salvador Colon;;;;El Salvador Colon;El Salvador Colon;El Salvador Colon;;;;;;;;
-226;GQE;1,975;1,985;;;Ekwele;Ekwele;Ekwele;;;;Ekwele;Ekwele;Ekwele;;;;;;;;
-230;ETB;;;;;Ethiopian Birr;Ethiopian Birr;Ethiopian Birr;;;;Ethiopian Birr;Ethiopian Birr;Ethiopian Birr;;;;;;;;
-232;ERN;1,998;;;;Nakfa;Nakfa;Nakfa;;;;Nakfa;Nakfa;Nakfa;;;;;;;;
-233;EEK;;2,010;;;Kroon;Kroon;Kroon;;;;Kroon;Kroon;Kroon;;;;;;;;
-238;FKP;;;;;Falkland Islands Pound;Falkland Islands Pound;Falkland Islands Pound;;;;Falkland Islands Pound;Falkland Islands Pound;Falkland Islands Pound;;;;;;;;
-242;FJD;;;;;Fiji Dollar;Fiji Dollar;Fiji Dollar;;;;Fiji Dollar;Fiji Dollar;Fiji Dollar;;;;;;;;
-246;FIM;;1,998;;;Markka;Markka;Markka;;;;Markka;Markka;Markka;;;;;;;;
-250;FRF;;1,998;;;French Franc;French Franc;French Franc;;;;French Franc;French Franc;French Franc;;;;;;;;
-262;DJF;;;;;Djibouti Franc;Djibouti Franc;Djibouti Franc;;;;Djibouti Franc;Djibouti Franc;Djibouti Franc;;;;;;;;
-270;GMD;;;;;Dalasi;Dalasi;Dalasi;;;;Dalasi;Dalasi;Dalasi;;;;;;;;
-276;DEM;;1,998;;;Deutsche Mark;Deutsche Mark;Deutsche Mark;;;;Deutsche Mark;Deutsche Mark;Deutsche Mark;;;;;;;;
-278;DDM;;1,990;;;Mark der DDR;Mark der DDR;Mark der DDR;;;;Mark der DDR;Mark der DDR;Mark der DDR;;;;;;;;
-288;GHC;1,967;2,007;;;Cedi;Cedi;Cedi;;;;Cedi;Cedi;Cedi;;;;;;;;
-292;GIP;;;;;Gibraltar Pound;Gibraltar Pound;Gibraltar Pound;;;;Gibraltar Pound;Gibraltar Pound;Gibraltar Pound;;;;;;;;
-300;GRD;1,954;2,000;;;Drachma;Drachma;Drachma;;;;Drachma;Drachma;Drachma;;;;;;;;
-320;GTQ;;;;;Quetzal;Quetzal;Quetzal;;;;Quetzal;Quetzal;Quetzal;;;;;;;;
-324;GNF;1,986;;;;Guinean Franc;Guinean Franc;Guinean Franc;;;;Guinean Franc;Guinean Franc;Guinean Franc;;;;;;;;
-328;GYD;;;;;Guyana Dollar;Guyana Dollar;Guyana Dollar;;;;Guyana Dollar;Guyana Dollar;Guyana Dollar;;;;;;;;
-332;HTG;;;;;Gourde;Gourde;Gourde;;;;Gourde;Gourde;Gourde;;;;;;;;
-340;HNL;;;;;Lempira;Lempira;Lempira;;;;Lempira;Lempira;Lempira;;;;;;;;
-344;HKD;;;;;Hong Kong Dollar;Hong Kong Dollar;Hong Kong Dollar;;;;Hong Kong Dollar;Hong Kong Dollar;Hong Kong Dollar;;;;;;;;
-348;HUF;;;;;Forint;Forint;Forint;;;;Forint;Forint;Forint;;;;;;;;
-352;ISK;1,981;;;;Iceland Krona;Iceland Krona;Iceland Krona;;;;Iceland Krona;Iceland Krona;Iceland Krona;;;;;;;;
-356;INR;;;;;Indian Rupee;Indian Rupee;Indian Rupee;;;;Indian Rupee;Indian Rupee;Indian Rupee;;;;;;;;
-360;IDR;;;;;Rupiah;Rupiah;Rupiah;;;;Rupiah;Rupiah;Rupiah;;;;;;;;
-364;IRR;;;;;Iranian Rial;Iranian Rial;Iranian Rial;;;;Iranian Rial;Iranian Rial;Iranian Rial;;;;;;;;
-368;IQD;;;;;Iraqi Dinar;Iraqi Dinar;Iraqi Dinar;;;;Iraqi Dinar;Iraqi Dinar;Iraqi Dinar;;;;;;;;
-372;IEP;1,938;1,998;;;Irish Pound;Irish Pound;Irish Pound;;;;Irish Pound;Irish Pound;Irish Pound;;;;;;;;
-376;ILS;1,986;;;;New Israeli Sheqel;New Israeli Sheqel;New Israeli Sheqel;;;;New Israeli Sheqel;New Israeli Sheqel;New Israeli Sheqel;;;;;;;;
-380;ITL;1,861;1,998;;;Italian Lira;Italian Lira;Italian Lira;;;;Italian Lira;Italian Lira;Italian Lira;;;;;;;;
-388;JMD;;;;;Jamaican Dollar;Jamaican Dollar;Jamaican Dollar;;;;Jamaican Dollar;Jamaican Dollar;Jamaican Dollar;;;;;;;;
-392;JPY;;;;;Yen;Yen;Yen;;;;Yen;Yen;Yen;;;;;;;;
-398;KZT;;;;;Tenge;Tenge;Tenge;;;;Tenge;Tenge;Tenge;;;;;;;;
-400;JOD;;;;;Jordanian Dinar;Jordanian Dinar;Jordanian Dinar;;;;Jordanian Dinar;Jordanian Dinar;Jordanian Dinar;;;;;;;;
-404;KES;;;;;Kenyan Shilling;Kenyan Shilling;Kenyan Shilling;;;;Kenyan Shilling;Kenyan Shilling;Kenyan Shilling;;;;;;;;
-408;KPW;;;;;North Korean Won;North Korean Won;North Korean Won;;;;North Korean Won;North Korean Won;North Korean Won;;;;;;;;
-410;KRW;;;;;Won;Won;Won;;;;Won;Won;Won;;;;;;;;
-414;KWD;;;;;Kuwaiti Dinar;Kuwaiti Dinar;Kuwaiti Dinar;;;;Kuwaiti Dinar;Kuwaiti Dinar;Kuwaiti Dinar;;;;;;;;
-417;KGS;;;;;Som;Som;Som;;;;Som;Som;Som;;;;;;;;
-418;LAK;1,980;;;;Lao Kip;Lao Kip;Lao Kip;;;;Lao Kip;Lao Kip;Lao Kip;;;;;;;;
-422;LBP;;;;;Lebanese Pound;Lebanese Pound;Lebanese Pound;;;;Lebanese Pound;Lebanese Pound;Lebanese Pound;;;;;;;;
-426;LSL;1,995;;;;Loti;Loti;Loti;;;;Loti;Loti;Loti;;;;;;;;
-428;LVL;1,992;2,012;;;Latvian Lats;Latvian Lats;Latvian Lats;;;;Latvian Lats;Latvian Lats;Latvian Lats;;;;;;;;
-430;LRD;;;;;Liberian Dollar;Liberian Dollar;Liberian Dollar;;;;Liberian Dollar;Liberian Dollar;Liberian Dollar;;;;;;;;
-434;LYD;1,971;;;;Libyan Dinar;Libyan Dinar;Libyan Dinar;;;;Libyan Dinar;Libyan Dinar;Libyan Dinar;;;;;;;;
-440;LTL;1,994;2,014;;;Lithuanian Litas;Lithuanian Litas;Lithuanian Litas;;;;Lithuanian Litas;Lithuanian Litas;Lithuanian Litas;;;;;;;;
-442;LUF;1,994;1,998;;;Luxembourg Franc;Luxembourg Franc;Luxembourg Franc;;;;Luxembourg Franc;Luxembourg Franc;Luxembourg Franc;;;;;;;;
-446;MOP;;;;;Pataca;Pataca;Pataca;;;;Pataca;Pataca;Pataca;;;;;;;;
-450;MGF;1,963;2,004;;;Malagasy Franc;Malagasy Franc;Malagasy Franc;;;;Malagasy Franc;Malagasy Franc;Malagasy Franc;;;;;;;;
-454;MWK;;;;;Malawi Kwacha;Malawi Kwacha;Malawi Kwacha;;;;Malawi Kwacha;Malawi Kwacha;Malawi Kwacha;;;;;;;;
-458;MYR;;;;;Malaysian Ringgit;Malaysian Ringgit;Malaysian Ringgit;;;;Malaysian Ringgit;Malaysian Ringgit;Malaysian Ringgit;;;;;;;;
-462;MVR;1,982;;;;Rufiyaa;Rufiyaa;Rufiyaa;;;;Rufiyaa;Rufiyaa;Rufiyaa;;;;;;;;
-466;MLF;1,962;1,984;;;Malian Franc;Malian Franc;Malian Franc;;;;Malian Franc;Malian Franc;Malian Franc;;;;;;;;
-470;MTL;1,984;2,007;;;Maltese Lira;Maltese Lira;Maltese Lira;;;;Maltese Lira;Maltese Lira;Maltese Lira;;;;;;;;
-478;MRO;1,973;2,017;;;Ouguiya;Ouguiya;Ouguiya;;;;Ouguiya;Ouguiya;Ouguiya;;;;;;;;
-480;MUR;;;;;Mauritius Rupee;Mauritius Rupee;Mauritius Rupee;;;;Mauritius Rupee;Mauritius Rupee;Mauritius Rupee;;;;;;;;
-484;MXN;1,993;;;;Mexican Peso;Mexican Peso;Mexican Peso;;;;Mexican Peso;Mexican Peso;Mexican Peso;;;;;;;;
-496;MNT;;;;;Tugrik;Tugrik;Tugrik;;;;Tugrik;Tugrik;Tugrik;;;;;;;;
-498;MDL;;;;;Moldovan Leu;Moldovan Leu;Moldovan Leu;;;;Moldovan Leu;Moldovan Leu;Moldovan Leu;;;;;;;;
-504;MAD;;;;;Moroccan Dirham;Moroccan Dirham;Moroccan Dirham;;;;Moroccan Dirham;Moroccan Dirham;Moroccan Dirham;;;;;;;;
-508;MZM;1,980;2,006;;;Mozambique Metical;Mozambique Metical;Mozambique Metical;;;;Mozambique Metical;Mozambique Metical;Mozambique Metical;;;;;;;;
-512;OMR;;;;;Rial Omani;Rial Omani;Rial Omani;;;;Rial Omani;Rial Omani;Rial Omani;;;;;;;;
-516;NAD;1,994;;;;Namibia Dollar;Namibia Dollar;Namibia Dollar;;;;Namibia Dollar;Namibia Dollar;Namibia Dollar;;;;;;;;
-524;NPR;;;;;Nepalese Rupee;Nepalese Rupee;Nepalese Rupee;;;;Nepalese Rupee;Nepalese Rupee;Nepalese Rupee;;;;;;;;
-528;NLG;;1,998;;;Netherlands Guilder;Netherlands Guilder;Netherlands Guilder;;;;Netherlands Guilder;Netherlands Guilder;Netherlands Guilder;;;;;;;;
-532;ANG;;;;;Netherlands Antillean Guilder;Netherlands Antillean Guilder;Netherlands Antillean Guilder;;;;Netherlands Antillean Guilder;Netherlands Antillean Guilder;Netherlands Antillean Guilder;;;;;;;;
-533;AWG;;;;;Aruban Florin;Aruban Florin;Aruban Florin;;;;Aruban Florin;Aruban Florin;Aruban Florin;;;;;;;;
-548;VUV;;;;;Vatu;Vatu;Vatu;;;;Vatu;Vatu;Vatu;;;;;;;;
-554;NZD;;;;;New Zealand Dollar;New Zealand Dollar;New Zealand Dollar;;;;New Zealand Dollar;New Zealand Dollar;New Zealand Dollar;;;;;;;;
-558;NIO;1,991;;;;Cordoba Oro;Cordoba Oro;Cordoba Oro;;;;Cordoba Oro;Cordoba Oro;Cordoba Oro;;;;;;;;
-566;NGN;;;;;Naira;Naira;Naira;;;;Naira;Naira;Naira;;;;;;;;
-578;NOK;;;;;Norwegian Krone;Norwegian Krone;Norwegian Krone;;;;Norwegian Krone;Norwegian Krone;Norwegian Krone;;;;;;;;
-586;PKR;;;;;Pakistan Rupee;Pakistan Rupee;Pakistan Rupee;;;;Pakistan Rupee;Pakistan Rupee;Pakistan Rupee;;;;;;;;
-590;PAB;;;;;Balboa;Balboa;Balboa;;;;Balboa;Balboa;Balboa;;;;;;;;
-598;PGK;;;;;Kina;Kina;Kina;;;;Kina;Kina;Kina;;;;;;;;
-600;PYG;;;;;Guarani;Guarani;Guarani;;;;Guarani;Guarani;Guarani;;;;;;;;
-604;PEN;1,992;;;;Sol;Sol;Sol;;;;Sol;Sol;Sol;;;;;;;;
-608;PHP;;;;;Philippine Peso;Philippine Peso;Philippine Peso;;;;Philippine Peso;Philippine Peso;Philippine Peso;;;;;;;;
-616;PLZ;1,950;1,994;;;Zloty;Zloty;Zloty;;;;Zloty;Zloty;Zloty;;;;;;;;
-620;PTE;1,911;1,998;;;Portuguese Escudo;Portuguese Escudo;Portuguese Escudo;;;;Portuguese Escudo;Portuguese Escudo;Portuguese Escudo;;;;;;;;
-624;GWP;1,975;1,997;;;Guinea-Bissau Peso;Guinea-Bissau Peso;Guinea-Bissau Peso;;;;Guinea-Bissau Peso;Guinea-Bissau Peso;Guinea-Bissau Peso;;;;;;;;
-626;TPE;1,959;1,976;;;Timor Escudo;Timor Escudo;Timor Escudo;;;;Timor Escudo;Timor Escudo;Timor Escudo;;;;;;;;
-634;QAR;;;;;Qatari Rial;Qatari Rial;Qatari Rial;;;;Qatari Rial;Qatari Rial;Qatari Rial;;;;;;;;
-642;ROL;1,952;2,005;;;Romanian Leu;Romanian Leu;Romanian Leu;;;;Romanian Leu;Romanian Leu;Romanian Leu;;;;;;;;
-643;RUB;2,008;;;;Russian Ruble;Russian Ruble;Russian Ruble;;;;Russian Ruble;Russian Ruble;Russian Ruble;;;;;;;;
-646;RWF;;;;;Rwanda Franc;Rwanda Franc;Rwanda Franc;;;;Rwanda Franc;Rwanda Franc;Rwanda Franc;;;;;;;;
-654;SHP;;;;;Saint Helena Pound;Saint Helena Pound;Saint Helena Pound;;;;Saint Helena Pound;Saint Helena Pound;Saint Helena Pound;;;;;;;;
-678;STD;1,977;2,018;;;Dobra;Dobra;Dobra;;;;Dobra;Dobra;Dobra;;;;;;;;
-682;SAR;;;;;Saudi Riyal;Saudi Riyal;Saudi Riyal;;;;Saudi Riyal;Saudi Riyal;Saudi Riyal;;;;;;;;
-690;SCR;;;;;Seychelles Rupee;Seychelles Rupee;Seychelles Rupee;;;;Seychelles Rupee;Seychelles Rupee;Seychelles Rupee;;;;;;;;
-694;SLL;;;;;Leone;Leone;Leone;;;;Leone;Leone;Leone;;;;;;;;
-702;SGD;;;;;Singapore Dollar;Singapore Dollar;Singapore Dollar;;;;Singapore Dollar;Singapore Dollar;Singapore Dollar;;;;;;;;
-703;SKK;1,993;2,008;;;Slovak Koruna;Slovak Koruna;Slovak Koruna;;;;Slovak Koruna;Slovak Koruna;Slovak Koruna;;;;;;;;
-704;VND;1,978;;;;Dong;Dong;Dong;;;;Dong;Dong;Dong;;;;;;;;
-705;SIT;1,991;2,006;;;Tolar;Tolar;Tolar;;;;Tolar;Tolar;Tolar;;;;;;;;
-706;SOS;;;;;Somali Shilling;Somali Shilling;Somali Shilling;;;;Somali Shilling;Somali Shilling;Somali Shilling;;;;;;;;
-710;ZAR;;;;;Rand;Rand;Rand;;;;Rand;Rand;Rand;;;;;;;;
-716;ZWD;1,980;2,006;;;Zimbabwe Dollar;Zimbabwe Dollar;Zimbabwe Dollar;;;;Zimbabwe Dollar;Zimbabwe Dollar;Zimbabwe Dollar;;;;;;;;
-720;YDD;1,965;1,996;;;Yemeni Dinar;Yemeni Dinar;Yemeni Dinar;;;;Yemeni Dinar;Yemeni Dinar;Yemeni Dinar;;;;;;;;
-724;ESP;;1,998;;;Spanish Peseta;Spanish Peseta;Spanish Peseta;;;;Spanish Peseta;Spanish Peseta;Spanish Peseta;;;;;;;;
-728;SSP;;;;;South Sudanese Pound;South Sudanese Pound;South Sudanese Pound;;;;South Sudanese Pound;South Sudanese Pound;South Sudanese Pound;;;;;;;;
-736;SDD;1,992;2,006;;;Sudanese Dinar;Sudanese Dinar;Sudanese Dinar;;;;Sudanese Dinar;Sudanese Dinar;Sudanese Dinar;;;;;;;;
-740;SRG;1,942;2,003;;;Suriname Guilder;Suriname Guilder;Suriname Guilder;;;;Suriname Guilder;Suriname Guilder;Suriname Guilder;;;;;;;;
-748;SZL;;;;;Lilangeni;Lilangeni;Lilangeni;;;;Lilangeni;Lilangeni;Lilangeni;;;;;;;;
-752;SEK;;;;;Swedish Krona;Swedish Krona;Swedish Krona;;;;Swedish Krona;Swedish Krona;Swedish Krona;;;;;;;;
-756;CHF;;;;;Swiss Franc;Swiss Franc;Swiss Franc;;;;Swiss Franc;Swiss Franc;Swiss Franc;;;;;;;;
-760;SYP;;;;;Syrian Pound;Syrian Pound;Syrian Pound;;;;Syrian Pound;Syrian Pound;Syrian Pound;;;;;;;;
-762;TJR;1,995;2,000;;;Tajikistan Ruble;Tajikistan Ruble;Tajikistan Ruble;;;;Tajikistan Ruble;Tajikistan Ruble;Tajikistan Ruble;;;;;;;;
-764;THB;;;;;Baht;Baht;Baht;;;;Baht;Baht;Baht;;;;;;;;
-776;TOP;;;;;Pa’anga;Pa’anga;Pa’anga;;;;Pa’anga;Pa’anga;Pa’anga;;;;;;;;
-780;TTD;;;;;Trinidad and Tobago Dollar;Trinidad and Tobago Dollar;Trinidad and Tobago Dollar;;;;Trinidad and Tobago Dollar;Trinidad and Tobago Dollar;Trinidad and Tobago Dollar;;;;;;;;
-784;AED;;;;;UAE Dirham;UAE Dirham;UAE Dirham;;;;UAE Dirham;UAE Dirham;UAE Dirham;;;;;;;;
-788;TND;;;;;Tunisian Dinar;Tunisian Dinar;Tunisian Dinar;;;;Tunisian Dinar;Tunisian Dinar;Tunisian Dinar;;;;;;;;
-792;TRL;1,843;2,005;;;Turkish Lira;Turkish Lira;Turkish Lira;;;;Turkish Lira;Turkish Lira;Turkish Lira;;;;;;;;
-795;TMM;1,993;2,008;;;Turkmenistan Manat;Turkmenistan Manat;Turkmenistan Manat;;;;Turkmenistan Manat;Turkmenistan Manat;Turkmenistan Manat;;;;;;;;
-800;UGX;1,988;;;;Uganda Shilling;Uganda Shilling;Uganda Shilling;;;;Uganda Shilling;Uganda Shilling;Uganda Shilling;;;;;;;;
-804;UAK;1,992;1,995;;;Karbovanet;Karbovanet;Karbovanet;;;;Karbovanet;Karbovanet;Karbovanet;;;;;;;;
-807;MKD;;;;;Denar;Denar;Denar;;;;Denar;Denar;Denar;;;;;;;;
-810;RUR;1,992;2,007;;;Russian Ruble;Russian Ruble;Russian Ruble;;;;Russian Ruble;Russian Ruble;Russian Ruble;;;;;;;;
-818;EGP;;;;;Egyptian Pound;Egyptian Pound;Egyptian Pound;;;;Egyptian Pound;Egyptian Pound;Egyptian Pound;;;;;;;;
-826;GBP;;;;;Pound Sterling;Pound Sterling;Pound Sterling;;;;Pound Sterling;Pound Sterling;Pound Sterling;;;;;;;;
-834;TZS;;;;;Tanzanian Shilling;Tanzanian Shilling;Tanzanian Shilling;;;;Tanzanian Shilling;Tanzanian Shilling;Tanzanian Shilling;;;;;;;;
-840;USD;;;;;US Dollar;US Dollar;US Dollar;;;;US Dollar;US Dollar;US Dollar;;;;;;;;
-858;UYU;1,993;;;;Peso Uruguayo;Peso Uruguayo;Peso Uruguayo;;;;Peso Uruguayo;Peso Uruguayo;Peso Uruguayo;;;;;;;;
-860;UZS;;;;;Uzbekistan Sum;Uzbekistan Sum;Uzbekistan Sum;;;;Uzbekistan Sum;Uzbekistan Sum;Uzbekistan Sum;;;;;;;;
-862;VEB;1,896;2,007;;;Bolivar;Bolivar;Bolivar;;;;Bolivar;Bolivar;Bolivar;;;;;;;;
-882;WST;;;;;Tala;Tala;Tala;;;;Tala;Tala;Tala;;;;;;;;
-886;YER;1,996;;;;Yemeni Rial;Yemeni Rial;Yemeni Rial;;;;Yemeni Rial;Yemeni Rial;Yemeni Rial;;;;;;;;
-890;YUN;1,990;1,992;;;Yugoslavian Dinar;Yugoslavian Dinar;Yugoslavian Dinar;;;;Yugoslavian Dinar;Yugoslavian Dinar;Yugoslavian Dinar;;;;;;;;
-891;YUM;1,993;2,005;;;New  Dinar;New  Dinar;New  Dinar;;;;New  Dinar;New  Dinar;New  Dinar;;;;;;;;
-894;ZMK;1,968;2,012;;;Zambian Kwacha;Zambian Kwacha;Zambian Kwacha;;;;Zambian Kwacha;Zambian Kwacha;Zambian Kwacha;;;;;;;;
-901;TWD;;;;;New Taiwan Dollar;New Taiwan Dollar;New Taiwan Dollar;;;;New Taiwan Dollar;New Taiwan Dollar;New Taiwan Dollar;;;;;;;;
-928;VES;2,018;;;;Bolívar Soberano;Bolívar Soberano;Bolívar Soberano;;;;Bolívar Soberano;Bolívar Soberano;Bolívar Soberano;;;;;;;;
-929;MRU;2,018;;;;Ouguiya;Ouguiya;Ouguiya;;;;Ouguiya;Ouguiya;Ouguiya;;;;;;;;
-930;STN;2,017;;;;Dobra;Dobra;Dobra;;;;Dobra;Dobra;Dobra;;;;;;;;
-931;CUC;;;;;Peso Convertible;Peso Convertible;Peso Convertible;;;;Peso Convertible;Peso Convertible;Peso Convertible;;;;;;;;
-932;ZWL;2,009;;;;Zimbabwe Dollar;Zimbabwe Dollar;Zimbabwe Dollar;;;;Zimbabwe Dollar;Zimbabwe Dollar;Zimbabwe Dollar;;;;;;;;
-933;BYN;2,016;;;;Belarusian Ruble;Belarusian Ruble;Belarusian Ruble;;;;Belarusian Ruble;Belarusian Ruble;Belarusian Ruble;;;;;;;;
-934;TMT;2,009;;;;Turkmenistan New Manat;Turkmenistan New Manat;Turkmenistan New Manat;;;;Turkmenistan New Manat;Turkmenistan New Manat;Turkmenistan New Manat;;;;;;;;
-935;ZWR;2,008;2,009;;;Zimbabwe Dollar;Zimbabwe Dollar;Zimbabwe Dollar;;;;Zimbabwe Dollar;Zimbabwe Dollar;Zimbabwe Dollar;;;;;;;;
-936;GHS;2,007;;;;Ghana Cedi;Ghana Cedi;Ghana Cedi;;;;Ghana Cedi;Ghana Cedi;Ghana Cedi;;;;;;;;
-937;VEF;2,008;2,018;;;Bolivar Fuerte;Bolivar Fuerte;Bolivar Fuerte;;;;Bolivar Fuerte;Bolivar Fuerte;Bolivar Fuerte;;;;;;;;
-938;SDG;2,007;;;;Sudanese Pound;Sudanese Pound;Sudanese Pound;;;;Sudanese Pound;Sudanese Pound;Sudanese Pound;;;;;;;;
-941;RSD;;;;;Serbian Dinar;Serbian Dinar;Serbian Dinar;;;;Serbian Dinar;Serbian Dinar;Serbian Dinar;;;;;;;;
-942;ZWN;2,006;2,008;;;Zimbabwe Dollar;Zimbabwe Dollar;Zimbabwe Dollar;;;;Zimbabwe Dollar;Zimbabwe Dollar;Zimbabwe Dollar;;;;;;;;
-943;MZN;2,006;;;;Mozambique Metical;Mozambique Metical;Mozambique Metical;;;;Mozambique Metical;Mozambique Metical;Mozambique Metical;;;;;;;;
-944;AZN;2,006;;;;Azerbaijan Manat;Azerbaijan Manat;Azerbaijan Manat;;;;Azerbaijan Manat;Azerbaijan Manat;Azerbaijan Manat;;;;;;;;
-946;RON;2,005;;;;Romanian Leu;Romanian Leu;Romanian Leu;;;;Romanian Leu;Romanian Leu;Romanian Leu;;;;;;;;
-947;CHE;;;;;WIR Euro;WIR Euro;WIR Euro;;;;WIR Euro;WIR Euro;WIR Euro;;;;;;;;
-948;CHW;;;;;WIR Franc;WIR Franc;WIR Franc;;;;WIR Franc;WIR Franc;WIR Franc;;;;;;;;
-949;TRY;;;;;Turkish Lira;Turkish Lira;Turkish Lira;;;;Turkish Lira;Turkish Lira;Turkish Lira;;;;;;;;
-950;XAF;;;;;CFA Franc BEAC;CFA Franc BEAC;CFA Franc BEAC;;;;CFA Franc BEAC;CFA Franc BEAC;CFA Franc BEAC;;;;;;;;
-951;XCD;;;;;East Caribbean Dollar;East Caribbean Dollar;East Caribbean Dollar;;;;East Caribbean Dollar;East Caribbean Dollar;East Caribbean Dollar;;;;;;;;
-952;XOF;;;;;CFA Franc BCEAO;CFA Franc BCEAO;CFA Franc BCEAO;;;;CFA Franc BCEAO;CFA Franc BCEAO;CFA Franc BCEAO;;;;;;;;
-953;XPF;;;;;CFP Franc;CFP Franc;CFP Franc;;;;CFP Franc;CFP Franc;CFP Franc;;;;;;;;
-967;ZMW;2,013;;;;Zambian Kwacha;Zambian Kwacha;Zambian Kwacha;;;;Zambian Kwacha;Zambian Kwacha;Zambian Kwacha;;;;;;;;
-968;SRD;2,004;;;;Suriname Dollar;Suriname Dollar;Suriname Dollar;;;;Suriname Dollar;Suriname Dollar;Suriname Dollar;;;;;;;;
-969;MGA;2,005;;;;Malagasy Ariary;Malagasy Ariary;Malagasy Ariary;;;;Malagasy Ariary;Malagasy Ariary;Malagasy Ariary;;;;;;;;
-971;AFN;2,003;;true;;Afghani;Afghani;Afghani;;;;Afghani;Afghani;Afghani;;;;;;;;
-972;TJS;2,002;;;;Somoni;Somoni;Somoni;;;;Somoni;Somoni;Somoni;;;;;;;;
-973;AOA;1,999;;;;Kwanza;Kwanza;Kwanza;;;;Kwanza;Kwanza;Kwanza;;;;;;;;
-974;BYR;2,000;2,016;;;Belarusian Ruble;Belarusian Ruble;Belarusian Ruble;;;;Belarusian Ruble;Belarusian Ruble;Belarusian Ruble;;;;;;;;
-975;BGN;1,999;;;;Bulgarian Lev;Bulgarian Lev;Bulgarian Lev;;;;Bulgarian Lev;Bulgarian Lev;Bulgarian Lev;;;;;;;;
-976;CDF;1,999;;;;Congolese Franc;Congolese Franc;Congolese Franc;;;;Congolese Franc;Congolese Franc;Congolese Franc;;;;;;;;
-977;BAM;;;;;Convertible Mark;Convertible Mark;Convertible Mark;;;;Convertible Mark;Convertible Mark;Convertible Mark;;;;;;;;
-978;EUR;1,999;;;;Euro;Euro;Euro;;;;Euro;Euro;Euro;;;;;;;;
-980;UAH;1,996;;;;Hryvnia;Hryvnia;Hryvnia;;;;Hryvnia;Hryvnia;Hryvnia;;;;;;;;
-981;GEL;;;;;Lari;Lari;Lari;;;;Lari;Lari;Lari;;;;;;;;
-982;AOR;1,995;1,999;;;Kwanza readjusted;Kwanza reajustado;Kwanza reajustado;;;;Kwanza readjusted;Kwanza reajustado;Kwanza reajustado;;;;;;;;
-984;BOV;;;;;Mvdol;Mvdol;Mvdol;;;;Mvdol;Mvdol;Mvdol;;;;;;;;
-985;PLN;1,995;;;;Zloty;Zloty;Zloty;;;;Zloty;Zloty;Zloty;;;;;;;;
-986;BRL;1,995;;;;Brazilian Real;Brazilian Real;Brazilian Real;;;;Brazilian Real;Brazilian Real;Brazilian Real;;;;;;;;
-1,001;AOK;1,997;1,990;;;Kwanza;Kwanza;Kwanza;;;;Kwanza;Kwanza;Kwanza;;;;;;;;
-1,002;ARM;1,881;1,969;;;Peso Moneda Nacional;Peso Moneda Nacional;Peso Moneda Nacional;;;;Peso Moneda Nacional;Peso Moneda Nacional;Peso Moneda Nacional;;;;;;;;
-1,003;ARL;1,970;1,983;;;Argentine Peso Ley;Argentine Peso Ley;Argentine Peso Ley;;;;Argentine Peso Ley;Argentine Peso Ley;Argentine Peso Ley;;;;;;;;
-1,004;ARP;1,983;1,985;;;Argentine Peso;Argentine Peso;Argentine Peso;;;;Argentine Peso;Argentine Peso;Argentine Peso;;;;;;;;
-1,005;ARA;1,985;1,991;;;Argentine Austral;Argentine Austral;Argentine Austral;;;;Argentine Austral;Argentine Austral;Argentine Austral;;;;;;;;
-1,006;BGJ;1,832;1,952;;;Bulgarian Lev;Bulgarian Lev;Bulgarian Lev;;;;Bulgarian Lev;Bulgarian Lev;Bulgarian Lev;;;;;;;;
-1,007;BGK;1,952;1,962;;;Bulgarian Lev;Bulgarian Lev;Bulgarian Lev;;;;Bulgarian Lev;Bulgarian Lev;Bulgarian Lev;;;;;;;;
-1,008;BOP;;1,986;;;Bolivian Peso;Bolivian Peso;Bolivian Peso;;;;Bolivian Peso;Bolivian Peso;Bolivian Peso;;;;;;;;
-1,009;BRB;1,970;1,986;;;Cruziero;Cruziero;Cruziero;;;;Cruziero;Cruziero;Cruziero;;;;;;;;
-1,010;BRC;1,986;1,989;;;Cruzado;Cruzado;Cruzado;;;;Cruzado;Cruzado;Cruzado;;;;;;;;
-1,011;BRN;1,989;1,990;;;New Cruzado;New Cruzado;New Cruzado;;;;New Cruzado;New Cruzado;New Cruzado;;;;;;;;
-1,012;BRE;1,990;1,993;;;Cruziero;Cruziero;Cruziero;;;;Cruziero;Cruziero;Cruziero;;;;;;;;
-1,013;BUK;;1,989;;;Kyat;Kyat;Kyat;;;;Kyat;Kyat;Kyat;;;;;;;;
-1,014;GNS;1,971;1,985;;;Syli;Syli;Syli;;;;Syli;Syli;Syli;;;;;;;;
-1,015;HRD;1,991;1,994;;;Croatian Dinar;Croatian Dinar;Croatian Dinar;;;;Croatian Dinar;Croatian Dinar;Croatian Dinar;;;;;;;;
-1,016;ILP;1,948;1,980;;;Israeli Pound;Israeli Pound;Israeli Pound;;;;Israeli Pound;Israeli Pound;Israeli Pound;;;;;;;;
-1,017;ILR;1,980;1,985;;;Israeli Shekel;Israeli Shekel;Israeli Shekel;;;;Israeli Shekel;Israeli Shekel;Israeli Shekel;;;;;;;;
-1,018;ISJ;1,922;1,981;;;Iceland Krona;Iceland Krona;Iceland Krona;;;;Iceland Krona;Iceland Krona;Iceland Krona;;;;;;;;
-1,019;LAJ;1,965;1,979;;;Lao Kip;Lao Kip;Lao Kip;;;;Lao Kip;Lao Kip;Lao Kip;;;;;;;;
-1,020;LSM;;1,985;;;Maloti;Maloti;Maloti;;;;Maloti;Maloti;Maloti;;;;;;;;
-1,021;LTT;;1,993;;;Talonas;Talonas;Talonas;;;;Talonas;Talonas;Talonas;;;;;;;;
-1,022;LYP;1,951;1,971;;;Libyan Pound;Libyan Pound;Libyan Pound;;;;Libyan Pound;Libyan Pound;Libyan Pound;;;;;;;;
-1,023;MTP;;1,983;;;Maltese Pound;Maltese Pound;Maltese Pound;;;;Maltese Pound;Maltese Pound;Maltese Pound;;;;;;;;
-1,024;MVQ;;1,981;;;Maldivian Rupee;Maldivian Rupee;Maldivian Rupee;;;;Maldivian Rupee;Maldivian Rupee;Maldivian Rupee;;;;;;;;
-1,025;MXP;;1,992;;;Mexican Peso;Mexican Peso;Mexican Peso;;;;Mexican Peso;Mexican Peso;Mexican Peso;;;;;;;;
-1,026;MZE;1,914;1,979;;;Mozambique Escudo;Mozambique Escudo;Mozambique Escudo;;;;Mozambique Escudo;Mozambique Escudo;Mozambique Escudo;;;;;;;;
-1,027;NIC;1,988;1,990;;;Cordoba;Cordoba;Cordoba;;;;Cordoba;Cordoba;Cordoba;;;;;;;;
-1,028;PES;1,863;1,984;;;Sol;Sol;Sol;;;;Sol;Sol;Sol;;;;;;;;
-1,029;PEI;1,985;1,991;;;Inti;Inti;Inti;;;;Inti;Inti;Inti;;;;;;;;
-1,030;SDP;1,956;1,992;;;Sudanese Pound;Sudanese Pound;Sudanese Pound;;;;Sudanese Pound;Sudanese Pound;Sudanese Pound;;;;;;;;
-1,031;SUR;1,961;1,991;;;Ruble;Ruble;Ruble;;;;Ruble;Ruble;Ruble;;;;;;;;
-1,032;UGS;1,966;1,987;;;Uganda Shilling;Uganda Shilling;Uganda Shilling;;;;Uganda Shilling;Uganda Shilling;Uganda Shilling;;;;;;;;
-1,033;UYP;1,896;1,975;;;Uruguayan Peso;Uruguayan Peso;Uruguayan Peso;;;;Uruguayan Peso;Uruguayan Peso;Uruguayan Peso;;;;;;;;
-1,034;UYN;1,975;1,993;;;Uruguayan New Peso;Uruguayan New Peso;Uruguayan New Peso;;;;Uruguayan New Peso;Uruguayan New Peso;Uruguayan New Peso;;;;;;;;
-1,035;VNC;;1,978;;;Old Dong;Old Dong;Old Dong;;;;Old Dong;Old Dong;Old Dong;;;;;;;;
-1,036;YUD;1,966;1,989;;;New Yugoslavian Dinar;New Yugoslavian Dinar;New Yugoslavian Dinar;;;;New Yugoslavian Dinar;New Yugoslavian Dinar;New Yugoslavian Dinar;;;;;;;;
-1,037;ZRZ;1,967;1,992;;;Zaire;Zaire;Zaire;;;;Zaire;Zaire;Zaire;;;;;;;;
-1,038;ZWC;1,970;1,979;;;Rhodesian Dollar;Rhodesian Dollar;Rhodesian Dollar;;;;Rhodesian Dollar;Rhodesian Dollar;Rhodesian Dollar;;;;;;;;
-1,039;ALK;1,946;1,965;;;Old Albanian Lek;Old Albanian Lek;Old Albanian Lek;;;;Old Albanian Lek;Old Albanian Lek;Old Albanian Lek;;;;;;;;
-1,040;GWE;;1,974;;;Guinean Escudo;Guinean Escudo;Guinean Escudo;;;;Guinean Escudo;Guinean Escudo;Guinean Escudo;;;;;;;;
+Identifier,Code,Start_Year,End_Year,Public,Type,Name_En,Name_Fr,Name_Es,Name_Ar,Name_Zh,Name_Ru,ShortName_En,ShortName_Fr,ShortName_Es,ShortName_Ar,ShortName_Zh,ShortName_Ru,Definition,ScopeNote,HistoryNote,EditorialNote,SubSet
+4,AFA,1925,2002,,,Afghani,Afghani,Afghani,,,,Afghani,Afghani,Afghani,,,,,,,,
+8,ALL,1965,,,,Lek,Lek,Lek,,,,Lek,Lek,Lek,,,,,,,Start Date removed in SWS,
+12,DZD,,,,,Algerian Dinar,Dinar algérien,Dinar argelino,,,,Algerian Dinar,Dinar algérien,Dinar argelino,,,,,,,,
+20,ADP,1869,2001,,,Andorran Peseta,Andorran Peseta,Andorran Peseta,,,,Andorran Peseta,Andorran Peseta,Andorran Peseta,,,,,,,,
+24,AON,1990,1995,,,New Kwanza,New Kwanza,New Kwanza,,,,New Kwanza,New Kwanza,New Kwanza,,,,,,,,
+31,AZM,1992,2005,,,Azerbaijan Manat,Manat,Manat,,,,Azerbaijan Manat,Manat,Manat,,,,,,,,
+32,ARS,1992,,,,Argentine Peso,Peso argentin,Peso argentino,,,,Argentine Peso,Peso argentin,Peso argentino,,,,,,,Start Date removed in SWS,
+36,AUD,,,,,Australian Dollar,Dollar australien,Dólar australiano,,,,Australian Dollar,Dollar australien,Dólar australiano,,,,,,,,
+40,ATS,,1998,,,Schilling,Schilling,Schilling,,,,Schilling,Schilling,Schilling,,,,,,,,
+44,BSD,,,,,Bahamian Dollar,Dollar des Bahamas,Dólar de las Bahamas,,,,Bahamian Dollar,Dollar des Bahamas,Dólar de las Bahamas,,,,,,,,
+48,BHD,,,,,Bahraini Dinar,Dinar de Bahreïn,Dinar de Bahrein,,,,Bahraini Dinar,Dinar de Bahreïn,Dinar de Bahrein,,,,,,,,
+50,BDT,,,,,Taka,Taka,Taka,,,,Taka,Taka,Taka,,,,,,,,
+51,AMD,,,,,Armenian Dram,Dram arménien,Dram armeniano,,,,Armenian Dram,Dram arménien,Dram armeniano,,,,,,,,
+52,BBD,,,,,Barbados Dollar,Dollar de Barbade,Dólar de Barbados,,,,Barbados Dollar,Dollar de Barbade,Dólar de Barbados,,,,,,,,
+56,BEF,,1998,,,Belgian Franc,Franc belge,Franco belga,,,,Belgian Franc,Franc belge,Franco belga,,,,,,,,
+60,BMD,,,,,Bermudian Dollar,Dollar des Bermudes,Dólar de Bermudas,,,,Bermudian Dollar,Dollar des Bermudes,Dólar de Bermudas,,,,,,,,
+64,BTN,,,,,Ngultrum,Ngultrum,Ngultrum,,,,Ngultrum,Ngultrum,Ngultrum,,,,,,,,
+68,BOB,1987,,,,Boliviano,Boliviano,Boliviano,,,,Boliviano,Boliviano,Boliviano,,,,,,,Start Date removed in SWS,
+70,BAD,1992,1998,,,Bosnia and Herzegovina dinar,Bosnia and Herzegovina dinar,Bosnia and Herzegovina dinar,,,,Bosnia and Herzegovina dinar,Bosnia and Herzegovina dinar,Bosnia and Herzegovina dinar,,,,,,,,
+72,BWP,,,,,Pula,Pula,Pula,,,,Pula,Pula,Pula,,,,,,,,
+76,BRR,1993,1994,,,Cruziero Real,Cruziero Real,Cruziero Real,,,,Cruziero Real,Cruziero Real,Cruziero Real,,,,,,,,
+84,BZD,,,,,Belize Dollar,Dollar de Belize,Dólar de Belice,,,,Belize Dollar,Dollar de Belize,Dólar de Belice,,,,,,,,
+90,SBD,,,,,Solomon Islands Dollar,Dollar de Salomon,Dólar de las Islas Salomón,,,,Solomon Islands Dollar,Dollar de Salomon,Dólar de las Islas Salomón,,,,,,,,
+96,BND,,,,,Brunei Dollar,Dollar de Brunei,Dólar de Brunei,,,,Brunei Dollar,Dollar de Brunei,Dólar de Brunei,,,,,,,,
+100,BGL,1962,1999,,,Bulgarian Lev,Bulgarian Lev,Bulgarian Lev,,,,Bulgarian Lev,Bulgarian Lev,Bulgarian Lev,,,,,,,,
+104,MMK,1990,,,,Kyat,Kyat,Kyat,,,,Kyat,Kyat,Kyat,,,,,,,Start Date removed in SWS,
+108,BIF,,,,,Burundi Franc,Franc du Burundi,Franco burundí,,,,Burundi Franc,Franc du Burundi,Franco burundí,,,,,,,,
+112,BYB,1992,1999,,,Belarusian Ruble,Belarusian Ruble,Belarusian Ruble,,,,Belarusian Ruble,Belarusian Ruble,Belarusian Ruble,,,,,,,,
+116,KHR,,,,,Riel,Riel,Riel,,,,Riel,Riel,Riel,,,,,,,,
+124,CAD,,,,,Canadian Dollar,Dollar canadien,Dólar canadiense,,,,Canadian Dollar,Dollar canadien,Dólar canadiense,,,,,,,,
+132,CVE,,,,,Cabo Verde Escudo,Escudo du Cabo Verde,Escudo de Cabo Verde,,,,Cabo Verde Escudo,Escudo du Cabo Verde,Escudo de Cabo Verde,,,,,,,,
+136,KYD,,,,,Cayman Islands Dollar,Dollar des Îles Caïmanes,Dólar de las Islas Caimán,,,,Cayman Islands Dollar,Dollar des Îles Caïmanes,Dólar de las Islas Caimán,,,,,,,,
+144,LKR,,,,,Sri Lanka Rupee,Roupie de Sri Lanka,Rupia de Sri Lanka,,,,Sri Lanka Rupee,Roupie de Sri Lanka,Rupia de Sri Lanka,,,,,,,,
+152,CLP,,,,,Chilean Peso,Peso chilien,Peso chileno,,,,Chilean Peso,Peso chilien,Peso chileno,,,,,,,,
+156,CNY,,,,,Yuan Renminbi,Yuan Ren-Min-Bi,Yuan Renminbi,,,,Yuan Renminbi,Yuan Ren-Min-Bi,Yuan Renminbi,,,,,,,,
+170,COP,,,,,Colombian Peso,Peso colombien,Peso colombiano,,,,Colombian Peso,Peso colombien,Peso colombiano,,,,,,,,
+174,KMF,,,,,Comorian Franc ,Franc des Comores,Franco comorano,,,,Comorian Franc ,Franc des Comores,Franco comorano,,,,,,,,
+180,ZRN,1993,1997,,,New Zaire,New Zaire,New Zaire,,,,New Zaire,New Zaire,New Zaire,,,,,,,,
+188,CRC,,,,,Costa Rican Colon,Colón de Costa Rica,Colón costarricense,,,,Costa Rican Colon,Colón de Costa Rica,Colón costarricense,,,,,,,,
+191,HRK,1995,,,,Kuna,Kuna croate,Kuna croata,,,,Kuna,Kuna croate,Kuna croata,,,,,,,Start Date removed in SWS,
+192,CUP,,,,,Cuban Peso,Peso cubain,Peso cubano,,,,Cuban Peso,Peso cubain,Peso cubano,,,,,,,,
+196,CYP,,2005,,,Cypriot Pound,Livre cypriote,Libra chipriota,,,,Cypriot Pound,Livre cypriote,Libra chipriota,,,,,,,,
+200,CSK,,1993,,,Czechoslovak Koruna,Czechoslovak Koruna,Czechoslovak Koruna,,,,Czechoslovak Koruna,Czechoslovak Koruna,Czechoslovak Koruna,,,,,,,,
+203,CZK,1993,,,,Czech Koruna,Couronne tchèque,Corona checa,,,,Czech Koruna,Couronne tchèque,Corona checa,,,,,,,Start Date removed in SWS,
+208,DKK,,,,,Danish Krone,Couronne danoise,Corona danesa,,,,Danish Krone,Couronne danoise,Corona danesa,,,,,,,,
+214,DOP,,,,,Dominican Peso,Peso dominicain,Peso dominicano,,,,Dominican Peso,Peso dominicain,Peso dominicano,,,,,,,,
+218,ECS,,2000,,,Ecuadorian Sucre,Ecuadorian Sucre,Ecuadorian Sucre,,,,Ecuadorian Sucre,Ecuadorian Sucre,Ecuadorian Sucre,,,,,,,,
+222,SVC,1891,2001,,,El Salvador Colon,Colón du El Salvador,Colón salvadoreño,,,,El Salvador Colon,Colón du El Salvador,Colón salvadoreño,,,,,,,,
+226,GQE,1975,1985,,,Ekwele,Ekwele,Ekwele,,,,Ekwele,Ekwele,Ekwele,,,,,,,,
+230,ETB,,,,,Ethiopian Birr,Birr éthiopien,Birr etiopiano,,,,Ethiopian Birr,Birr éthiopien,Birr etiopiano,,,,,,,,
+232,ERN,1998,,,,Nakfa,Nakfa,Nakfa,,,,Nakfa,Nakfa,Nakfa,,,,,,,Start Date removed in SWS,
+233,EEK,,2010,,,Kroon,Couronne estonienne,Corona estoniana,,,,Kroon,Couronne estonienne,Corona estoniana,,,,,,,,
+238,FKP,,,,,Falkland Islands Pound,Livre de Falkland,Libra de las Islas Malvinas,,,,Falkland Islands Pound,Livre de Falkland,Libra de las Islas Malvinas,,,,,,,,
+242,FJD,,,,,Fiji Dollar,Dollar de Fidji,Dólar de Fiji,,,,Fiji Dollar,Dollar de Fidji,Dólar de Fiji,,,,,,,,
+246,FIM,,1998,,,Markka,Markka,Markka,,,,Markka,Markka,Markka,,,,,,,,
+250,FRF,,1998,,,French Franc,French Franc,French Franc,,,,French Franc,French Franc,French Franc,,,,,,,,
+262,DJF,,,,,Djibouti Franc,Franc de Djibouti,Franco de Djibouti,,,,Djibouti Franc,Franc de Djibouti,Franco de Djibouti,,,,,,,,
+270,GMD,,,,,Dalasi,Dalasi,Dalasi,,,,Dalasi,Dalasi,Dalasi,,,,,,,,
+276,DEM,,1998,,,Deutsche Mark,Deutsche Mark,Deutsche Mark,,,,Deutsche Mark,Deutsche Mark,Deutsche Mark,,,,,,,,
+278,DDM,,1990,,,Mark der DDR,Mark der DDR,Mark der DDR,,,,Mark der DDR,Mark der DDR,Mark der DDR,,,,,,,,
+288,GHC,1967,2007,,,Cedi,Cedi,Cedi,,,,Cedi,Cedi,Cedi,,,,,,,,
+292,GIP,,,,,Gibraltar Pound,Livre de Gibraltar,Libra de Gibraltar,,,,Gibraltar Pound,Livre de Gibraltar,Libra de Gibraltar,,,,,,,,
+300,GRD,1954,2000,,,Drachma,Drachma,Drachma,,,,Drachma,Drachma,Drachma,,,,,,,,
+320,GTQ,,,,,Quetzal,Quetzal,Quetzal,,,,Quetzal,Quetzal,Quetzal,,,,,,,,
+324,GNF,1986,,,,Guinean Franc,Franc guinéen,Franco de Guinea,,,,Guinean Franc,Franc guinéen,Franco de Guinea,,,,,,,Start Date removed in SWS,
+328,GYD,,,,,Guyana Dollar,Dollar de Guyane,Dólar de Guyana,,,,Guyana Dollar,Dollar de Guyane,Dólar de Guyana,,,,,,,,
+332,HTG,,,,,Gourde,Gourde,Gourde,,,,Gourde,Gourde,Gourde,,,,,,,,
+340,HNL,,,,,Lempira,Lempira,Lempira,,,,Lempira,Lempira,Lempira,,,,,,,,
+344,HKD,,,,,Hong Kong Dollar,Dollar de Hong-Kong,Dólar de Hong Kong,,,,Hong Kong Dollar,Dollar de Hong-Kong,Dólar de Hong Kong,,,,,,,,
+348,HUF,,,,,Forint,Forint,Forint,,,,Forint,Forint,Forint,,,,,,,,
+352,ISK,1981,,,,Iceland Krona,Couronne islandaise,Corona islandesa,,,,Iceland Krona,Couronne islandaise,Corona islandesa,,,,,,,Start Date removed in SWS,
+356,INR,,,,,Indian Rupee,Roupie indienne,Rupia india,,,,Indian Rupee,Roupie indienne,Rupia india,,,,,,,,
+360,IDR,,,,,Rupiah,Rupiah,Rupia,,,,Rupiah,Rupiah,Rupia,,,,,,,,
+364,IRR,,,,,Iranian Rial,Rial iranien,Rial iraní,,,,Iranian Rial,Rial iranien,Rial iraní,,,,,,,,
+368,IQD,,,,,Iraqi Dinar,Dinar iraquien,Dinar iraquí,,,,Iraqi Dinar,Dinar iraquien,Dinar iraquí,,,,,,,,
+372,IEP,1938,1998,,,Irish Pound,Irish Pound,Irish Pound,,,,Irish Pound,Irish Pound,Irish Pound,,,,,,,,
+376,ILS,1986,,,,New Israeli Sheqel,Nouveau israëli sheqel,Nuevo israelí sheqel,,,,New Israeli Sheqel,Nouveau israëli sheqel,Nuevo israelí sheqel,,,,,,,Start Date removed in SWS,
+380,ITL,1861,1998,,,Italian Lira,Italian Lira,Italian Lira,,,,Italian Lira,Italian Lira,Italian Lira,,,,,,,,
+388,JMD,,,,,Jamaican Dollar,Dollar jamaïcain,Dólar jamaicano,,,,Jamaican Dollar,Dollar jamaïcain,Dólar jamaicano,,,,,,,,
+392,JPY,,,,,Yen,Yen,Yen,,,,Yen,Yen,Yen,,,,,,,,
+398,KZT,,,,,Tenge,Tenge,Tenge,,,,Tenge,Tenge,Tenge,,,,,,,,
+400,JOD,,,,,Jordanian Dinar,Dinar jordanien,Dinar jordano,,,,Jordanian Dinar,Dinar jordanien,Dinar jordano,,,,,,,,
+404,KES,,,,,Kenyan Shilling,Shilling du Kenya,Chelín keniano,,,,Kenyan Shilling,Shilling du Kenya,Chelín keniano,,,,,,,,
+408,KPW,,,,,North Korean Won,Won de la Corée du Nord,Won de la Corea del Norte,,,,North Korean Won,Won de la Corée du Nord,Won de la Corea del Norte,,,,,,,,
+410,KRW,,,,,Won,Won,Won,,,,Won,Won,Won,,,,,,,,
+414,KWD,,,,,Kuwaiti Dinar,Dinar koweïtien,Dinar kuwaití,,,,Kuwaiti Dinar,Dinar koweïtien,Dinar kuwaití,,,,,,,,
+417,KGS,,,,,Som,Som,Som,,,,Som,Som,Som,,,,,,,,
+418,LAK,1980,,,,Lao Kip,Kip,Kip,,,,Lao Kip,Kip,Kip,,,,,,,Start Date removed in SWS,
+422,LBP,,,,,Lebanese Pound,Livre libanaise,Libra libanesa,,,,Lebanese Pound,Livre libanaise,Libra libanesa,,,,,,,,
+426,LSL,1995,,,,Loti,Loti,Loti,,,,Loti,Loti,Loti,,,,,,,Start Date removed in SWS,
+428,LVL,1992,2013,,,Latvian Lats,Lats letton,Lats letón,,,,Latvian Lats,Lats letton,Lats letón,,,,,,,,
+430,LRD,,,,,Liberian Dollar,Dollar libérien,Dólar liberiano,,,,Liberian Dollar,Dollar libérien,Dólar liberiano,,,,,,,,
+434,LYD,1971,,,,Libyan Dinar,Dinar libyen,Dinar libio,,,,Libyan Dinar,Dinar libyen,Dinar libio,,,,,,,Start Date removed in SWS,
+440,LTL,1994,2014,,,Lithuanian Litas,Litas lituanien,Lita lituanesa,,,,Lithuanian Litas,Litas lituanien,Lita lituanesa,,,,,,,,
+442,LUF,1994,1998,,,Luxembourg Franc,Luxembourg Franc,Luxembourg Franc,,,,Luxembourg Franc,Luxembourg Franc,Luxembourg Franc,,,,,,,,
+446,MOP,,,,,Pataca,Pataca,Pataca,,,,Pataca,Pataca,Pataca,,,,,,,,
+450,MGF,1963,2004,,,Malagasy Franc,Malagasy Franc,Malagasy Franc,,,,Malagasy Franc,Malagasy Franc,Malagasy Franc,,,,,,,,
+454,MWK,,,,,Malawi Kwacha,Kwacha malawien,Kwacha malawiano,,,,Malawi Kwacha,Kwacha malawien,Kwacha malawiano,,,,,,,,
+458,MYR,,,,,Malaysian Ringgit,Ringgit de Malaisie,Ringgit malayo,,,,Malaysian Ringgit,Ringgit de Malaisie,Ringgit malayo,,,,,,,,
+462,MVR,1982,,,,Rufiyaa,Rufiyaa,Rifiyaa,,,,Rufiyaa,Rufiyaa,Rifiyaa,,,,,,,Start Date removed in SWS,
+466,MLF,1962,1983,,,Malian Franc,Malian Franc,Malian Franc,,,,Malian Franc,Malian Franc,Malian Franc,,,,,,,,
+470,MTL,1984,2007,,,Maltese Lira,Livre maltaise,Libra maltesa,,,,Maltese Lira,Livre maltaise,Libra maltesa,,,,,,,,
+478,MRO,1973,2017,,,Ouguiya,Ouguija,Ouguiya,,,,Ouguiya,Ouguija,Ouguiya,,,,,,,,
+480,MUR,,,,,Mauritius Rupee,Roupie de Maurice,Rupia mauricia,,,,Mauritius Rupee,Roupie de Maurice,Rupia mauricia,,,,,,,,
+484,MXN,1993,,,,Mexican Peso,Peso mexicain,Peso mexicano,,,,Mexican Peso,Peso mexicain,Peso mexicano,,,,,,,Start Date removed in SWS,
+496,MNT,,,,,Tugrik,Tugrik,Tugrik,,,,Tugrik,Tugrik,Tugrik,,,,,,,,
+498,MDL,,,,,Moldovan Leu,Leu de Moldovie,Leu de Moldova,,,,Moldovan Leu,Leu de Moldovie,Leu de Moldova,,,,,,,,
+504,MAD,,,,,Moroccan Dirham,Dirham marocain,Dirham marroquí,,,,Moroccan Dirham,Dirham marocain,Dirham marroquí,,,,,,,,
+508,MZM,1980,2006,,,Mozambique Metical,Metical,Metical,,,,Mozambique Metical,Metical,Metical,,,,,,,,
+512,OMR,,,,,Rial Omani,Rial omanais,Rial omaní,,,,Rial Omani,Rial omanais,Rial omaní,,,,,,,,
+516,NAD,1994,,,,Namibia Dollar,Dollar namibien,Dólar namibiano,,,,Namibia Dollar,Dollar namibien,Dólar namibiano,,,,,,,Start Date removed in SWS,
+524,NPR,,,,,Nepalese Rupee,Roupie du Népal,Rupia nepalesa,,,,Nepalese Rupee,Roupie du Népal,Rupia nepalesa,,,,,,,,
+528,NLG,,1998,,,Netherlands Guilder,Netherlands Guilder,Netherlands Guilder,,,,Netherlands Guilder,Netherlands Guilder,Netherlands Guilder,,,,,,,,
+532,ANG,,,,,Netherlands Antillean Guilder,Florin des Antilles,Florín de las Antillas,,,,Netherlands Antillean Guilder,Florin des Antilles,Florín de las Antillas,,,,,,,,
+533,AWG,,,,,Aruban Florin,Florin d'Aruba,Florín arubeño,,,,Aruban Florin,Florin d'Aruba,Florín arubeño,,,,,,,,
+548,VUV,,,,,Vatu,Vatu,Vatu,,,,Vatu,Vatu,Vatu,,,,,,,,
+554,NZD,,,,,New Zealand Dollar,Dollar néo-zélandais,Dólar neozelandés,,,,New Zealand Dollar,Dollar néo-zélandais,Dólar neozelandés,,,,,,,,
+558,NIO,1991,,,,Cordoba Oro,Córdoba Oro,Córdoba Oro,,,,Cordoba Oro,Córdoba Oro,Córdoba Oro,,,,,,,Start Date removed in SWS,
+566,NGN,,,,,Naira,Naira,Naira,,,,Naira,Naira,Naira,,,,,,,,
+578,NOK,,,,,Norwegian Krone,Couronne norvégienne,Corona noruega,,,,Norwegian Krone,Couronne norvégienne,Corona noruega,,,,,,,,
+586,PKR,,,,,Pakistan Rupee,Roupie du Pakistan,Rupia paquistaní,,,,Pakistan Rupee,Roupie du Pakistan,Rupia paquistaní,,,,,,,,
+590,PAB,,,,,Balboa,Balboa,Balboa,,,,Balboa,Balboa,Balboa,,,,,,,,
+598,PGK,,,,,Kina,Kina,Kina,,,,Kina,Kina,Kina,,,,,,,,
+600,PYG,,,,,Guarani,Guaraní,Guaraní,,,,Guarani,Guaraní,Guaraní,,,,,,,,
+604,PEN,1992,,,,Sol,Sol,Sol,,,,Sol,Sol,Sol,,,,,,,Start Date removed in SWS,
+608,PHP,,,,,Philippine Peso,Peso philippin,Peso filipino,,,,Philippine Peso,Peso philippin,Peso filipino,,,,,,,,
+616,PLZ,1950,1994,,,Zloty,Zloty,Zloty,,,,Zloty,Zloty,Zloty,,,,,,,,
+620,PTE,1911,1998,,,Portuguese Escudo,Portuguese Escudo,Portuguese Escudo,,,,Portuguese Escudo,Portuguese Escudo,Portuguese Escudo,,,,,,,,
+624,GWP,1975,1997,,,Guinea-Bissau Peso,Peso de Guinée-Bissau,Peso de Guinea-Bissau,,,,Guinea-Bissau Peso,Peso de Guinée-Bissau,Peso de Guinea-Bissau,,,,,,,,
+626,TPE,1959,1976,,,Timor Escudo,Timor Escudo,Timor Escudo,,,,Timor Escudo,Timor Escudo,Timor Escudo,,,,,,,,
+634,QAR,,,,,Qatari Rial,Riyal du Qatar,Rial de Qatar,,,,Qatari Rial,Riyal du Qatar,Rial de Qatar,,,,,,,,
+642,ROL,1952,2005,,,Romanian Leu,Leu roumain,Leu rumano,,,,Romanian Leu,Leu roumain,Leu rumano,,,,,,,,
+643,RUB,1998,,,,Russian Ruble,Rouble russe,Rublo ruso,,,,Russian Ruble,Rouble russe,Rublo ruso,,,,,,,Start Date removed in SWS,
+646,RWF,,,,,Rwanda Franc,Franc du Rwanda,Franco ruandés,,,,Rwanda Franc,Franc du Rwanda,Franco ruandés,,,,,,,,
+654,SHP,,,,,Saint Helena Pound,Livre de Sainte-Hélène,Libra de Santa Elena,,,,Saint Helena Pound,Livre de Sainte-Hélène,Libra de Santa Elena,,,,,,,,
+678,STD,1977,2017,,,Dobra,Dobra,Dobra,,,,Dobra,Dobra,Dobra,,,,,,,,
+682,SAR,,,,,Saudi Riyal,Riyal saoudien,Rial saudí,,,,Saudi Riyal,Riyal saoudien,Rial saudí,,,,,,,,
+690,SCR,,,,,Seychelles Rupee,Roupie des Seychelles,Rupia de Seychelles,,,,Seychelles Rupee,Roupie des Seychelles,Rupia de Seychelles,,,,,,,,
+694,SLL,,,,,Leone,Leone,Leone,,,,Leone,Leone,Leone,,,,,,,,
+702,SGD,,,,,Singapore Dollar,Dollar de Singapour,Dólar singapurense,,,,Singapore Dollar,Dollar de Singapour,Dólar singapurense,,,,,,,,
+703,SKK,1993,2008,,,Slovak Koruna,Couronne slovaque,Corona eslovaca,,,,Slovak Koruna,Couronne slovaque,Corona eslovaca,,,,,,,,
+704,VND,1978,,,,Dong,Dong,Dong,,,,Dong,Dong,Dong,,,,,,,Start Date removed in SWS,
+705,SIT,1991,2006,,,Tolar,Tolar,Tolar,,,,Tolar,Tolar,Tolar,,,,,,,,
+706,SOS,,,,,Somali Shilling,Shilling de Somalie,Chelín somalí,,,,Somali Shilling,Shilling de Somalie,Chelín somalí,,,,,,,,
+710,ZAR,,,,,Rand,Rand,Rand,,,,Rand,Rand,Rand,,,,,,,,
+716,ZWD,1980,2006,,,Zimbabwe Dollar,Dollar du Zimbabwe,Dólar de Zimbabwe,,,,Zimbabwe Dollar,Dollar du Zimbabwe,Dólar de Zimbabwe,,,,,,,,
+720,YDD,1965,1996,,,Yemeni Dinar,Dinar du Yémen,Dinar yemení,,,,Yemeni Dinar,Dinar du Yémen,Dinar yemení,,,,,,,,
+724,ESP,,1998,,,Spanish Peseta,Spanish Peseta,Spanish Peseta,,,,Spanish Peseta,Spanish Peseta,Spanish Peseta,,,,,,,,
+728,SSP,,,,,South Sudanese Pound,Livre sud-soudanaise,Libra sursudanesa,,,,South Sudanese Pound,Livre sud-soudanaise,Libra sursudanesa,,,,,,,,
+736,SDD,1992,2006,,,Sudanese Dinar,Dinar soudanaise,Dinar sudanesa,,,,Sudanese Dinar,Dinar soudanaise,Dinar sudanesa,,,,,,,,
+740,SRG,1942,2003,,,Suriname Guilder,Suriname Guilder,Suriname Guilder,,,,Suriname Guilder,Suriname Guilder,Suriname Guilder,,,,,,,,
+748,SZL,,,,,Lilangeni,Lilangeni,Lilangeni,,,,Lilangeni,Lilangeni,Lilangeni,,,,,,,,
+752,SEK,,,,,Swedish Krona,Couronne suédoise,Corona sueca,,,,Swedish Krona,Couronne suédoise,Corona sueca,,,,,,,,
+756,CHF,,,,,Swiss Franc,Franc suisse,Franco suizo,,,,Swiss Franc,Franc suisse,Franco suizo,,,,,,,,
+760,SYP,,,,,Syrian Pound,Livre syrienne,Libra siria,,,,Syrian Pound,Livre syrienne,Libra siria,,,,,,,,
+762,TJR,1995,2000,,,Tajikistan Ruble,Tajikistan Ruble,Tajikistan Ruble,,,,Tajikistan Ruble,Tajikistan Ruble,Tajikistan Ruble,,,,,,,,
+764,THB,,,,,Baht,Baht,Baht,,,,Baht,Baht,Baht,,,,,,,,
+776,TOP,,,,,Pa’anga,Pa'anga,Pa'anga,,,,Pa’anga,Pa'anga,Pa'anga,,,,,,,,
+780,TTD,,,,,Trinidad and Tobago Dollar,Dollar de la Trinité et de Tobago,Dólar de Trinidad y Tabago,,,,Trinidad and Tobago Dollar,Dollar de la Trinité et de Tobago,Dólar de Trinidad y Tabago,,,,,,,,
+784,AED,,,,,UAE Dirham,Dirham des Émirats Arabes Unis,Dirham de los Emiratos Árabes Unidos,,,,UAE Dirham,Dirham des Émirats Arabes Unis,Dirham de los Emiratos Árabes Unidos,,,,,,,,
+788,TND,,,,,Tunisian Dinar,Dinar tunisien,Dinar tunecino,,,,Tunisian Dinar,Dinar tunisien,Dinar tunecino,,,,,,,,
+792,TRL,1843,2005,,,Turkish Lira,Livre turque,Lira turca,,,,Turkish Lira,Livre turque,Lira turca,,,,,,,,
+795,TMM,1993,2008,,,Turkmenistan Manat,Manat du Turkménistan,Manat de Turkmenistán,,,,Turkmenistan Manat,Manat du Turkménistan,Manat de Turkmenistán,,,,,,,,
+800,UGX,1988,,,,Uganda Shilling,Shilling ougandais,Chelín ugandés,,,,Uganda Shilling,Shilling ougandais,Chelín ugandés,,,,,,,Start Date removed in SWS,
+804,UAK,1992,1995,,,Karbovanet,Karbovanet,Karbovanet,,,,Karbovanet,Karbovanet,Karbovanet,,,,,,,,
+807,MKD,,,,,Denar,Denar,Denar,,,,Denar,Denar,Denar,,,,,,,,
+810,RUR,1992,1997,,,Russian Ruble,Rouble russe,Rublo ruso,,,,Russian Ruble,Rouble russe,Rublo ruso,,,,,,,,
+818,EGP,,,,,Egyptian Pound,Livre égyptienne,Libra egipcia,,,,Egyptian Pound,Livre égyptienne,Libra egipcia,,,,,,,,
+826,GBP,,,,,Pound Sterling,Livre sterling,Libra esterlina,,,,Pound Sterling,Livre sterling,Libra esterlina,,,,,,,,
+834,TZS,,,,,Tanzanian Shilling,Shilling de Tanzanie,Chelín tanzano,,,,Tanzanian Shilling,Shilling de Tanzanie,Chelín tanzano,,,,,,,,
+840,USD,,,,,US Dollar,Dollar des États-Unis,Dólar de EE.UU.,,,,US Dollar,Dollar des États-Unis,Dólar de EE.UU.,,,,,,,,
+858,UYU,1993,,,,Peso Uruguayo,Peso uruguayen,Peso uruguayo,,,,Peso Uruguayo,Peso uruguayen,Peso uruguayo,,,,,,,Start Date removed in SWS,
+860,UZS,,,,,Uzbekistan Sum,Soum d'Ouzbékistan,Sum Uzbekistán,,,,Uzbekistan Sum,Soum d'Ouzbékistan,Sum Uzbekistán,,,,,,,,
+862,VEB,1896,2007,,,Bolivar,Bolivar,Bolívar,,,,Bolivar,Bolivar,Bolívar,,,,,,,,
+882,WST,,,,,Tala,Tala,Tala,,,,Tala,Tala,Tala,,,,,,,,
+886,YER,1996,,,,Yemeni Rial,Riyal du Yémen,Rial yemení,,,,Yemeni Rial,Riyal du Yémen,Rial yemení,,,,,,,Start Date removed in SWS,
+890,YUN,1990,1992,,,Yugoslavian Dinar,Yugoslavian Dinar,Yugoslavian Dinar,,,,Yugoslavian Dinar,Yugoslavian Dinar,Yugoslavian Dinar,,,,,,,,
+891,YUM,1993,2005,,,New  Dinar,New  Dinar,New  Dinar,,,,New  Dinar,New  Dinar,New  Dinar,,,,,,,,
+894,ZMK,1968,2012,,,Zambian Kwacha,Kwacha zambien,Kwacha zambiano,,,,Zambian Kwacha,Kwacha zambien,Kwacha zambiano,,,,,,,,
+901,TWD,,,,,New Taiwan Dollar,Nouveau dollar de Taïwan,Nuevo dólar taiwanés,,,,New Taiwan Dollar,Nouveau dollar de Taïwan,Nuevo dólar taiwanés,,,,,,,,
+928,VES,2018,,,,Bolívar Soberano,Bolivar souverain,Bolívar soberano,,,,Bolívar Soberano,Bolivar souverain,Bolívar soberano,,,,,,,Start Date removed in SWS,
+929,MRU,2018,,,,Ouguiya,Ouguiya,Ouguiya,,,,Ouguiya,Ouguiya,Ouguiya,,,,,,,Start Date removed in SWS,
+930,STN,2018,,,,Dobra,Dobra,Dobra,,,,Dobra,Dobra,Dobra,,,,,,,Start Date removed in SWS,
+931,CUC,,,,,Peso Convertible,Peso Convertible,Peso Convertible,,,,Peso Convertible,Peso Convertible,Peso Convertible,,,,,,,,
+932,ZWL,2009,,,,Zimbabwe Dollar,Dollar du Zimbabwe,Dólar de Zimbabwe,,,,Zimbabwe Dollar,Dollar du Zimbabwe,Dólar de Zimbabwe,,,,,,,Start Date removed in SWS,
+933,BYN,2016,,,,Belarusian Ruble,Rouble bélorussien,Rublo belaruso,,,,Belarusian Ruble,Rouble bélorussien,Rublo belaruso,,,,,,,Start Date removed in SWS,
+934,TMT,2009,,,,Turkmenistan New Manat,Nouveau manat du Turkménistan,Nuevo manat de Turkmenistán,,,,Turkmenistan New Manat,Nouveau manat du Turkménistan,Nuevo manat de Turkmenistán,,,,,,,Start Date removed in SWS,
+935,ZWR,2008,2009,,,Zimbabwe Dollar,Dollar du Zimbabwe,Dólar de Zimbabwe,,,,Zimbabwe Dollar,Dollar du Zimbabwe,Dólar de Zimbabwe,,,,,,,,
+936,GHS,2007,,,,Ghana Cedi,Ghana Cedi,Cedi de Ghana,,,,Ghana Cedi,Ghana Cedi,Cedi de Ghana,,,,,,,Start Date removed in SWS,
+937,VEF,2008,2018,,,Bolivar Fuerte,Bolivar Fuerte,Bolivar Fuerte,,,,Bolivar Fuerte,Bolivar Fuerte,Bolivar Fuerte,,,,,,,,
+938,SDG,2007,,,,Sudanese Pound,Livre soudanaise,Libra sudanesa,,,,Sudanese Pound,Livre soudanaise,Libra sudanesa,,,,,,,Start Date removed in SWS,
+941,RSD,,,,,Serbian Dinar,Dinar serbe,Dinar serbio,,,,Serbian Dinar,Dinar serbe,Dinar serbio,,,,,,,,
+942,ZWN,2006,2008,,,Zimbabwe Dollar,Zimbabwe Dollar,Zimbabwe Dollar,,,,Zimbabwe Dollar,Zimbabwe Dollar,Zimbabwe Dollar,,,,,,,,
+943,MZN,2006,,,,Mozambique Metical,Metical,Metical,,,,Mozambique Metical,Metical,Metical,,,,,,,Start Date removed in SWS,
+944,AZN,2006,,,,Azerbaijan Manat,Manat,Manat,,,,Azerbaijan Manat,Manat,Manat,,,,,,,Start Date removed in SWS,
+946,RON,2005,,,,Romanian Leu,Leu roumain,Leu rumano,,,,Romanian Leu,Leu roumain,Leu rumano,,,,,,,Start Date removed in SWS,
+947,CHE,,,,,WIR Euro,WIR Euro,WIR Euro,,,,WIR Euro,WIR Euro,WIR Euro,,,,,,,,
+948,CHW,,,,,WIR Franc,WIR Franc,WIR Franc,,,,WIR Franc,WIR Franc,WIR Franc,,,,,,,,
+949,TRY,,,,,Turkish Lira,Livre turque,Lira turca,,,,Turkish Lira,Livre turque,Lira turca,,,,,,,,
+950,XAF,,,,,CFA Franc BEAC,Franc CFA (BEAC),Franco CFA (BEAC),,,,CFA Franc BEAC,Franc CFA (BEAC),Franco CFA (BEAC),,,,,,,,
+951,XCD,,,,,East Caribbean Dollar,Dollar des Caraïbes orientales,Dólar del Caribe oriental,,,,East Caribbean Dollar,Dollar des Caraïbes orientales,Dólar del Caribe oriental,,,,,,,,
+952,XOF,,,,,CFA Franc BCEAO,Franc CFA (BCEAO),Franco CFA (BCEAO),,,,CFA Franc BCEAO,Franc CFA (BCEAO),Franco CFA (BCEAO),,,,,,,,
+953,XPF,,,,,CFP Franc,Franc CFP,Franco CFP,,,,CFP Franc,Franc CFP,Franco CFP,,,,,,,,
+967,ZMW,2013,,,,Zambian Kwacha,Kwacha zambien,Kwacha zambiano,,,,Zambian Kwacha,Kwacha zambien,Kwacha zambiano,,,,,,,Start Date removed in SWS,
+968,SRD,2004,,,,Suriname Dollar,Dollar surinamais,Dólar surinamés,,,,Suriname Dollar,Dollar surinamais,Dólar surinamés,,,,,,,Start Date removed in SWS,
+969,MGA,2005,,,,Malagasy Ariary,Malagasy ariary,Ariary malgache,,,,Malagasy Ariary,Malagasy ariary,Ariary malgache,,,,,,,Start Date removed in SWS,
+971,AFN,2003,,true,,Afghani,Afghani,Afghani,,,,Afghani,Afghani,Afghani,,,,,,,Start Date removed in SWS,
+972,TJS,2002,,,,Somoni,Somoni,Somoni,,,,Somoni,Somoni,Somoni,,,,,,,Start Date removed in SWS,
+973,AOA,1999,,,,Kwanza,Kwanza,Kwanza,,,,Kwanza,Kwanza,Kwanza,,,,,,,Start Date removed in SWS,
+974,BYR,2000,2016,,,Belarusian Ruble,Rouble bélorussien,Rublo belaruso,,,,Belarusian Ruble,Rouble bélorussien,Rublo belaruso,,,,,,,,
+975,BGN,1999,,,,Bulgarian Lev,Lev,Lev,,,,Bulgarian Lev,Lev,Lev,,,,,,,Start Date removed in SWS,
+976,CDF,1999,,,,Congolese Franc,Franc congolais,Franco congolés,,,,Congolese Franc,Franc congolais,Franco congolés,,,,,,,Start Date removed in SWS,
+977,BAM,,,,,Convertible Mark,Mark convertible,Marco,,,,Convertible Mark,Mark convertible,Marco,,,,,,,,
+978,EUR,1999,,,,Euro,Euro,Euro,,,,Euro,Euro,Euro,,,,,,,Start Date removed in SWS,
+980,UAH,1996,,,,Hryvnia,Hryvnia,Jrivnia,,,,Hryvnia,Hryvnia,Jrivnia,,,,,,,Start Date removed in SWS,
+981,GEL,,,,,Lari,Lari,Lari,,,,Lari,Lari,Lari,,,,,,,,
+982,AOR,1995,1999,,,Kwanza readjusted,Kwanza readjusted,Kwanza readjusted,,,,Kwanza readjusted,Kwanza readjusted,Kwanza readjusted,,,,,,,,
+984,BOV,,,,,Mvdol,Mvdol,Mvdol,,,,Mvdol,Mvdol,Mvdol,,,,,,,,
+985,PLN,1995,,,,Zloty,Zloty,Zloty,,,,Zloty,Zloty,Zloty,,,,,,,Start Date removed in SWS,
+986,BRL,1995,,,,Brazilian Real,Real,Real,,,,Brazilian Real,Real,Real,,,,,,,Start Date removed in SWS,
+1001,AOK,1977,1990,,,Kwanza,Kwanza,Kwanza,,,,Kwanza,Kwanza,Kwanza,,,,,,,,
+1002,ARM,1881,1969,,,Peso Moneda Nacional,Peso Moneda Nacional,Peso Moneda Nacional,,,,Peso Moneda Nacional,Peso Moneda Nacional,Peso Moneda Nacional,,,,,,,,
+1003,ARL,1970,1983,,,Argentine Peso Ley,Argentine Peso Ley,Argentine Peso Ley,,,,Argentine Peso Ley,Argentine Peso Ley,Argentine Peso Ley,,,,,,,,
+1004,ARP,1983,1985,,,Argentine Peso,Peso argentin,Peso argentino,,,,Argentine Peso,Peso argentin,Peso argentino,,,,,,,,
+1005,ARA,1985,1991,,,Argentine Austral,Argentine Austral,Argentine Austral,,,,Argentine Austral,Argentine Austral,Argentine Austral,,,,,,,,
+1006,BGJ,1832,1952,,,Bulgarian Lev,Bulgarian Lev,Bulgarian Lev,,,,Bulgarian Lev,Bulgarian Lev,Bulgarian Lev,,,,,,,,
+1007,BGK,1952,1962,,,Bulgarian Lev,Bulgarian Lev,Bulgarian Lev,,,,Bulgarian Lev,Bulgarian Lev,Bulgarian Lev,,,,,,,,
+1008,BOP,,1986,,,Bolivian Peso,Bolivian Peso,Bolivian Peso,,,,Bolivian Peso,Bolivian Peso,Bolivian Peso,,,,,,,,
+1009,BRB,1970,1986,,,Cruziero,Cruziero,Cruziero,,,,Cruziero,Cruziero,Cruziero,,,,,,,Start Date removed in SWS,
+1010,BRC,1986,1989,,,Cruzado,Cruzado,Cruzado,,,,Cruzado,Cruzado,Cruzado,,,,,,,,
+1011,BRN,1989,1990,,,New Cruzado,New Cruzado,New Cruzado,,,,New Cruzado,New Cruzado,New Cruzado,,,,,,,,
+1012,BRE,1990,1993,,,Cruziero,Cruziero,Cruziero,,,,Cruziero,Cruziero,Cruziero,,,,,,,,
+1013,BUK,,1989,,,Kyat,Kyat,Kyat,,,,Kyat,Kyat,Kyat,,,,,,,,
+1014,GNS,1971,1985,,,Syli,Syli,Syli,,,,Syli,Syli,Syli,,,,,,,,
+1015,HRD,1991,1994,,,Croatian Dinar,Croatian Dinar,Croatian Dinar,,,,Croatian Dinar,Croatian Dinar,Croatian Dinar,,,,,,,,
+1016,ILP,1948,1980,,,Israeli Pound,Livre israélienne,Libra de Israel,,,,Israeli Pound,Livre israélienne,Libra de Israel,,,,,,,,
+1017,ILR,1980,1985,,,Israeli Shekel,Israeli Shekel,Israeli Shekel,,,,Israeli Shekel,Israeli Shekel,Israeli Shekel,,,,,,,,
+1018,ISJ,1922,1981,,,Iceland Krona,Iceland Krona,Iceland Krona,,,,Iceland Krona,Iceland Krona,Iceland Krona,,,,,,,,
+1019,LAJ,1965,1979,,,Lao Kip,Lao Kip,Lao Kip,,,,Lao Kip,Lao Kip,Lao Kip,,,,,,,,
+1020,LSM,,1985,,,Maloti,Maloti,Maloti,,,,Maloti,Maloti,Maloti,,,,,,,,
+1021,LTT,,1993,,,Talonas,Talonas,Talonas,,,,Talonas,Talonas,Talonas,,,,,,,,
+1022,LYP,1951,1971,,,Libyan Pound,Livre libyenne,Libia libra,,,,Libyan Pound,Livre libyenne,Libia libra,,,,,,,,
+1023,MTP,,1983,,,Maltese Pound,Maltese Pound,Maltese Pound,,,,Maltese Pound,Maltese Pound,Maltese Pound,,,,,,,,
+1024,MVQ,,1981,,,Maldivian Rupee,Maldivian Rupee,Maldivian Rupee,,,,Maldivian Rupee,Maldivian Rupee,Maldivian Rupee,,,,,,,,
+1025,MXP,,1992,,,Mexican Peso,Peso mexicain,Peso mexicano,,,,Mexican Peso,Peso mexicain,Peso mexicano,,,,,,,,
+1026,MZE,1914,1979,,,Mozambique Escudo,Mozambique Escudo,Mozambique Escudo,,,,Mozambique Escudo,Mozambique Escudo,Mozambique Escudo,,,,,,,,
+1027,NIC,1988,1990,,,Cordoba,Córdoba,Córdoba,,,,Cordoba,Córdoba,Córdoba,,,,,,,,
+1028,PES,1863,1984,,,Sol,Sol,Sol,,,,Sol,Sol,Sol,,,,,,,,
+1029,PEI,1985,1991,,,Inti,Inti,Inti,,,,Inti,Inti,Inti,,,,,,,,
+1030,SDP,1956,1992,,,Sudanese Pound,Sudanese Pound,Sudanese Pound,,,,Sudanese Pound,Sudanese Pound,Sudanese Pound,,,,,,,,
+1031,SUR,1961,1991,,,Ruble,Ruble,Ruble,,,,Ruble,Ruble,Ruble,,,,,,,,
+1032,UGS,1966,1987,,,Uganda Shilling,Shilling ougandais,Chelín ugandés,,,,Uganda Shilling,Shilling ougandais,Chelín ugandés,,,,,,,,
+1033,UYP,1896,1975,,,Uruguayan Peso,Uruguayan Peso,Uruguayan Peso,,,,Uruguayan Peso,Uruguayan Peso,Uruguayan Peso,,,,,,,,
+1034,UYN,1975,1993,,,Uruguayan New Peso,Uruguayan New Peso,Uruguayan New Peso,,,,Uruguayan New Peso,Uruguayan New Peso,Uruguayan New Peso,,,,,,,,
+1035,VNC,,1978,,,Old Dong,Old Dong,Old Dong,,,,Old Dong,Old Dong,Old Dong,,,,,,,,
+1036,YUD,1966,1989,,,New Yugoslavian Dinar,New Yugoslavian Dinar,New Yugoslavian Dinar,,,,New Yugoslavian Dinar,New Yugoslavian Dinar,New Yugoslavian Dinar,,,,,,,,
+1037,ZRZ,1967,1992,,,Zaire,Zaire,Zaire,,,,Zaire,Zaire,Zaire,,,,,,,,
+1038,ZWC,1970,1979,,,Rhodesian Dollar,Rhodesian Dollar,Rhodesian Dollar,,,,Rhodesian Dollar,Rhodesian Dollar,Rhodesian Dollar,,,,,,,,
+1039,ALK,1946,1965,,,Old Albanian Lek,Old Albanian Lek,Old Albanian Lek,,,,Old Albanian Lek,Old Albanian Lek,Old Albanian Lek,,,,,,,,
+1040,GWE,,1974,,,Guinean Escudo,Guinean Escudo,Guinean Escudo,,,,Guinean Escudo,Guinean Escudo,Guinean Escudo,,,,,,,,
+1041,BRZ,1942,1967,,,Cruzeiro,Cruzeiro,Cruzeiro,,,,Cruzeiro,Cruzeiro,Cruzeiro,,,,,,,,
+1042,AUP,,1950,,,Australian Pound,Livre australienne,Libra australiana,,,,Australian Pound,Livre australienne,Libra australiana,,,,,,,,
+1043,FJP,,1969,,,Fijian Pound,Livre de Fidji,Libra de Fiji,,,,Fijian Pound,Livre de Fidji,Libra de Fiji,,,,,,,,
+1044,XBW,,1955,,,British West Indies Dollar,Dollar des Indes britanniques,Dólar de las Indias Occidentales Británicas,,,,British West Indies Dollar,Dollar des Indes britanniques,Dólar de las Indias Occidentales Británicas,,,,,,,,
+1045,XPG,1959,1966,,,Persian Gulf Rupee,Roupie du Golfe,Rupia del Golfo,,,,Persian Gulf Rupee,Roupie du Golfe,Rupia del Golfo,,,,,,,,
+1046,NZP,,1967,,,New Zealand Pound,Livre néo-zélandaise,Libra de Nueva Zelanda,,,,New Zealand Pound,Livre néo-zélandaise,Libra de Nueva Zelanda,,,,,,,,
