@@ -18,7 +18,7 @@ suppressMessages({
 
 if(CheckDebug()){
   library(faoswsModules)
-  SETTINGS = ReadSettings("swsQA.yml")
+  SETTINGS = ReadSettings("sws.yml")
   R_SWS_SHARE_PATH = SETTINGS[["share"]]
   SetClientFiles(SETTINGS[["certdir"]])
   GetTestEnvironment(baseUrl = SETTINGS[["server"]],

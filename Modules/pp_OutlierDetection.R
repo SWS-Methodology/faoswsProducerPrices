@@ -46,6 +46,8 @@ message(paste("Prod Prices: countries selected ", paste0(sessionCountry, collaps
 
 #-- Pull preparation data ----
 
+lastyear <- as.character(as.numeric(format(Sys.Date(), '%Y')))
+
 priceKey = DatasetKey(
   domain = domainPP,
   dataset = datasetPrep,
@@ -57,7 +59,7 @@ priceKey = DatasetKey(
     Dimension(name = "measuredItemCPC",
               keys = GetCodeList(domainPP, datasetPrep, 'measuredItemCPC')[, code]),
     Dimension(name = "timePointYears", 
-              keys = GetCodeList(domainPP, datasetPrep, 'timePointYears')[, code]))
+              keys = GetCodeList(domainPP, datasetPrep, 'timePointYears')[code > as.character(as.numeric(lastyear)-22), code]))
   
 )
 
@@ -69,6 +71,7 @@ newYear <- max(priceData$timePointYears)
 #-- Outlier detection ----
 
 ppout <- copy(priceData)
+ppout <- ppout[order(timePointYears)]
 ppout[ , LogValue := log(Value)]
 ppout[measuredElement == '5531' , 
       var := diff(c(NA, LogValue)), 
@@ -134,7 +137,7 @@ ppnew[, method := 'tsclean']
 #-- Manual outlier ----
 
 ppout2 <- copy(priceData)
-
+ppout2 <- ppout2[order(timePointYears)]
 ppout2[measuredElement == '5531', 
        quart1 := quantile(Value, 0.25, na.rm = T),
        by = c("geographicAreaM49",
@@ -156,7 +159,6 @@ ppout2[Value > upper | Value < lower  , outlier2 := TRUE,
               "measuredItemCPC")]
 ppout2[!timePointYears %in% newYear, outlier2 := FALSE]
 ppout2[outlier2 == TRUE, method := 'IQR_level']
-
 
 outliers <- rbind(ppnew[flagObservationStatus_clean == 'E' & flagMethod_clean == 'e'], 
                   ppout[timePointYears %in% newYear & outlier2 == TRUE],

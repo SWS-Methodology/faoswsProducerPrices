@@ -46,8 +46,8 @@ if(!is.null(countryPar) & length(countryPar) > 0){
 message(paste("Prod Prices: countries selected ", paste0(sessionCountry, collapse = ', '), '.', sep = ''))
 
 # Mandatory year values.
-maxyear <- as.numeric(swsContext.computationParams$maxyear)
-minyear <- as.numeric(swsContext.computationParams$minyear)
+maxyear <- 2020# as.numeric(swsContext.computationParams$maxyear)
+minyear <- 2018#as.numeric(swsContext.computationParams$minyear)
 selectedYears <- as.character(minyear:maxyear)
 
 #-- Pull questionnaire data ----
@@ -99,11 +99,17 @@ if(any(sessionCountry == '275')){
 erdt <- GetData(erKey, flags = F) 
 
 if(erdt[geographicAreaM49 == '275',.N] == 0){
-  erdt[geographicAreaM49 == '376', geographicAreaM49 := '275']
+  # Palestine copy Israel
+  palestine <- erdt[geographicAreaM49 == '376']
+  palestine[,geographicAreaM49 := '275']
+  erdt <- rbind(erdt, palestine)
+  
 } else {
-  erdt[geographicAreaM49 == '275', geographicAreaM49 := NA]
-  erdt <- erdt[!is.na(geographicAreaM49)]
-  erdt[geographicAreaM49 == '376', geographicAreaM49 := '275']
+  
+  erdt <- erdt[geographicAreaM49 != '275']
+  palestine <- erdt[geographicAreaM49 == '376']
+  palestine[,geographicAreaM49 := '275']
+  erdt <- rbind(erdt, palestine)
 }
 
 
@@ -133,11 +139,13 @@ if(erdt[geographicAreaM49 == '275',.N] == 0){
 
 erdt[,c('measuredElement', 'to_currency')] <- NULL
 
-lcu_2_m49 <- ReadDatatable('lcu_2_m49')
-eco_curr0 <- ReadDatatable('currency_country_years')
+xr_corr <- ReadDatatable('exchange_rates_correspondences')
+
+#lcu_2_m49 <- ReadDatatable('lcu_2_m49')
+#eco_curr0 <- ReadDatatable('currency_country_years')
 xrcountry <-  ReadDatatable('currency_changes')
 
-erdt <- fix_xr(erdt, lcu_2_m49, eco_curr0, xrcountry)
+erdt <- fix_xr(xrcountry, xr_corr)
 
 # Start conversion into USD and SLC merging with XR
 pper0 <- merge(priceData, erdt, by = c('geographicAreaM49', 'timePointYears'), all.x = T,

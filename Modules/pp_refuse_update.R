@@ -53,6 +53,7 @@ codes <- conflict2update[,c("geographicAreaM49",
                             "timePointYears",
                             "measuredItemCPC"), with =F]
 
+if(codes[,.N] > 0){
 domainPP <- 'prod_prices'
 datasetVal <- 'annual_producer_prices_validation'
 datasetPrep <- 'annual_producer_prices_prep'
@@ -82,4 +83,24 @@ data2ripristinate <- val_price[codes, on = c("geographicAreaM49",
 #-- Data Saving ----
 SaveData(domainPP, datasetPrep, data2ripristinate)
 
+from = "sws@fao.org"
+to = swsContext.userEmail
+subject = "The 'Refuse update' plug-in has correctly run"
+body = 'The values restored should now be saved in the Preparation dataset.'
+sendmailR::sendmail(from = from, to = to, subject = subject, msg = body)
+
+} else {
+
+  from = "sws@fao.org"
+  to = swsContext.userEmail
+  subject = "The 'Refuse update' plug-in has correctly run"
+  body = 'There was no value to restore. The Preparation dataset remains unchanged with the newest questionnaire data.'
+  sendmailR::sendmail(from = from, to = to, subject = subject, msg = body)
+  paste0("Email sent to ", swsContext.userEmail)
+  
+}
+
+
 paste0("Email sent to ", swsContext.userEmail)
+
+
