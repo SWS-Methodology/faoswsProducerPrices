@@ -17,11 +17,11 @@ suppressMessages({
 
 if(CheckDebug()){
   library(faoswsModules)
-  SETTINGS = ReadSettings("sws.yml")
+  SETTINGS = ReadSettings("sws1.yml")
   R_SWS_SHARE_PATH = SETTINGS[["share"]]
   SetClientFiles(SETTINGS[["certdir"]])
   GetTestEnvironment(baseUrl = SETTINGS[["server"]],
-                     token = '4e9d9a2e-5258-48b6-974f-3656d1af8217')
+                     token = SETTINGS[["token"]])#'4e9d9a2e-5258-48b6-974f-3656d1af8217')
 }
 
 #-- Parameters ----
@@ -38,16 +38,16 @@ if(!is.null(countryPar) & length(countryPar) > 0){
   countryPar <- swsContext.computationParams$countries
   sessionCountry <- strsplit(countryPar, ', ')[[1]]
 } else {
-  sessionCountry <- swsContext.datasets[[1]]@dimensions$geographicAreaM49@keys
+  #sessionCountry <- swsContext.datasets[[1]]@dimensions$geographicAreaM49@keys
   countries <- GetCodeList(domainPP, datasetPrep, "geographicAreaM49")[ type == 'country']$code
   # Make sure only countries not areas
-  sessionCountry <- sessionCountry[sessionCountry %in% countries]
+  sessionCountry <- countries#sessionCountry[sessionCountry %in% countries]
 }
 message(paste("Prod Prices: countries selected ", paste0(sessionCountry, collapse = ', '), '.', sep = ''))
 
 # Mandatory year values.
-maxyear <- 2020# as.numeric(swsContext.computationParams$maxyear)
-minyear <- 2018#as.numeric(swsContext.computationParams$minyear)
+maxyear <- as.numeric(swsContext.computationParams$maxyear)
+minyear <- as.numeric(swsContext.computationParams$minyear)
 selectedYears <- as.character(minyear:maxyear)
 
 #-- Pull questionnaire data ----
@@ -79,40 +79,40 @@ priceData <- GetData(priceKey, flags = TRUE)
 if(any(sessionCountry == '275')){
   
   erKey = DatasetKey(
-  domain = 'common',
-  dataset = 'exchange_rates_annual',
-  dimensions = list(
-    Dimension(name = 'geographicAreaM49',
-              keys = GetCodeList('common', 'exchange_rates_annual', 'geographicAreaM49')[code %in% c(sessionCountry, '376') , code]),
-    Dimension(name = "from_currency",
-              keys = GetCodeList('common', 'exchange_rates_annual', 'from_currency')[code != 'ECU' & endDate >= '1991-01-01' | 
-                                                                                       is.na(endDate), code]),
-    Dimension(name = "to_currency", 
-              keys = GetCodeList('common', 'exchange_rates_annual', 'to_currency')[code == 'USD', code]),
-    Dimension(name = 'measuredElement',
-              keys = 'LCU'),
-    Dimension(name = "timePointYears", 
-              keys = GetCodeList('common', 'exchange_rates_annual', 'timePointYears')[code %in% selectedYears, code]))
+    domain = 'common',
+    dataset = 'exchange_rates_annual',
+    dimensions = list(
+      Dimension(name = 'geographicAreaM49',
+                keys = GetCodeList('common', 'exchange_rates_annual', 'geographicAreaM49')[code %in% c(sessionCountry, '376') , code]),
+      Dimension(name = "from_currency",
+                keys = GetCodeList('common', 'exchange_rates_annual', 'from_currency')[code != 'ECU' & endDate >= '1991-01-01' | 
+                                                                                         is.na(endDate), code]),
+      Dimension(name = "to_currency", 
+                keys = GetCodeList('common', 'exchange_rates_annual', 'to_currency')[code == 'USD', code]),
+      Dimension(name = 'measuredElement',
+                keys = 'LCU'),
+      Dimension(name = "timePointYears", 
+                keys = GetCodeList('common', 'exchange_rates_annual', 'timePointYears')[code %in% selectedYears, code]))
+    
+  )
   
-)
-
-erdt <- GetData(erKey, flags = F) 
-
-if(erdt[geographicAreaM49 == '275',.N] == 0){
-  # Palestine copy Israel
-  palestine <- erdt[geographicAreaM49 == '376']
-  palestine[,geographicAreaM49 := '275']
-  erdt <- rbind(erdt, palestine)
+  erdt <- GetData(erKey, flags = F) 
   
-} else {
+  if(erdt[geographicAreaM49 == '275',.N] == 0){
+    # Palestine copy Israel
+    palestine <- erdt[geographicAreaM49 == '376']
+    palestine[,geographicAreaM49 := '275']
+    erdt <- rbind(erdt, palestine)
+    
+  } else {
+    
+    erdt <- erdt[geographicAreaM49 != '275']
+    palestine <- erdt[geographicAreaM49 == '376']
+    palestine[,geographicAreaM49 := '275']
+    erdt <- rbind(erdt, palestine)
+  }
   
-  erdt <- erdt[geographicAreaM49 != '275']
-  palestine <- erdt[geographicAreaM49 == '376']
-  palestine[,geographicAreaM49 := '275']
-  erdt <- rbind(erdt, palestine)
-}
-
-
+  
 } else {
   
   erKey = DatasetKey(
@@ -145,7 +145,7 @@ xr_corr <- ReadDatatable('exchange_rates_correspondences')
 #eco_curr0 <- ReadDatatable('currency_country_years')
 xrcountry <-  ReadDatatable('currency_changes')
 
-erdt <- fix_xr(xrcountry, xr_corr)
+erdt <- fix_xr(erdt,xrcountry, xr_corr)
 
 # Start conversion into USD and SLC merging with XR
 pper0 <- merge(priceData, erdt, by = c('geographicAreaM49', 'timePointYears'), all.x = T,
@@ -193,57 +193,67 @@ valpriceKey = DatasetKey(
 val_price <- GetData(valpriceKey, flags = TRUE)
 #setnames(val_price, 'flag_obs_status_v2', 'flagObservationStatus')
 
-if(any(pper[timePointYears == maxyear]$flagObservationStatus == 'B')){
+xr_corr[start_year_iso %in% selectedYears,.N] > 0
+
+
+if(xr_corr[start_year_iso %in% selectedYears,.N] > 0){
+  #any(pper[timePointYears == maxyear]$flagObservationStatus == 'B')){
   
-  geotimecomb <- unique(pper[flagObservationStatus == 'B', .(geographicAreaM49, timePointYears, from_currency)])
-  
+  geotimecomb <- xr_corr[start_year_iso %in% selectedYears,.(geographicaream49, start_year_iso, currency_code_iso)]  #unique(pper[flagObservationStatus == 'B', .(geographicAreaM49, timePointYears, from_currency)])
+  setnames(geotimecomb, c('geographicaream49'), c('geographicAreaM49'))
   # Get datatable with conversion rates 
   # If change of currency (the datatable has to be updated)
   conv_rates <- ReadDatatable('currency_changes')
   
   conv_rates_needed <- merge(conv_rates, geotimecomb, by.x  = 'new_currency_code',
-                             by.y = 'from_currency')
+                             by.y = 'currency_code_iso')# 'from_currency')
   
   slcval <- merge(val_price, conv_rates_needed, by = 'geographicAreaM49', 
                   all.x = T, suffixes = c('', '_change'))
   
-  slcval[measuredElement == '5531' & timePointYears < timePointYears_change, c('Value',
-                                                                               'flagObservationStatus', 
-                                                                               'flagMethod'):= list(Value/exchange_rate,
-                                                                                                    flagObservationStatus,
-                                                                                                    'q')]
+  slcval[measuredElement == '5531' & timePointYears <  start_year_iso, #timePointYears_change, 
+         c('Value',
+           'flagObservationStatus', 
+           'flagMethod'):= list(Value/exchange_rate,
+                                flagObservationStatus,
+                                'q')]
   names(slcval)
   slcval[ , c("new_currency_code",    
               "old_currency_code",
               "exchange_rate",
-              "timePointYears_change")] <- NULL
+              #"timePointYears_change"
+              "start_year_iso"
+  )] <- NULL
   
   slcquest <- merge(pper, conv_rates_needed,  by = 'geographicAreaM49',
                     all.x = T, suffixes = c('', '_change'))
   
-  slcquest[measuredElement == '5531' & timePointYears < timePointYears_change, c('Value',
-                                                                                 'flagObservationStatus', 
-                                                                                 'flagMethod'):= list(Value/exchange_rate,
-                                                                                                      flagObservationStatus,
-                                                                                                      'q')]
+  slcquest[measuredElement == '5531' & timePointYears < start_year_iso, #timePointYears_change,  
+           c('Value',
+             'flagObservationStatus', 
+             'flagMethod'):= list(Value/exchange_rate,
+                                  flagObservationStatus,
+                                  'q')]
   slcquest[ , c("new_currency_code",    
                 "old_currency_code",
                 "exchange_rate",
-                "timePointYears_change")] <- NULL
+                #"timePointYears_change"
+                "start_year_iso"
+  )] <- NULL
   
   
   
   #-- Data Saving ----
   
   data2save <- rbind(slcquest[!is.na(Value), .(geographicAreaM49,
-                                         timePointYears,
-                                         measuredElement,
-                                         measuredItemCPC,
-                                         Value,
-                                         flagObservationStatus,
-                                         flagMethod)],
+                                               timePointYears,
+                                               measuredElement,
+                                               measuredItemCPC,
+                                               Value,
+                                               flagObservationStatus,
+                                               flagMethod)],
                      slcval[measuredElement == '5531' & timePointYears < minyear & !is.na(Value),
-                            , .(geographicAreaM49,
+                            .(geographicAreaM49,
                                 timePointYears,
                                 measuredElement,
                                 measuredItemCPC,
@@ -258,7 +268,7 @@ if(any(pper[timePointYears == maxyear]$flagObservationStatus == 'B')){
 } else {
   slcval <- val_price
   slcquest <- pper
-
+  
   #-- Data Saving ----
   
   data2save <- slcquest[!is.na(Value), .(geographicAreaM49,
@@ -272,7 +282,7 @@ if(any(pper[timePointYears == maxyear]$flagObservationStatus == 'B')){
   SaveData(domainPP, datasetPrep, data2save)
   
   
-  }
+}
 
 
 
@@ -280,9 +290,9 @@ if(any(pper[timePointYears == maxyear]$flagObservationStatus == 'B')){
 #-- Merge QUEST and VAL ----
 
 pptot <- merge(slcquest[measuredElement == '5530'], slcval[measuredElement == '5530'], by = c('geographicAreaM49', 
-                                        'timePointYears',
-                                        'measuredElement',
-                                        'measuredItemCPC'),
+                                                                                              'timePointYears',
+                                                                                              'measuredElement',
+                                                                                              'measuredItemCPC'),
                suffixes = c('', '_old'), all = T)
 
 pptot[!is.na(Value_old) & is.na(Value), c('Value',

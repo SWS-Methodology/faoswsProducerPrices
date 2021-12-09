@@ -1,0 +1,13 @@
+current: qa
+all:
+  share: //hqlprsws1.hq.un.fao.org/sws_r_share
+qa:
+  certdir: C:/Users/Taglionic/OneDrive - Food and Agriculture Organization/Github/.R/QA
+  server: https://swsqa.aws.fao.org:8181
+  token: 3c8c2fa8-07d1-41b4-bd63-a3ebf308a9ff
+  
+dev:
+  certdir: C:/Users/Taglionic/OneDrive - Food and Agriculture Organization/Github/.R/QA
+  server: https://swsdev.aws.fao.org:8181
+  token: a5c52080-ec4f-409b-a430-06aa85ede100
+

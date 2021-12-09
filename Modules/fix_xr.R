@@ -1,4 +1,4 @@
-fix_xr <- function(xrcountry, xr_corr){
+fix_xr <- function(erdt, xrcountry, xr_corr){
   
   # Get country-currency datatatble from IMF
   xr_corr[is.na(start_year_iso), start_year_iso := '1900']

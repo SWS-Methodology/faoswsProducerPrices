@@ -21,11 +21,11 @@ suppressMessages({
 
 if(CheckDebug()){
   library(faoswsModules)
-  SETTINGS = ReadSettings("sws.yml")
+  SETTINGS = ReadSettings("sws1.yml")
   R_SWS_SHARE_PATH = SETTINGS[["share"]]
   SetClientFiles(SETTINGS[["certdir"]])
   GetTestEnvironment(baseUrl = SETTINGS[["server"]],
-                     token = '4c304ada-522c-4110-bac6-34a3bc0703e8')  #SETTINGS[["token"]])#'4e9d9a2e-5258-48b6-974f-3656d1af8217')
+                     token = SETTINGS[["token"]])#'4c304ada-522c-4110-bac6-34a3bc0703e8')  #'4e9d9a2e-5258-48b6-974f-3656d1af8217')
 }
 
 domainPP <- 'prod_prices'
@@ -44,15 +44,16 @@ if(interpolations[,.N] == 0){
   msg <- 'No interpolation validation has been found.'
 } else {
   msg <- ''
-impYear <- max(interpolations$timepointyears)
-#interpolations <- interpolations[timepointyears >= (max(as.numeric(interpolations$timepointyears))-3)]
-interpolations <- interpolations[flagobservationstatus == 'I' & flagmethod == 'e' & timepointyears == as.character(as.numeric(impYear)-1)]
-interpolations[is.na(value), c('value', 'flagobservationstatus', 'flagmethod') := list(0, 'M', 'u')]
-
-interpolations[,selected := NULL]
-interpolations[,interpolation := NULL]
-interpolations[,approach := 'Interpolation']
-setnames(interpolations, 'value', 'estimation')
+  impYear <- max(interpolations$timepointyears)
+  #interpolations <- interpolations[timepointyears >= (max(as.numeric(interpolations$timepointyears))-3)]
+  interpolations <- interpolations[flagobservationstatus == 'I' & flagmethod == 'interpolation']
+  # interpolations[is.na(value), c('value', 'flagobservationstatus', 'flagmethod') := list(0, 'M', 'u')]
+  interpolations[, flagmethod := 'e']
+  interpolations[,selected := NULL]
+  interpolations[,value := interpolation ]
+  interpolations[,interpolation := NULL]
+  interpolations[,approach := 'Interpolation']
+  setnames(interpolations, 'value', 'estimation')
 }
 # imputations[approach == 'ARIMAX', selected := TRUE]
 
@@ -62,13 +63,13 @@ if(any(!unique(imputations$approach) %in% approaches$method)){
                 paste(imputations$approach[!unique(imputations$approach) %in% approaches$method], collapse = ', '), sep = '' ))
 }  
 
-validations <- imputations[selected == TRUE]
+validations0 <- imputations[selected == TRUE]
 
-validations <- merge(validations, approaches, by.x = 'approach', by.y = 'method', all.x = T)
+validations0 <- merge(validations0, approaches, by.x = 'approach', by.y = 'method', all.x = T)
 
-validations[ , selected := NULL]
+validations0[ , selected := NULL]
 
-validations <- rbind(validations, interpolations)
+validations <- rbind(validations0, interpolations)
 
 validations[ , measuredElement := '5531']
 
@@ -127,13 +128,18 @@ if(any(unique(validations$geographicAreaM49) == '275')){
   erdt <- GetData(erKey, flags = F) 
   
   if(erdt[geographicAreaM49 == '275',.N] == 0){
-    erdt[geographicAreaM49 == '376', geographicAreaM49 := '275']
+    # Palestine copy Israel
+    palestine <- erdt[geographicAreaM49 == '376']
+    palestine[,geographicAreaM49 := '275']
+    erdt <- rbind(erdt, palestine)
+    
   } else {
-    erdt[geographicAreaM49 == '275', geographicAreaM49 := NA]
-    erdt <- erdt[!is.na(geographicAreaM49)]
-    erdt[geographicAreaM49 == '376', geographicAreaM49 := '275']
+    
+    erdt <- erdt[geographicAreaM49 != '275']
+    palestine <- erdt[geographicAreaM49 == '376']
+    palestine[,geographicAreaM49 := '275']
+    erdt <- rbind(erdt, palestine)
   }
-  
   
 } else {
   
@@ -163,11 +169,12 @@ if(any(unique(validations$geographicAreaM49) == '275')){
 erdt[,c('measuredElement', 'to_currency')] <- NULL
 
 # Get country-currency datatatble ADD withdraw year/effective change in series
-lcu_2_m49 <- ReadDatatable('lcu_2_m49')
-eco_curr0 <- ReadDatatable('currency_country_years')
+xr_corr <- ReadDatatable('exchange_rates_correspondences')
+#lcu_2_m49 <- ReadDatatable('lcu_2_m49')
+#eco_curr0 <- ReadDatatable('currency_country_years')
 xrcountry <-  ReadDatatable('currency_changes')
 
-erdt <- fix_xr(erdt, lcu_2_m49, eco_curr0, xrcountry)
+erdt <- fix_xr(erdt, xrcountry, xr_corr)
 
 # # check on currency
 # if(!all(erdt$from_currency %in% lcu_2_m49$code_iso)){
@@ -177,22 +184,26 @@ erdt <- fix_xr(erdt, lcu_2_m49, eco_curr0, xrcountry)
 # }
 
 # Start conversion into USD and SLC merging with XR
-
-if(any(pper$flagObservationStatus == 'B')){
+selectedYears <- unique(pper$timePointYears)
+if(xr_corr[start_year_iso %in% selectedYears,.N] > 0){ 
+  #any(pper$flagObservationStatus == 'B')){
   
-  geotimecomb <- unique(pper[flagObservationStatus == 'B', .(geographicAreaM49, timePointYears)])
-                        #, from_currency)])
-  geotimecomb <- merge(geotimecomb, erdt[,.(geographicAreaM49, timePointYears, from_currency)],
-        by = c('geographicAreaM49', 'timePointYears'))
+  geotimecomb <- xr_corr[start_year_iso %in% selectedYears,.(geographicaream49, start_year_iso, currency_code_iso)]
+  #unique(pper[flagObservationStatus == 'B', .(geographicAreaM49, timePointYears)])
+  #, from_currency)])
+  setnames(geotimecomb, c('geographicaream49'), c('geographicAreaM49'))
+  #  geotimecomb <- merge(erdt[,.(geographicAreaM49, timePointYears, from_currency)], geotimecomb, 
+  #        by.x = c('geographicAreaM49', 'timePointYears'),
+  #        by.y = c('geographicAreaM49', 'start_year_iso'))
   
   # Get datatable with conversion rates 
   # If change of currency (the datatable has to be updated)
   conv_rates <- ReadDatatable('currency_changes')
   
   conv_rates_needed <- merge(conv_rates, geotimecomb, by.x  = 'new_currency_code',
-                             by.y = 'from_currency')
+                             by.y = 'currency_code_iso')# 'from_currency')
   #curr2check <- unique(geotimecomb$from_currency)
-  if(conv_rates_needed[,.N, new_currency_code]$N > 1){
+  if(any(conv_rates_needed[,.N, new_currency_code]$N > 1)){
     
     message('Two conversion rate for the same currency')
     stop()
@@ -201,29 +212,35 @@ if(any(pper$flagObservationStatus == 'B')){
   slcval <- merge(validations, conv_rates_needed, by = 'geographicAreaM49', 
                   all.x = T, suffixes = c('', '_change'))
   
-  slcval[measuredElement == '5530' & timePointYears < timePointYears_change, c('Value',
-                                                                               'flagObservationStatus', 
-                                                                               'flagMethod'):= list(Value*exchange_rate,
-                                                                                                    flagObservationStatus,
-                                                                                                    'i')]
+  slcval[measuredElement == '5530' & timePointYears < start_year_iso, #timePointYears_change, 
+         c('Value',
+           'flagObservationStatus', 
+           'flagMethod'):= list(Value*exchange_rate,
+                                flagObservationStatus,
+                                'i')]
   # names(slcval)
   slcval[ , c("new_currency_code",    
               "old_currency_code",
               "exchange_rate",
-              "timePointYears_change")] <- NULL
+              #"timePointYears_change"
+              "start_year_iso"
+  )] <- NULL
   
   slcquest <- merge(pper, conv_rates_needed,  by = 'geographicAreaM49',
                     all.x = T, suffixes = c('', '_change'))
   
-  slcquest[measuredElement == '5530' & timePointYears < timePointYears_change, c('Value',
-                                                                                 'flagObservationStatus', 
-                                                                                 'flagMethod'):= list(Value*exchange_rate,
-                                                                                                      flagObservationStatus,
-                                                                                                      'e')]
+  slcquest[measuredElement == '5530' & timePointYears < start_year_iso, #timePointYears_change,
+           c('Value',
+             'flagObservationStatus', 
+             'flagMethod'):= list(Value*exchange_rate,
+                                  flagObservationStatus,
+                                  'e')]
   slcquest[ , c("new_currency_code",    
                 "old_currency_code",
                 "exchange_rate",
-                "timePointYears_change")] <- NULL
+                #"timePointYears_change"
+                "start_year_iso"
+                )] <- NULL
   
   pper <- copy(slcquest)
   
@@ -252,6 +269,8 @@ pper3 <- pper2[ !is.na(Value)]
 #                   'flagmethod'), 
 #          c('flagObservationStatus',
 #            'flagMethod'))
+
+pper3[, Value := round(Value, 6)]
 
 SaveData(domain = domainPP, dataset = datasetPrep, data = pper3,
          metadata = includemetadata, waitTimeout = Inf)

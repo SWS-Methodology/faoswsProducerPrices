@@ -1,0 +1,17 @@
+current: production
+qa:
+  
+  certdir: C:/Users/Taglionic/OneDrive - Food and Agriculture Organization/Github/.R/QA
+  server: https://swsqa.aws.fao.org:8181
+# token: 460220a7-9821-4d68-b429-d88ad3f73470
+#token: 2ef045e2-42c3-430f-9f8f-0cd424711b0a
+  token : f645b5c7-8056-44fa-95d0-0dd69cdf4497 #6839bd5a-047c-4b9a-9c1c-1060e90c686f
+  share: "Z:"
+
+
+production:
+  certdir: C:/Users/Taglionic/OneDrive - Food and Agriculture Organization/Github/.R/Production
+  server: https://sws.fao.org:8181
+  token: 3d78ae3a-d68a-4e14-8624-8065bb8a98ae
+  share: "Z:"
+

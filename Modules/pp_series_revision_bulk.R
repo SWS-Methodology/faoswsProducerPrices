@@ -106,7 +106,6 @@ commPar <- swsContext.computationParams$commodities
 
 cpchierarchy <- ReadDatatable('cpc_hierarchy_ebx5')
 
-commPar = 'All'
 if(commPar == 'All'){
   
   commList <-   GetCodeList('agriculture', 'aproduction', 'measuredItemCPC')[, code]
@@ -192,15 +191,15 @@ if(commPar == 'All'){
 # years
 
 
-maxyear <- 2019# swsContext.computationParams$maxyear
-minyear <- 2018#swsContext.computationParams$minyear
+maxyear <- swsContext.computationParams$maxyear
+minyear <- swsContext.computationParams$minyear
 
 sel_years <- as.character(minyear:maxyear)
 
 
 # method
 
-selMethod <- "ARIMAX" #swsContext.computationParams$method
+selMethod <- 'ARIMAX'#swsContext.computationParams$method
 
 message(paste("Prod Prices: countries selected ", paste0(sessionCountry, collapse = ', '), ". ",
               "Commodity groups:", paste0(commPar), '.', sep = ''))
@@ -238,12 +237,12 @@ sessionCountry <- unique(prep_price0$geographicAreaM49)
 #               list(NA, 'M', 'u')]
 
 # Get space for imputations
-prep_price_exp <- expandYear(prep_price0[timePointYears %in% sel_years], 
+prep_price_exp <- expandYear(prep_price0, #[timePointYears %in% sel_years], 
                              newYears = impYear)
 
-prep_price_exp[timePointYears %in% (minyear-1):(minyear-2), ]
+#prep_price_exp[timePointYears %in% (minyear-1):(minyear-2), ]
 
-prep_price <- rbind(prep_price_exp, prep_price0[!timePointYears %in% sel_years])
+prep_price <- prep_price_exp #rbind(prep_price_exp, prep_price0[!timePointYears %in% sel_years])
 
 # Re-impute all previous imputations
 prep_price[timePointYears %in% sel_years & !flagObservationStatus %in% c('', 'X') , c('Value',
@@ -252,40 +251,22 @@ prep_price[timePointYears %in% sel_years & !flagObservationStatus %in% c('', 'X'
 
 # If no official or imputed data before the 'M;u' then the series is not imputed
 # If one year not in the selected ones is missing the system ignore them
-prep_price <- prep_price[!prep_price[!timePointYears %in% sel_years & 
-                                       flagMethod == 'u'], on = c("geographicAreaM49",
-                                                                  "measuredItemCPC")]
+setkey(prep_price)
 
-# 
-# if(is.null(input$btn_country) |
-#    is.null(input$btn_year) | is.null(input$btn_start_year) |
-#    is.null(input$btn_commodity) ) return(NULL)
-# 
-# sel_country <- country_input[country_input$label == input$btn_country, code]
-# 
-# if(length(sel_country) == 0) return(NULL)
-# 
-# sel_country <- country_input[country_input$label == input$btn_country, code]
-# sel_years <- input$btn_start_year:input$btn_year
-# startyearevaluation <- as.character(min(series2est$country_data$timePointYears))#as.numeric(input$btn_start_year)-10)
-# sel_commodity <- cpc_list[label == input$btn_commodity, code]
-# 
-# if(length(sel_country)>0){
-#   if(sel_country != '' & sel_commodity != ''){
-#     #prep_price_slc <- series2est$slc_series
-#     prep_price_slc <- series2est$country_data[geographicAreaM49 == sel_country &
-#                                                 measuredItemCPC == sel_commodity &
-#                                                 measuredElement == '5531']
-#     
-#     
-#     validate(need(prep_price_slc[timePointYears %in% sel_years & flagMethod != 'q',.N] > 0,
-#                   "All data in this series are official."))
+firstReportedYear <- unique(prep_price[!is.na(Value), minRepY := min(as.numeric(timePointYears)), .(geographicAreaM49, measuredItemCPC)][,.(geographicAreaM49, measuredItemCPC, minRepY)])
+firstReportedYear <- firstReportedYear[!is.na(minRepY)]
+prep_price$minRepY <- NULL
 
-# --- Load auxiliary data ----
-# load(
-#   'plugintest.RData'
-# )
-options(warn=2)
+prep_price <- merge(prep_price, firstReportedYear, 
+                    by =c("geographicAreaM49", "measuredItemCPC"), all.x = T,
+                    allow.cartesian = T)
+
+todelete <- prep_price[is.na(Value) & timePointYears < minRepY]
+
+prep_price <- prep_price[!todelete, on = c("geographicAreaM49", "measuredItemCPC", "timePointYears")]
+
+prep_price[, minRepY := NULL]
+selMethod == 'LM'
 #---- ARIMAX ----
 if(selMethod == "ARIMAX"){
 
@@ -343,7 +324,9 @@ prep12[!is.na(ValueVA) , LogVA := log(ValueVA)]
 
 # Yield
 yieldcode <- '5421'
-
+if(any(sessionCountry %in% '156')){
+  sel_country_yield <- c(sessionCountry, '1248')
+} else { sel_country_yield <- sessionCountry}
 yieldKey = DatasetKey(
   domain = 'agriculture',
   dataset = 'aproduction',
@@ -351,7 +334,7 @@ yieldKey = DatasetKey(
     Dimension(name = "geographicAreaM49",
               keys = GetCodeList('agriculture', 
                                  'aproduction', 
-                                 'geographicAreaM49')[code %in% sessionCountry, code]),
+                                 'geographicAreaM49')[code %in%  c(sel_country_yield), code]),
     Dimension(name = "measuredElement", 
               keys = GetCodeList('agriculture', 
                                  'aproduction', 
@@ -403,17 +386,18 @@ prepcov <- prepcov[order(timePointYears)]
 prepcov[!is.na(Value), LogValue := log(Value)]
 
 # series with missing data
-setkey(prepcov)
-notimputedseries <- unique(prepcov[timePointYears < min(sel_years), is.na(Value), 
-                                   .(geographicAreaM49, measuredItemCPC)][V1 == TRUE,
-                                                                          .(geographicAreaM49, 
-                                                                            measuredItemCPC)])
+# setkey(prepcov)
+# notimputedseries <- unique(prepcov[timePointYears < min(sel_years), is.na(Value), 
+#                                    .(geographicAreaM49, measuredItemCPC)][V1 == TRUE,
+#                                                                           .(geographicAreaM49, 
+#                                                                             measuredItemCPC)])
 # Ignore series not imputable
-prepcov <- prepcov[!notimputedseries, on = c('geographicAreaM49', 'measuredItemCPC')]
+#prepcov <- prepcov[!notimputedseries, on = c('geographicAreaM49', 'measuredItemCPC')]
 geocommmiss <- unique(prepcov[flagObservationStatus == 'M' & flagMethod == 'u',
                               .(geographicAreaM49, measuredItemCPC)])
 
-setnames(notimputedseries, names(notimputedseries), tolower(names(notimputedseries)))
+
+#setnames(notimputedseries, names(notimputedseries), tolower(names(notimputedseries)))
 
 #notimpseries <- ReadDatatable('non_imputed_bulk_series', readOnly = F)
 
@@ -429,31 +413,31 @@ setnames(notimputedseries, names(notimputedseries), tolower(names(notimputedseri
 message('PP_imputationMethods: start imputation')
 
 fulldata <- data.table()
-#prepcov <- prepcov[timePointYears != 2020]
-options(warn = 2)
+
 for(geo in unique(geocommmiss$geographicAreaM49)){
   series_geo <- prepcov[geographicAreaM49 == geo]
   print(geo)
   for(selComm in unique(geocommmiss[geographicAreaM49 == geo]$measuredItemCPC)){
     print(selComm)
-#    if(selComm =='01929.90')browser()
     series_comm <- series_geo[measuredItemCPC == selComm]
+
+    if(series_comm[!is.na(Value),.N] < 2 ){
+      next
+    }
     series_comm <- series_comm[,colSums(is.na(series_comm))<nrow(series_comm), with = F]
 
     # Series for arima model: time series until btn_start_year
-    ppseries <- tryCatch({ts(series_comm[timePointYears < minyear]$LogValue,
+    ppseries <- tryCatch({ts(series_comm[timePointYears < minyear & !is.na(Value)]$LogValue,
                              start = as.numeric(min(series_comm$timePointYears)))},
-                         error = function(error_condition){ts(series_comm$LogValue, start = as.numeric(min(series_comm$timePointYears)))})
-    
-    if(length(ppseries[!is.na(ppseries)]) < 2 ){
-      next
-    }
+                         error = function(error_condition){ts(series_comm$LogValue, 
+                                                              start = as.numeric(min(series_comm$timePointYears)))})
     
     # Covariate set Exclude Year, country and commodity (columns 1:3)
     xreg_comm <- series_comm[  , names(series_comm) %in% c("timePointYears", "geographicAreaM49", "measuredItemCPC",    
                                                            "LogGDP", "LogVA", "ValueYield", "toi_aff"), with = F]
     
-    missing <- apply(xreg_comm[ , 4:ncol(xreg_comm), with = F], 2, function(x){length(x[is.na(x)])})
+    if(length(names(xreg_comm)) > 3){
+    missing <- apply(xreg_comm[timePointYears %in% sel_years, 4:ncol(xreg_comm), with = F], 2, function(x){length(x[is.na(x)])})
     if(max(missing) == min(missing)){
       xreg_comm <- xreg_comm
     } else {
@@ -466,13 +450,13 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
     
     # Check if there are data before the data to impute
     if(xreg_comm[timePointYears < minyear,.N]== 0){
-      xreg_comm
+      next
     } else {
       xreg_comm <- xreg_comm[timePointYears < minyear,]
     }
     
     # Check there is at least one covariates
-    if(length(names(xreg_comm)) > 3){
+    
       # Covariates available
       vec2comb <- names(xreg_comm)[4:ncol(xreg_comm)]
       
@@ -505,8 +489,8 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
       bestmod <- modlist[which(!lapply(modlist, function(x){x$bic}) %in% c(Inf, -Inf))][[1]]
       }
       #-- ARIMA forescast ----
-      nh <- series_comm[flagMethod == 'u' & timePointYears %in% sel_years,.N] #as.numeric(maxyear) - as.numeric(minyear) + 1
-      missingyear <- series_comm[flagMethod == 'u' & timePointYears %in% sel_years,]$timePointYears
+      nh <- series_comm[(flagMethod == 'u' & timePointYears < maxyear) | (timePointYears %in% sel_years),.N] #as.numeric(maxyear) - as.numeric(minyear) + 1
+      missingyear <- series_comm[(flagMethod == 'u' & timePointYears < maxyear)  | timePointYears %in% sel_years,]$timePointYears
       # Covariates for predictive years
       
       if(length(bestmod) > 0){
@@ -518,14 +502,15 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
           pred <- forecast(bestmod, h = nh)$mean
         } else {
         
-        xreg_comm_pred <- series_comm[flagMethod == 'u' & timePointYears %in% sel_years, 
+        xreg_comm_pred <- series_comm[(flagMethod == 'u' & timePointYears < maxyear)  | timePointYears %in% sel_years, 
                                       varselected, with = F]
         pred <- forecast(bestmod, h = nh, xreg = xreg_comm_pred)$mean
         
         }
         
       } else {
-        pred <- NA
+        pred <-  ts(rep(NA, nh), 
+                    start = as.numeric(as.numeric(min(series_comm[flagMethod == 'u']$timePointYears ))))
       }
       
       #-- Kalman ----
@@ -536,11 +521,10 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
         prepcovInterp[timePointYears %in% sel_years & !flagObservationStatus %in% c('', 'X'), LogValue := NA]
         tskalm <- ts(prepcovInterp$LogValue, start = as.numeric(as.numeric(min(series_comm$timePointYears))))
        
-        predkalm <- tryCatch(na.kalman(x = tskalm, model = "auto.arima", #bestmod$model, 
-                                       xreg = prepcovInterp[, varselected, with = F]),
+        predkalm <- tryCatch(na.kalman(x = tskalm, model = "auto.arima"),
                              error = function(error_condition) {  tskalm[is.na(tskalm)] <- pred[is.na(tskalm)] })
       
-        
+        if(!all(is.na(predkalm[is.na(tskalm)]))){
         if(all(predkalm[is.na(tskalm)] == 0)){
           pred1 <- series_comm[!timePointYears %in% sel_years,]$LogValue
           pred2 <- series_comm[timePointYears %in% sel_years,]$LogValue
@@ -548,24 +532,48 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
           pred <- ts(c(pred1, pred2), start = as.numeric(as.numeric(min(series_comm$timePointYears))))
           #pred
         } else {
-          pred <- predkalm  
+          pred <- predkalm#[time(predkalm) %in% sel_years]   
         }
+         } else {
+           pred1 <- series_comm[!timePointYears %in% sel_years,]$LogValue
+           pred2 <- series_comm[timePointYears %in% sel_years,]$LogValue
+           pred2[which(is.na(pred2))] <- pred[which(is.na(pred2))]
+           pred <- ts(c(pred1, pred2), start = as.numeric(as.numeric(min(series_comm$timePointYears))))
+          } 
+        
+      } else {
+        
+        prepcovInterp <- copy(series_comm)
+        prepcovInterp[timePointYears %in% sel_years & !flagObservationStatus %in% c('', 'X'), LogValue := NA]
+        tskalm <- ts(prepcovInterp$LogValue, start = as.numeric(as.numeric(min(series_comm$timePointYears))))
+        
+        predkalm <- tryCatch(na.kalman(x = tskalm, model = "auto.arima"),
+                             error = function(error_condition) {  tskalm[is.na(tskalm)] <- pred[is.na(tskalm)] })
+        
+        pred <- predkalm
+        
       }
         
-    } else{
+    } else {
       prepcovInterp <- copy(series_comm)
-      pred <- ts(rep(NA, length(sel_years)), start = as.numeric(as.numeric(min(sel_years))))
+      nh <- series_comm[(flagMethod == 'u' & timePointYears < maxyear) | (timePointYears %in% sel_years),.N]
+      bestmod <- auto.arima(ppseries, seasonal = FALSE)
+      pred <- forecast(bestmod, h = nh)$mean
+      
+     # pred <- ts(rep(NA, length(sel_years)), 
+     #            start = as.numeric(as.numeric(min(sel_years))))
     }
    
     # -- End of imputation methods ----
     
     newimputation <- series_comm[, names(prep_price), with = F]
-    newimputation[timePointYears %in% missingyear, ARIMAX := exp(pred[time(pred) %in% missingyear])]
+    newimputation[timePointYears %in% missingyear, 
+                  ARIMAX := exp(pred[time(pred) %in% missingyear])]
     newimputation[!timePointYears %in% missingyear, ARIMAX := Value]
     
-    newimputation[ !flagObservationStatus %in% c('', 'X'),
-                   c('Value', 'flagObservationStatus', 'flagMethod') :=
-                     list(ARIMAX, 'I', 'e')]
+    newimputation[ !flagObservationStatus %in% c('', 'X'), Value := ARIMAX]
+    newimputation[ !flagObservationStatus %in% c('', 'X'), flagObservationStatus := 'I']
+    newimputation[ !flagObservationStatus %in% c('', 'X'), flagMethod :='e']
     
     fulldata <- rbind(fulldata, newimputation)
     
@@ -738,7 +746,9 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
   
   # Yield
   yieldcode <- '5421'
-  
+  if(any(sessionCountry %in% '156')){
+    sel_country_yield <- c(sessionCountry, '1248')
+  } else { sel_country_yield <- sessionCountry}
   yieldKey = DatasetKey(
     domain = 'agriculture',
     dataset = 'aproduction',
@@ -746,7 +756,7 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
       Dimension(name = "geographicAreaM49",
                 keys = GetCodeList('agriculture', 
                                    'aproduction', 
-                                   'geographicAreaM49')[code %in% sessionCountry, code]),
+                                   'geographicAreaM49')[code %in%  c(sel_country_yield), code]),
       Dimension(name = "measuredElement", 
                 keys = GetCodeList('agriculture', 
                                    'aproduction', 
@@ -761,6 +771,11 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
   
   yield <- GetData(yieldKey, flags = TRUE)
   setnames(yield, 'Value', 'ValueYield')
+  if(yield[geographicAreaM49 == '156',.N] == 0){
+    yield[geographicAreaM49 == '1248', geographicAreaM49 := '156']
+    
+  }
+
   yield[, c("measuredElement", "flagObservationStatus", "flagMethod")] <- NULL
   
   prep123 <- merge(prep12, yield, 
@@ -819,12 +834,16 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
 
   for(geo in unique(geocommmiss$geographicAreaM49)){
     series_geo <- prepcov[geographicAreaM49 == geo]
-    
-    fulldata_country <- data.table()
+    print(geo)
     
     for(selComm in unique(geocommmiss[geographicAreaM49 == geo]$measuredItemCPC)){
-      
+      print(selComm)
       series_comm <- series_geo[measuredItemCPC == selComm]
+      
+      if(series_comm[!is.na(Value),.N] < 2 ){
+        next
+      }
+      
       series_comm <- series_comm[,colSums(is.na(series_comm))<nrow(series_comm), with = F]
       # Series for lm model: numeric year and series until btn_start_year
       series_comm_lm <- copy(series_comm)
@@ -846,7 +865,7 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
       # Exclude columns with NAs
       xreg_comm <- xreg_comm[ , colSums(is.na(xreg_comm)) < nrow(series_comm), with = F]
       if(xreg_comm[timePointYears < minyear,.N]== 0){
-        xreg_comm
+        next
       } else {
         xreg_comm <- xreg_comm[timePointYears < minyear,]
       }
@@ -873,7 +892,7 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
           
           formula <- as.formula(paste('LogValue ~ timePointYears + ',
                                       paste(names(xreg2use), collapse = ' + '), collapse = ''))
-          lmlist[[j]] <- tryCatch(lm(formula = formula, data = series_comm_lm),
+          lmlist[[j]] <- tryCa(lm(formula = formula, data = series_comm_lm),
                                   error = function(error_condition) { lm(formula = 'LogValue ~ timePointYears',
                                                                          data = series_comm_lm)})
           # print(j)
@@ -884,7 +903,7 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
         BICnotInf <- BICnotInf[!BICnotInf %in% c(-Inf, Inf)]
         
         #-- ARIMA forescast ----
-        nh <- maxyear - minyear +1
+        nh <- series_comm_lm[flagMethod == 'u' & timePointYears %in% sel_years,.N] # nh <- maxyear - minyear +1
         
         #-- Linear model ----
         
@@ -907,12 +926,22 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
         if(any(series_comm[timePointYears %in% sel_years]$flagMethod == 'q') & length(BICnotInf) > 0){
           
           prepcovInterp <- copy(series_comm)
-          prepcovInterp[timePointYears %in% sel_years & flagMethod != 'q', LogValue := NA]
+          prepcovInterp[timePointYears %in% sel_years &
+                          timePointYears != max( prepcovInterp$timePointYears) & 
+                          !flagObservationStatus %in% c('', 'X'), LogValue := NA]
+          
+          prepcovInterp[timePointYears %in% sel_years & 
+                          timePointYears == max( prepcovInterp$timePointYears) & 
+                          !flagObservationStatus %in% c('', 'X'),
+                        LogValue := predlm[length(predlm)]]
           
           prepcovInterp$timePointYears <- as.numeric(prepcovInterp$timePointYears)
-          predlm <- na.approx(prepcovInterp$LogValue) #forecast(bestlm, h = nh, prepcovInterp)$mean
-          #predlm <- ifelse(is.na(prepcovInterp$LogValue), predlm, prepcovInterp$LogValue)
+        
+          predlm <- na.approx(prepcovInterp$LogValue)
           
+          #forecast(bestlm, h = nh, prepcovInterp)$mean
+          #predlm <- ifelse(is.na(prepcovInterp$LogValue), predlm, prepcovInterp$LogValue)
+          predlm <- predlm[which(series_comm$timePointYears %in% sel_years)]
         }
         
       } else{
@@ -967,9 +996,9 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
 
   for(geo in unique(geocommmiss$geographicAreaM49)){
     series_geo <- prepcov[geographicAreaM49 == geo]
-    
+    print(geo)
     for(selComm in unique(geocommmiss[geographicAreaM49 == geo]$measuredItemCPC)){
-
+print(selComm)
       # -- Commodity group information ----
       series_comm <- series_geo[measuredItemCPC == selComm]
       series_comm <- series_comm[,colSums(is.na(series_comm))<nrow(series_comm), with = F]
@@ -1037,11 +1066,38 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
       
       cgmethod <- merge(cgmethod, commoditygroup2merge,
                         by = 'timePointYears', all.x = T)
+
       cgmethod <- cgmethod[order(timePointYears)]
       
-      cgmethod[, ValueCG := shift(Value)*(1+medianbyyear)]
-      cgmethod[flagMethod == 'q', ValueCG := Value]
+      cgmethod[!timePointYears %in% sel_years, ValueCG := Value]
+      cgmethod[flagObservationStatus %in% c('', 'X'), Value := exp(LogValue)]
+      
+      for(i in 2:nrow(cgmethod)){
+        newValue <- (1 + cgmethod[i,]$medianbyyear) * cgmethod[i-1]$Value
+        cgmethod[i , ValueCG := newValue]
+        cgmethod[i & timePointYears %in% sel_years, Value := ValueCG]  
+      }
+      
       cgmethod[timePointYears %in% sel_years, Value := ValueCG]               
+      cgmethod[flagObservationStatus %in% c('', 'X') &
+                 timePointYears %in% sel_years, Value := exp(LogValue)]
+      
+      
+      # cgmethod <- cgmethod[order(timePointYears)]
+      # 
+      # cgmethod[, ValueCG := shift(Value)*(1+medianbyyear)]
+      # cgmethod[timePointYears %in% sel_years, Value := ValueCG]
+      # cgmethod[flagObservationStatus %in% c('', 'X'), Value := exp(LogValue)]
+      # 
+      # while(cgmethod[timePointYears %in% sel_years & is.na(ValueCG) & !is.na(medianbyyear),.N] > 0
+      #       & cgmethod[timePointYears < min(sel_years),.N] > 0){
+      #   cgmethod[!is.na(medianbyyear) , ValueCG := shift(Value)*(1+medianbyyear)]
+      #   cgmethod[timePointYears %in% sel_years, Value := ValueCG]
+      # }
+      # 
+      # cgmethod[, Value := exp(LogValue)]
+      # cgmethod[timePointYears %in% sel_years, Value := ValueCG]               
+      # cgmethod[flagObservationStatus %in% c('', 'X'), Value := exp(LogValue)]          
       
       
       # -- End of imputation methods ----
@@ -1128,10 +1184,30 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
                            by = c('geographicAreaM49', 'timePointYears'), all.x = T)
         cpimethod[order(timePointYears)]
         
-        cpimethod[, ValueCPI := shift(Value)*(1+GR2use)]
-        cpimethod[flagMethod == 'q', ValueCPI := Value]
+        cpimethod[!timePointYears %in% sel_years, ValueCPI := Value]
         
-        cpimethod[timePointYears %in% sel_years, Value := ValueCPI]      
+        for(i in 2:nrow(cpimethod)){
+          newValue <- (1 + cpimethod[i,]$GR2use) * cpimethod[i-1]$Value
+          cpimethod[i , ValueCPI := newValue]
+          cpimethod[i & timePointYears %in% sel_years, Value := ValueCPI]  
+        }
+        
+        cpimethod[timePointYears %in% sel_years, Value := ValueCPI]               
+        cpimethod[flagObservationStatus %in% c('', 'X') &
+                    timePointYears %in% sel_years, Value := exp(LogValue)]
+        
+        # cpimethod[, ValueCPI := shift(Value)*(1+GR2use)]
+        # cpimethod[timePointYears %in% sel_years, Value := ValueCPI]
+        # cpimethod[flagObservationStatus %in% c('', 'X'), ValueCPI := Value]
+        # while(cpimethod[timePointYears %in% sel_years & is.na(ValueCPI) & !is.na(GR2use),.N] > 0 &
+        #       cpimethod[timePointYears < min(sel_years),.N] > 0){
+        #   cpimethod[!is.na(GR2use) , ValueCPI := shift(Value)*(1+GR2use)]
+        #   cpimethod[timePointYears %in% sel_years, Value := ValueCPI]
+        #   
+        # }
+        # cpimethod[, Value := exp(LogValue)]
+        # cpimethod[timePointYears %in% sel_years, Value := ValueCPI]               
+        # cpimethod[flagObservationStatus %in% c('', 'X'), Value := exp(LogValue)]    
         
       } else {
         
@@ -1234,9 +1310,9 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
 
   for(geo in unique(geocommmiss$geographicAreaM49)){
     series_geo <- prepcov[geographicAreaM49 == geo]
-    
+    print(geo)
     for(selComm in unique(geocommmiss[geographicAreaM49 == geo]$measuredItemCPC)){
-     
+     print(selComm)
       series_comm <- series_geo[measuredItemCPC == selComm]
       series_comm <- series_comm[,colSums(is.na(series_comm))<nrow(series_comm), with = F]
       
@@ -1247,12 +1323,37 @@ for(geo in unique(geocommmiss$geographicAreaM49)){
       gdpmethod <- merge(gdpmethod, GDPapproach, 
                          by = c('geographicAreaM49', 'timePointYears'), 
                          all.x = T)
-      
-      gdpmethod[order(timePointYears)]
-      gdpmethod[, ValueGDPdefl := shift(Value)*(1+GRgdp)]
-      gdpmethod[flagMethod == 'q', ValueGDPdefl := Value]
-      gdpmethod[timePointYears %in% sel_years, Value := ValueGDPdefl]  
-      
+  
+          gdpmethod[order(timePointYears)]
+     
+          
+          gdpmethod[!timePointYears %in% sel_years, ValueGDPdefl := Value]
+          
+          for(i in 2:nrow(gdpmethod)){
+            newValue <- (1 + gdpmethod[i,]$GRgdp) * gdpmethod[i-1]$Value
+            gdpmethod[i , ValueGDPdefl := newValue]
+            gdpmethod[i & timePointYears %in% sel_years, Value := ValueGDPdefl]  
+            
+          }
+          
+          gdpmethod[timePointYears %in% sel_years, Value := ValueGDPdefl]               
+          gdpmethod[flagObservationStatus %in% c('', 'X') &
+                      timePointYears %in% sel_years, Value := exp(LogValue)]
+
+          
+          
+      # gdpmethod[, ValueGDPdefl := shift(Value)*(1+GRgdp)]
+      # gdpmethod[timePointYears %in% sel_years, Value := ValueGDPdefl]
+      # gdpmethod[flagObservationStatus %in% c('', 'X'), Value := exp(LogValue)]
+      # while(gdpmethod[timePointYears %in% sel_years & is.na(ValueGDPdefl) & !is.na(GRgdp),.N] > 0 &
+      #       gdpmethod[timePointYears < min(sel_years),.N] > 0){
+      #     gdpmethod[!is.na(GRgdp), 
+      #               ValueGDPdefl := shift(Value)*(1+GRgdp)]
+      #   gdpmethod[timePointYears %in% sel_years, Value := ValueGDPdefl]
+      # }
+      # gdpmethod[, Value := exp(LogValue)]
+      # gdpmethod[timePointYears %in% sel_years, Value := ValueGDPdefl]               
+      # gdpmethod[flagObservationStatus %in% c('', 'X'), Value := exp(LogValue)]
       # -- End of imputation methods ----
       
       newimputation <- series_comm[, names(prep_price), with = F]
@@ -1344,9 +1445,9 @@ if(any(pper$flagObservationStatus == 'B')){
 
 # USD conversion 
 # Get country-currency datatatble ADD withdraw year/effective change in series
-lcu_2_m49 <- ReadDatatable('lcu_2_m49')
-lcu_2_m49[start_year_iso == '', start_year_iso := '1900']
-lcu_2_m49[end_year_iso == '', end_year_iso := '9999']
+#lcu_2_m49 <- ReadDatatable('lcu_2_m49')
+#lcu_2_m49[start_year_iso == '', start_year_iso := '1900']
+#lcu_2_m49[end_year_iso == '', end_year_iso := '9999']
 
 # Pull exchange rates dataset
 
@@ -1372,10 +1473,12 @@ erdt <- GetData(erKey, flags = F)
 
 erdt[,c('measuredElement', 'to_currency')] <- NULL
 
-eco_curr0 <- ReadDatatable('currency_country_years')
+xr_corr <- ReadDatatable('exchange_rates_correspondences')
+#lcu_2_m49 <- ReadDatatable('lcu_2_m49')
+#eco_curr0 <- ReadDatatable('currency_country_years')
 xrcountry <-  ReadDatatable('currency_changes')
 
-erdt <- fix_xr(erdt, lcu_2_m49, eco_curr0, xrcountry)
+erdt <- fix_xr(erdt, xrcountry, xr_corr)
 
 ## FIX DUPLICATES!!!!!!
 
