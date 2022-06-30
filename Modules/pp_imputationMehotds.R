@@ -149,7 +149,6 @@ ensembleImpute <- function (data, imputationParameters){
   data.table(ensemble = ensemble)
 }
 
-
 imputeVariable0 <- function (data, imputationParameters) {
   if (!exists("ensuredImputationData") || !ensuredImputationData) 
     ensureImputationInputs(data = data, imputationParameters = imputationParameters)
@@ -178,7 +177,6 @@ imputeVariable0 <- function (data, imputationParameters) {
   invisible(data[imputedIndex, `:=`(c(newObsFlagColumn, newMethodFlagColumn), 
                                     list(imputationParameters$imputationFlag, imputationParameters$newMethodFlag))])
 }
-
 
 arimaxAndlm <- function(series_comm, series_comm_lm, impYear, nh, missing, missingyear){
   
@@ -248,6 +246,9 @@ arimaxAndlm <- function(series_comm, series_comm_lm, impYear, nh, missing, missi
       bestmod <- modlist[which(!lapply(modlist, function(x){x$bic}) %in% c(Inf, -Inf))][[1]]
     }
     
+    bics <- unlist(lapply(modlist, function(x){x$bic}))
+    mod2sel <- which(bics == min(bics))
+    
     # Best LM with lowest BIC
     BICnotInf <- unlist(lapply(lmlist, function(x){BIC(x)}))
     BICnotInf <- BICnotInf[!BICnotInf %in% c(-Inf, Inf)]
@@ -258,8 +259,7 @@ arimaxAndlm <- function(series_comm, series_comm_lm, impYear, nh, missing, missi
     
     # Covariates for predictive years
     if(length(bestmod) > 0){
-      bestmod <- modlist[[which(unlist(lapply(modlist, function(x){x$bic})) ==
-                                  min(unlist(lapply(modlist, function(x){x$bic}))))[1]]]
+      bestmod <- modlist[[mod2sel[1]]]
       varselected <- names(bestmod$coef)[names(bestmod$coef) %in% names(xreg_comm)]
       
       if(length(varselected) == 0){
@@ -443,30 +443,16 @@ applyCG <- function(cpchierarchy, selComm, series_geo, series_comm, missingyear)
   cgmethod <- merge(cgmethod, commoditygroup2merge,
                     by = 'timePointYears', all.x = T)
   cgmethod <- cgmethod[order(timePointYears)]
-  # cgmethod[, ValueCG := shift(Value)*(1+medianbyyear)]
-  # cgmethod[timePointYears %in% missingyear, Value := ValueCG]
-  # i = 0
-  # while( (cgmethod[timePointYears %in% missingyear & is.na(ValueCG) & !is.na(medianbyyear),.N] > 0 & 
-  #         cgmethod[timePointYears < min(missingyear),.N] > 0) & (i < 50) ){
-  #   cgmethod[!is.na(medianbyyear) , ValueCG := shift(Value)*(1+medianbyyear)]
-  #   cgmethod[timePointYears %in% missingyear, Value := ValueCG]
-  #   i = i+1
-  # }
-  # cgmethod[is.na(Value), Value := ValueCG]
-  
-  cgmethod[!timePointYears %in% missingyear, ValueCG := Value]
-  cgmethod[flagObservationStatus %in% c('', 'X'), Value := exp(LogValue)]
-  
-  for(i in 2:nrow(cgmethod)){
-    newValue <- (1 + cgmethod[i,]$medianbyyear) * cgmethod[i-1]$Value
-    cgmethod[i , ValueCG := newValue]
-    cgmethod[i & timePointYears %in% missingyear, Value := ValueCG]  
+  cgmethod[, ValueCG := shift(Value)*(1+medianbyyear)]
+  cgmethod[timePointYears %in% missingyear, Value := ValueCG]
+  i = 0
+  while( (cgmethod[timePointYears %in% missingyear & is.na(ValueCG) & !is.na(medianbyyear),.N] > 0 & 
+          cgmethod[timePointYears < min(missingyear),.N] > 0) | (i < 50) ){
+    cgmethod[!is.na(medianbyyear) , ValueCG := shift(Value)*(1+medianbyyear)]
+    cgmethod[timePointYears %in% missingyear, Value := ValueCG]
+    i = i+1
   }
-  
-  cgmethod[timePointYears %in% missingyear, Value := ValueCG]               
-  cgmethod[flagObservationStatus %in% c('', 'X') &
-             timePointYears %in% missingyear, Value := exp(LogValue)]
-  
+  cgmethod[is.na(Value), Value := ValueCG]
   print('Commodity group ok')
   
   return(cgmethod)
@@ -480,30 +466,17 @@ applyCPI <- function(cpi, selComm, series_comm, missingyear){
                                        GR2use)],
                      by = c('geographicAreaM49', 'timePointYears'), all.x = T)
   cpimethod[order(timePointYears)]
-  # cpimethod[, ValueCPI := shift(Value)*(1+shift(GR2use))]
-  # cpimethod[timePointYears %in% missingyear, Value := ValueCPI]
-  # i = 0
-  # while( (cpimethod[timePointYears %in% missingyear & is.na(ValueCPI) & !is.na(GR2use),.N] > 0 &
-  #         cpimethod[timePointYears < min(missingyear),.N] > 0) & (i < 50) ){
-  #   cpimethod[!is.na(GR2use) , ValueCPI := shift(Value)*(1+GR2use)]
-  #   cpimethod[timePointYears %in% missingyear, Value := ValueCPI]
-  #   i = i + 1
-  # }
-  # 
-  # cpimethod[is.na(Value), Value := ValueCPI]
-  
-  cpimethod[!timePointYears %in% missingyear, ValueCPI := Value]
-  
-  for(i in 2:nrow(cpimethod)){
-    newValue <- (1 + cpimethod[i,]$GR2use) * cpimethod[i-1]$Value
-    cpimethod[i , ValueCPI := newValue]
-    cpimethod[i & timePointYears %in% missingyear, Value := ValueCPI]  
+  cpimethod[, ValueCPI := shift(Value)*(1+shift(GR2use))]
+  cpimethod[timePointYears %in% missingyear, Value := ValueCPI]
+  i = 0
+  while( (cpimethod[timePointYears %in% missingyear & is.na(ValueCPI) & !is.na(GR2use),.N] > 0 &
+          cpimethod[timePointYears < min(missingyear),.N] > 0) | (i < 50) ){
+    cpimethod[!is.na(GR2use) , ValueCPI := shift(Value)*(1+GR2use)]
+    cpimethod[timePointYears %in% missingyear, Value := ValueCPI]
+    i = i + 1
   }
   
-  cpimethod[timePointYears %in% missingyear, Value := ValueCPI]               
-  cpimethod[flagObservationStatus %in% c('', 'X') &
-              timePointYears %in% missingyear, Value := exp(LogValue)]
-  
+  cpimethod[is.na(Value), Value := ValueCPI]
   print('CPI ok')
   
   return(cpimethod)
@@ -518,30 +491,16 @@ applyGDP <- function(GDPapproach, selComm, series_comm, missingyear){
                      all.x = T)
   
   gdpmethod[order(timePointYears)]
-  # gdpmethod[, ValueGDPdefl := shift(Value)*(1+GRgdp)]
-  # gdpmethod[timePointYears %in% missingyear, Value := ValueGDPdefl]
-  # i = 0
-  # while( (gdpmethod[timePointYears %in% missingyear & is.na(ValueGDPdefl) & !is.na(GRgdp),.N] > 0 &
-  #         gdpmethod[timePointYears < min(missingyear),.N] > 0) & (i < 50) ){
-  #   gdpmethod[!is.na(GRgdp) , ValueGDPdefl := shift(Value)*(1+GRgdp)]
-  #   gdpmethod[timePointYears %in% missingyear, Value := ValueGDPdefl]
-  #   i = i + 1
-  # }
-  #gdpmethod[is.na(Value), Value := ValueGDPdefl]
-  
-  gdpmethod[!timePointYears %in% missingyear, ValueGDPdefl := Value]
-  
-  for(i in 2:nrow(gdpmethod)){
-    newValue <- (1 + gdpmethod[i,]$GRgdp) * gdpmethod[i-1]$Value
-    gdpmethod[i , ValueGDPdefl := newValue]
-    gdpmethod[i & timePointYears %in% missingyear, Value := ValueGDPdefl]  
-    
+  gdpmethod[, ValueGDPdefl := shift(Value)*(1+GRgdp)]
+  gdpmethod[timePointYears %in% missingyear, Value := ValueGDPdefl]
+  i = 0
+  while( (gdpmethod[timePointYears %in% missingyear & is.na(ValueGDPdefl) & !is.na(GRgdp),.N] > 0 &
+          gdpmethod[timePointYears < min(missingyear),.N] > 0) | (i < 50) ){
+    gdpmethod[!is.na(GRgdp) , ValueGDPdefl := shift(Value)*(1+GRgdp)]
+    gdpmethod[timePointYears %in% missingyear, Value := ValueGDPdefl]
+    i = i + 1
   }
-  
-  gdpmethod[timePointYears %in% missingyear, Value := ValueGDPdefl]               
-  gdpmethod[flagObservationStatus %in% c('', 'X') &
-              timePointYears %in% missingyear, Value := exp(LogValue)]
-  
+  gdpmethod[is.na(Value), Value := ValueGDPdefl]
   print('GDP ok')
   return(gdpmethod)
 }
@@ -590,17 +549,17 @@ preppriceKey = DatasetKey(
 )
 
 prep_price0 <- GetData(preppriceKey, flags = TRUE)
-impYear <- as.numeric(lastyear)-1 #max(as.numeric(unique(prep_price0$timePointYears)))
+impYear <- swsContext.computationParams$last_imp_y #as.numeric(lastyear)-1 #max(as.numeric(unique(prep_price0$timePointYears)))
 
 sessionCountry <- unique(prep_price0$geographicAreaM49)
 
 # Impute last four years maximum
 # Get space for imputations
-nyear2impute <- 4
+nyear2impute <- 10
 prep_price_exp <- expandYear(prep_price0[timePointYears %in% impYear:(impYear-nyear2impute)], 
                              newYears = impYear)
 
-prep_price <- rbind(prep_price_exp[timePointYears %in% impYear:(impYear-nyear2impute)], prep_price0[!timePointYears %in% impYear:(impYear-nyear2impute)])
+prep_price <- rbind(prep_price_exp, prep_price0[!timePointYears %in% impYear:(impYear-nyear2impute)])
 
                                                               
 #---- Interpolation ----

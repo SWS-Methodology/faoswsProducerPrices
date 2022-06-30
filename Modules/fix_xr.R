@@ -4,6 +4,8 @@ fix_xr <- function(erdt, xrcountry, xr_corr){
   xr_corr[is.na(start_year_iso), start_year_iso := '1900']
   xr_corr[is.na(end_year_iso), end_year_iso := '9999']
   
+  xr_corr[is.na(start_year_eco_team), start_year_eco_team := '1900']
+  xr_corr[is.na(end_year_eco_team), end_year_eco_team := '9999']
   #xr_corr <- xr_corr[end_year_iso >= '1990' & end_year_m49 >= '1990' & end_year_eco_team > '1990']
   
   xr_corr[,c("country", "geographicareaiso3",
@@ -25,15 +27,15 @@ fix_xr <- function(erdt, xrcountry, xr_corr){
 
   problems <- dtcheck[timePointYears < start_year_eco_team]
   
-  prova <- merge(problems, xr_corr[,.(geographicaream49, currency_code_iso)], by.x = c('geographicAreaM49'),
+  problemcheck <- merge(problems, xr_corr[,.(geographicaream49, currency_code_iso)], by.x = c('geographicAreaM49'),
                     by.y = c('geographicaream49'), all.x = T)
   
-  tochange <- prova[timePointYears <= end_year_eco_team & timePointYears >= start_year_eco_team]
+  tochange <- problemcheck[timePointYears <= end_year_eco_team & timePointYears >= start_year_eco_team]
   
   setkey(tochange)
   changes <- unique(tochange[, .(from_currency, currency_code_iso)])
-  # Get fixed exchange rates from one currency to the other
   
+  # Get fixed exchange rates from one currency to the other
   neededxr <- merge(xrcountry, changes, 
                     by.x = c('new_currency_code', 'old_currency_code'),
                     by.y = c('from_currency', 'currency_code_iso'))

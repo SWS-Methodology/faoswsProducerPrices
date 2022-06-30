@@ -17,7 +17,7 @@ suppressMessages({
 
 if(CheckDebug()){
   library(faoswsModules)
-  SETTINGS = ReadSettings("sws1.yml")
+  SETTINGS = ReadSettings("sws.yml")
   R_SWS_SHARE_PATH = SETTINGS[["share"]]
   SetClientFiles(SETTINGS[["certdir"]])
   GetTestEnvironment(baseUrl = SETTINGS[["server"]],
@@ -70,6 +70,36 @@ priceKey = DatasetKey(
 
 priceData <- GetData(priceKey, flags = TRUE)
 
+if(priceData[flagObservationStatus == 'B',.N] > 0){
+  changes <- unique(priceData[flagObservationStatus == 'B',.(geographicAreaM49, timePointYears)])
+  msg <- paste('Currency change in country ', paste0(unique(changes$geographicAreaM49), collapse = ', '), 
+               ' respectively in years ', paste0(unique(changes$timePointYears), collapse = ', '),
+               'Please make sure the SLC series are consistent in the preparation dataset running the pp_Conversion plugin for these countries.', 
+               sep = '') 
+} else { msg <- ''}
+
+setkey(priceData)
+priceMetaData <- GetMetadata(priceKey)
+currencyPerYear <- priceMetaData[Metadata_Element == 'COMMENT']
+currencyPerYear <- currencyPerYear[,.N, .(geographicAreaM49, timePointYears, Metadata_Value)]
+currencyPerYear[, currency_new := gsub('Currency: ', '', Metadata_Value)]
+currencyPerYear[, currency_new := gsub(' ', '', currency_new)]
+
+dt2update <- ReadDatatable('country_year_lcu', readOnly = FALSE)
+
+updatedTable <- merge(dt2update, currencyPerYear[,.(geographicAreaM49,
+                                                    timePointYears,
+                                                    currency_new)], 
+                      by.x = c('geographicaream49', 'timepointyears'),
+                      by.y = c('geographicAreaM49', 'timePointYears'), all = T)
+
+updatedTable[!is.na(currency_new) & is.na(currency_code), currency_code := currency_new]
+updatedTable[currency_new != currency_code, currency_code := currency_new]
+updatedTable[,currency_new := NULL]
+
+cng <- Changeset('country_year_lcu')
+AddModifications(cng, updatedTable)
+Finalize(cng)
 
 #-- USD conversion ----
 
@@ -139,39 +169,8 @@ if(any(sessionCountry == '275')){
 
 erdt[,c('measuredElement', 'to_currency')] <- NULL
 
-xr_corr <- ReadDatatable('exchange_rates_correspondences')
 
-#lcu_2_m49 <- ReadDatatable('lcu_2_m49')
-#eco_curr0 <- ReadDatatable('currency_country_years')
-xrcountry <-  ReadDatatable('currency_changes')
-
-erdt <- fix_xr(erdt,xrcountry, xr_corr)
-
-# Start conversion into USD and SLC merging with XR
-pper0 <- merge(priceData, erdt, by = c('geographicAreaM49', 'timePointYears'), all.x = T,
-               suffixes = c('', '_er'))
-
-msg1 <- NULL
-
-if(nrow(pper0[is.na(Value_er)]) >0){
-  misscountry <- unique(pper0[is.na(Value_er)]$geographicAreaM49)
-  message(paste('Missing exchange rate for: ', misscountry, sep = ''))
-  msg1 <- paste('Missing exchange rate for: ', misscountry, sep = '')
-}
-
-pper0[, ValueUSD := Value / Value_er]
-pper0[, ValueSLC := Value]
-
-pper0[, c("Value_er")] <- NULL
-
-# get appropriate shape and flags (USD and SLC calculated, 'i')
-pper <- melt(pper0, measure.vars = c('Value', 'ValueUSD', 'ValueSLC'),
-             value.name = 'Value')
-pper[variable == 'ValueUSD', c('measuredElement', 
-                               'flagMethod') := list('5532', 'q')]
-pper[variable == 'ValueSLC', c('measuredElement', 
-                               'flagMethod') := list('5531', 'q')]
-pper[ , c('variable')] <- NULL
+priceconverted <- convert_currency(priceData = priceData, erdt = erdt, sessionElement = 'LCU')
 
 #-- Get Validated dataset ----
 
@@ -191,87 +190,10 @@ valpriceKey = DatasetKey(
 )
 
 val_price <- GetData(valpriceKey, flags = TRUE)
-#setnames(val_price, 'flag_obs_status_v2', 'flagObservationStatus')
 
-xr_corr[start_year_iso %in% selectedYears,.N] > 0
-
-
-if(xr_corr[start_year_iso %in% selectedYears,.N] > 0){
-  #any(pper[timePointYears == maxyear]$flagObservationStatus == 'B')){
+#-- Data Saving ----
   
-  geotimecomb <- xr_corr[start_year_iso %in% selectedYears,.(geographicaream49, start_year_iso, currency_code_iso)]  #unique(pper[flagObservationStatus == 'B', .(geographicAreaM49, timePointYears, from_currency)])
-  setnames(geotimecomb, c('geographicaream49'), c('geographicAreaM49'))
-  # Get datatable with conversion rates 
-  # If change of currency (the datatable has to be updated)
-  conv_rates <- ReadDatatable('currency_changes')
-  
-  conv_rates_needed <- merge(conv_rates, geotimecomb, by.x  = 'new_currency_code',
-                             by.y = 'currency_code_iso')# 'from_currency')
-  
-  slcval <- merge(val_price, conv_rates_needed, by = 'geographicAreaM49', 
-                  all.x = T, suffixes = c('', '_change'))
-  
-  slcval[measuredElement == '5531' & timePointYears <  start_year_iso, #timePointYears_change, 
-         c('Value',
-           'flagObservationStatus', 
-           'flagMethod'):= list(Value/exchange_rate,
-                                flagObservationStatus,
-                                'q')]
-  names(slcval)
-  slcval[ , c("new_currency_code",    
-              "old_currency_code",
-              "exchange_rate",
-              #"timePointYears_change"
-              "start_year_iso"
-  )] <- NULL
-  
-  slcquest <- merge(pper, conv_rates_needed,  by = 'geographicAreaM49',
-                    all.x = T, suffixes = c('', '_change'))
-  
-  slcquest[measuredElement == '5531' & timePointYears < start_year_iso, #timePointYears_change,  
-           c('Value',
-             'flagObservationStatus', 
-             'flagMethod'):= list(Value/exchange_rate,
-                                  flagObservationStatus,
-                                  'q')]
-  slcquest[ , c("new_currency_code",    
-                "old_currency_code",
-                "exchange_rate",
-                #"timePointYears_change"
-                "start_year_iso"
-  )] <- NULL
-  
-  
-  
-  #-- Data Saving ----
-  
-  data2save <- rbind(slcquest[!is.na(Value), .(geographicAreaM49,
-                                               timePointYears,
-                                               measuredElement,
-                                               measuredItemCPC,
-                                               Value,
-                                               flagObservationStatus,
-                                               flagMethod)],
-                     slcval[measuredElement == '5531' & timePointYears < minyear & !is.na(Value),
-                            .(geographicAreaM49,
-                                timePointYears,
-                                measuredElement,
-                                measuredItemCPC,
-                                Value,
-                                flagObservationStatus,
-                                flagMethod)])
-  
-  SaveData(domainPP, datasetPrep, data2save)
-  
-  
-  
-} else {
-  slcval <- val_price
-  slcquest <- pper
-  
-  #-- Data Saving ----
-  
-  data2save <- slcquest[!is.na(Value), .(geographicAreaM49,
+  data2save <- priceconverted[!is.na(Value), .(geographicAreaM49,
                                          timePointYears,
                                          measuredElement,
                                          measuredItemCPC,
@@ -281,15 +203,10 @@ if(xr_corr[start_year_iso %in% selectedYears,.N] > 0){
   
   SaveData(domainPP, datasetPrep, data2save)
   
-  
-}
-
-
-
 
 #-- Merge QUEST and VAL ----
 
-pptot <- merge(slcquest[measuredElement == '5530'], slcval[measuredElement == '5530'], by = c('geographicAreaM49', 
+pptot <- merge(priceconverted[measuredElement == '5530'], val_price[measuredElement == '5530'], by = c('geographicAreaM49', 
                                                                                               'timePointYears',
                                                                                               'measuredElement',
                                                                                               'measuredItemCPC'),
@@ -302,7 +219,6 @@ pptot[!is.na(Value_old) & is.na(Value), c('Value',
                                                                 flagMethod_old)]
 
 pptot[!is.na(Value_old) & !is.na(Value), diff := (Value_old - Value)/Value]
-pptot[ , from_currency := NULL]  
 
 difference_tolerance <- 0.1
 revisions2control <- pptot[abs(diff) > difference_tolerance & !is.na(diff)]
@@ -333,10 +249,9 @@ if(nrow(revisions2control) > 0){
 
 #-- send Email with notification of correct execution ----
 
-mailbody <- ifelse(is.null(msg1),
+mailbody <- paste(msg,
                    paste('Number fo revised values: ', nrow(revisions2control), sep = ''),
-                   paste('Number fo revised values: ', nrow(revisions2control), 
-                         '. Problem! ', msg1, sep = ''))
+                   paste('Number fo revised values: ', nrow(revisions2control), sep = ''))
 
 from = "sws@fao.org"
 to = swsContext.userEmail

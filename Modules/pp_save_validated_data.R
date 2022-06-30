@@ -31,6 +31,19 @@ if(CheckDebug()){
 domainPP <- 'prod_prices'
 datasetPrep <- 'annual_producer_prices_prep' 
 
+countryPar <-  swsContext.computationParams$countries
+print(countryPar)
+if(!is.null(countryPar) & length(countryPar) > 0){
+  countryPar <- swsContext.computationParams$countries
+  sessionCountry <- strsplit(countryPar, ', ')[[1]]
+} else {
+  #sessionCountry <- swsContext.datasets[[1]]@dimensions$geographicAreaM49@keys
+  countries <- GetCodeList(domainPP, datasetPrep, "geographicAreaM49")[ type == 'country']$code
+  # Make sure only countries not areas
+  sessionCountry <- countries#sessionCountry[sessionCountry %in% countries]
+}
+message(paste("Prod Prices: countries selected ", paste0(sessionCountry, collapse = ', '), '.', sep = ''))
+
 imputations <- ReadDatatable('imputation_annual_prices')
 
 interpolations0 <- ReadDatatable('interpolation_annual_prices')
@@ -75,8 +88,10 @@ validations[ , measuredElement := '5531']
 
 setnames(validations, c("geographicaream49", "measureditemcpc", "timepointyears", "estimation", "approach", 
                         "flagobservationstatus", "flagmethod"),
-         c("geographicAreaM49", "measuredItemCPC", "timePointYears", "ValueSLC", "Metadata_Value",
+         c("geographicAreaM49", "measuredItemCPC", "timePointYears", "Value", "Metadata_Value",
            "flagObservationStatus", "flagMethod"))
+
+validations <- validations[geographicAreaM49 %in% sessionCountry ]
 
 includemetadata <- copy(validations[,c("geographicAreaM49", "measuredItemCPC", "timePointYears", "Metadata_Value"), with = F])
 includemetadata[,Metadata:="GENERAL"]
@@ -90,17 +105,17 @@ includemetadata2 <- copy(includemetadata)[, measuredElement := '5532']
 includemetadata <- rbind(includemetadata, includemetadata1, includemetadata2)
 
 
-validations[, Value := ValueSLC]
-validations[,Metadata_Value := NULL]
-# get appropriate shape and flags (USD and SLC calculated, 'i')
-pper <- melt(validations, measure.vars = c('Value', 'ValueSLC'),
-             value.name = 'Value')
+# validations[, Value := ValueSLC]
+# validations[,Metadata_Value := NULL]
+# # get appropriate shape and flags (USD and SLC calculated, 'i')
+# pper <- melt(validations, measure.vars = c('Value', 'ValueSLC'),
+#              value.name = 'Value')
+# 
+# pper[variable == 'Value', c('measuredElement') := list('5530')]
+# pper[ , c('variable')] <- NULL
 
-pper[variable == 'Value', c('measuredElement') := list('5530')]
-pper[ , c('variable')] <- NULL
-
-pper <- pper[!is.na(Value)]
-
+pper <- validations[!is.na(Value)]
+pper[, Metadata_Value := NULL]
 #-- USD conversion ----
 
 # Pull exchange rates dataset
@@ -168,113 +183,24 @@ if(any(unique(validations$geographicAreaM49) == '275')){
 
 erdt[,c('measuredElement', 'to_currency')] <- NULL
 
-# Get country-currency datatatble ADD withdraw year/effective change in series
-xr_corr <- ReadDatatable('exchange_rates_correspondences')
-#lcu_2_m49 <- ReadDatatable('lcu_2_m49')
-#eco_curr0 <- ReadDatatable('currency_country_years')
-xrcountry <-  ReadDatatable('currency_changes')
+if(pper[,.N] >0){
+pp_converted <- convert_currency(priceData = pper, erdt = erdt, sessionElement = 'SLC')
 
-erdt <- fix_xr(erdt, xrcountry, xr_corr)
+pp2save <- pp_converted[ !is.na(Value)]
 
-# # check on currency
-# if(!all(erdt$from_currency %in% lcu_2_m49$code_iso)){
-#   stop(paste('Missing countey-currency correspondence: ', 
-#              unique(erdt[!from_currency %in% lcu_2_m49$code_iso]$from_currency),
-#              'not in the lcu_2_m49 datatble. Please update it.'))
-# }
-
-# Start conversion into USD and SLC merging with XR
-selectedYears <- unique(pper$timePointYears)
-if(xr_corr[start_year_iso %in% selectedYears,.N] > 0){ 
-  #any(pper$flagObservationStatus == 'B')){
-  
-  geotimecomb <- xr_corr[start_year_iso %in% selectedYears,.(geographicaream49, start_year_iso, currency_code_iso)]
-  #unique(pper[flagObservationStatus == 'B', .(geographicAreaM49, timePointYears)])
-  #, from_currency)])
-  setnames(geotimecomb, c('geographicaream49'), c('geographicAreaM49'))
-  #  geotimecomb <- merge(erdt[,.(geographicAreaM49, timePointYears, from_currency)], geotimecomb, 
-  #        by.x = c('geographicAreaM49', 'timePointYears'),
-  #        by.y = c('geographicAreaM49', 'start_year_iso'))
-  
-  # Get datatable with conversion rates 
-  # If change of currency (the datatable has to be updated)
-  conv_rates <- ReadDatatable('currency_changes')
-  
-  conv_rates_needed <- merge(conv_rates, geotimecomb, by.x  = 'new_currency_code',
-                             by.y = 'currency_code_iso')# 'from_currency')
-  #curr2check <- unique(geotimecomb$from_currency)
-  if(any(conv_rates_needed[,.N, new_currency_code]$N > 1)){
-    
-    message('Two conversion rate for the same currency')
-    stop()
-  }
-  
-  slcval <- merge(validations, conv_rates_needed, by = 'geographicAreaM49', 
-                  all.x = T, suffixes = c('', '_change'))
-  
-  slcval[measuredElement == '5530' & timePointYears < start_year_iso, #timePointYears_change, 
-         c('Value',
-           'flagObservationStatus', 
-           'flagMethod'):= list(Value*exchange_rate,
-                                flagObservationStatus,
-                                'i')]
-  # names(slcval)
-  slcval[ , c("new_currency_code",    
-              "old_currency_code",
-              "exchange_rate",
-              #"timePointYears_change"
-              "start_year_iso"
-  )] <- NULL
-  
-  slcquest <- merge(pper, conv_rates_needed,  by = 'geographicAreaM49',
-                    all.x = T, suffixes = c('', '_change'))
-  
-  slcquest[measuredElement == '5530' & timePointYears < start_year_iso, #timePointYears_change,
-           c('Value',
-             'flagObservationStatus', 
-             'flagMethod'):= list(Value*exchange_rate,
-                                  flagObservationStatus,
-                                  'e')]
-  slcquest[ , c("new_currency_code",    
-                "old_currency_code",
-                "exchange_rate",
-                #"timePointYears_change"
-                "start_year_iso"
-                )] <- NULL
-  
-  pper <- copy(slcquest)
-  
-}
-
-
-## FIX DUPLICATES!!!!!!
-
-pper0 <- merge(pper, erdt, by = c('geographicAreaM49', 'timePointYears'), all.x = T, #  %in% c('233','428','440')
-               suffixes = c('', '_er'))
-
-pper0[measuredElement == '5530', ValueUSD := Value/Value_er]
-#### erdt[duplicated(erdt[,.( geographicAreaM49, timePointYears)])] !!!!!!!
-
-pper0[, c("Value_er")] <- NULL
-
-pper2 <- melt(pper0, measure.vars = c('Value', 'ValueUSD'),
-              value.name = 'Value')
-
-pper2[variable == 'ValueUSD', c('measuredElement') := list('5532')]
-pper2[ , c('variable', 'from_currency')] <- NULL
-
-pper3 <- pper2[ !is.na(Value)]
-
+includemetadata <- includemetadata[pp2save, on = c("geographicAreaM49", "measuredItemCPC", 
+                                                   "timePointYears", "measuredElement")]
 # setnames(pper3, c('flagobservationstatus',
 #                   'flagmethod'), 
 #          c('flagObservationStatus',
 #            'flagMethod'))
 
-pper3[, Value := round(Value, 6)]
+pp2save[, Value := round(Value, 6)]
 
-SaveData(domain = domainPP, dataset = datasetPrep, data = pper3,
+
+SaveData(domain = domainPP, dataset = datasetPrep, data = pp2save,
          metadata = includemetadata, waitTimeout = Inf)
-
+}
 
 from = "sws@fao.org"
 to = swsContext.userEmail
