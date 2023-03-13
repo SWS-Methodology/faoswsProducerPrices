@@ -2,8 +2,10 @@
 
 convert_currency <- function(priceData, erdt, sessionElement){
   
-  lcuByYear <- ReadDatatable('country_year_lcu')
   
+  
+  lcuByYear <- ReadDatatable('country_year_lcu')
+
   
   priceWithCurrency <- merge(priceData, lcuByYear, by.x = c('geographicAreaM49', 'timePointYears'),
                              by.y = c('geographicaream49', 'timepointyears'), all.x = T)
@@ -77,13 +79,13 @@ convert_currency <- function(priceData, erdt, sessionElement){
     # Calculate SLC
     pricesWithCurrencyChange[, ValueSLC := ValuePrices/exchange_rate]
     
-    # if(pricesWithCurrencyChange[is.na(ValueSLC),.N] > 0){
-    #   msg1 <- paste('No SLC value calculated for country: ', 
-    #                 paste(unique(pricesWithCurrencyChange[is.na(ValueSLC)]$geographicAreaM49), collapse = ', '),
-    #                 sep = '')
-    # }  else {
-    #   msg1 <- ''
-    # }
+    if(pricesWithCurrencyChange[is.na(ValueSLC),.N] > 0){
+      msg1 <- paste('No SLC value caluclated for country: ', 
+                    paste(unique(pricesWithCurrencyChange[is.na(ValueSLC)]$geographicAreaM49), collapse = ', '),
+                    sep = '')
+    }  else {
+      msg1 <- ''
+    }
     
     pricesWithCurrencyChange[, c("currency_code_lcu",
                                  "currency_code_slc",
@@ -161,15 +163,15 @@ convert_currency <- function(priceData, erdt, sessionElement){
     pricesWithBothCurrency[,c('from_currency', 'ValueXR', 'XR2apply', 'exchange_rate',
                               'currency_code_lcu', 'currency_code_slc')] <- NULL
     
-    # 
-    # if(pricesWithBothCurrency[is.na(ValueSLC),.N] > 0){
-    #   msg1 <- paste('No SLC value calculated for country: ', 
-    #                 paste(unique(pricesWithCurrencyChange[is.na(ValueSLC)]$geographicAreaM49), collapse = ', '),
-    #                 sep = '')
-    # }  else {
-    #   msg1 <- ''
-    # }
-    # 
+    
+    if(pricesWithBothCurrency[is.na(ValueSLC),.N] > 0){
+      msg1 <- paste('No SLC value caluclated for country: ', 
+                    paste(unique(pricesWithCurrencyChange[is.na(ValueSLC)]$geographicAreaM49), collapse = ', '),
+                    sep = '')
+    }  else {
+      msg1 <- ''
+    }
+    
     pper <- melt(pricesWithBothCurrency, measure.vars = c('ValueLCU', 'ValueUSD', 'ValueSLC'),
                  value.name = 'Value')
     pper[variable == 'ValueUSD', c('measuredElement') := list('5532')]
@@ -246,13 +248,13 @@ convert_currency <- function(priceData, erdt, sessionElement){
     # Calculate SLC
     pricesWithCurrencyChange[, ValueSLC := ValueLCU/exchange_rate]
     
-    # if(pricesWithCurrencyChange[is.na(ValueSLC),.N] > 0){
-    #   msg1 <- paste('No SLC value calculated for country: ', 
-    #                 paste(unique(pricesWithCurrencyChange[is.na(ValueSLC)]$geographicAreaM49), collapse = ', '),
-    #                 sep = '')
-    # } else {
-    #   msg1 <- ''
-    # }
+    if(pricesWithCurrencyChange[is.na(ValueSLC),.N] > 0){
+      msg1 <- paste('No SLC value caluclated for country: ', 
+                    paste(unique(pricesWithCurrencyChange[is.na(ValueSLC)]$geographicAreaM49), collapse = ', '),
+                    sep = '')
+    } else {
+      msg1 <- ''
+    }
     
     pricesWithCurrencyChange[, c("currency_code_lcu",
                                  "currency_code_slc",
@@ -269,3 +271,4 @@ convert_currency <- function(priceData, erdt, sessionElement){
   return(pper)
 
 }
+

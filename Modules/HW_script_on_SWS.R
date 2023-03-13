@@ -1,3 +1,4 @@
+# .libPaths("/newhome/shared/Library/3.3.3")
 library(stats)
 library(data.table)
 library(faoswsUtil)
@@ -14,7 +15,9 @@ getKey <- function(domain_, dataset_) {
     dataset = dataset_,
     dimensions = list(
       Dimension(name = country,
-                keys = GetCodeList(domain_, dataset_, country)[type == 'country', code]),
+                keys = GetCodeList(domain_, dataset_, country)[type == 'country', code]
+                # keys = selected_country
+                ),
       Dimension(name = element,
                 keys = GetCodeList(domain_, dataset_, element)[, code]),
       Dimension(name = item,
@@ -30,13 +33,15 @@ message(paste0('Holt winters Indicators plugin has started.'))
 if(CheckDebug()){
   
   library(faoswsModules)
-  SETT <- ReadSettings("sws1.yml") #~/Documents/InternshipFAO/HoltWinters/modules/sws.yml")
-  SetClientFiles(SETT[["certdir"]])
-  GetTestEnvironment(baseUrl = SETT[["server"]], token = SETT[["token"]])
-  Sys.setenv(R_SWS_SHARE_PATH = SETT[["share"]])
-  GetTestEnvironment(baseUrl = SETT[["server"]], token = SETT[["token"]])
+  SETTINGS <- ReadSettings("modules/HoltWinters//sws.yml") #~/Documents/InternshipFAO/HoltWinters/modules/sws.yml")
+  R_SWS_SHARE_PATH = SETTINGS[["share"]]
+  SetClientFiles(SETTINGS[["certdir"]])
+  GetTestEnvironment(baseUrl = SETTINGS[["server"]],
+                     token = SETTINGS[["token"]])
   
 }
+
+
 
 first_year <- swsContext.computationParams$min_year # stores params specifiied by user
 last_year <- swsContext.computationParams$max_year # 2021 
@@ -54,12 +59,13 @@ item <- grep('item', GetDatasetConfig(domain, dataset)$dimensions,
 years <- grep('years', GetDatasetConfig(domain, dataset)$dimensions,
               value = T, ignore.case = T)
 
-keys <- getKey(domain, dataset)
+# Get only countries of interest
+countryPar <- swsContext.computationParams$countries
+
+keys <- getKey(domain_ = domain, dataset_ = dataset)
 
 pp <- GetData(keys, flags = TRUE)
 
-# Get only countries of interest
-countryPar <- swsContext.computationParams$countries
 
 if(!is.null(countryPar) & length(countryPar) > 0){
   countryPar <- swsContext.computationParams$countries
@@ -101,9 +107,11 @@ p <- lapply(pc[1:length(pc)], function(x){ # and now apply the holt winters func
     } else{
       tryCatch({
         hw <- HoltWinters(ts(rev(y$Value[1:5])), gamma=F)
-        h <- length((year-1):(end+1))
+        #h <- length((year-1):(end+1))
+        h <- length((year):(end+1)) # michele asked to change it
         nn <- head(y,h)
-        nn$timePointYears <- (year-1):(end+1)
+        #nn$timePointYears <- (year-1):(end+1)
+        nn$timePointYears <- (year):(end+1) # michele asked to change it
         nn$Value <- rev(predict(hw,n.ahead=h))
         nn$flagObservationStatus <- rep('F', h)
         nn$flagMethod <- rep('e', h)
@@ -131,19 +139,23 @@ p3 <- lapply(p2[1:length(p2)], function(x){ # and now apply the holt winters fun
     # y$Value <- (y$Value-mean(y$Value, na.rm=T))/sd(y$Value,na.rm=T)
     end <- as.numeric(head(y$timePointYears,1))
     
-    ifelse(as.numeric(head(y$timePointYears,1)) >= year-1 , year - 1, as.numeric(head(y$timePointYears,1)))
+    #ifelse(as.numeric(head(y$timePointYears,1)) >= year-1 , year - 1, as.numeric(head(y$timePointYears,1)))
+    ifelse(as.numeric(head(y$timePointYears,1)) >= year, year, as.numeric(head(y$timePointYears,1))) # michele asked to change it
     if (end < minYear){
       return(y)
     } else if (length(y$Value) < 10){
       return(y)
-    } else if(end >= (year-1)){ 
+    # } else if(end >= (year-1)){ 
+    } else if(end >= (year)){ # michele asked to change it
       return(y)
     }else{
       tryCatch({
         hw <- HoltWinters(ts(rev(y$Value[1:10])), gamma=F)
-        h <- length((year-1):(end+1))
+        #h <- length((year-1):(end+1))
+        h <- length((year):(end+1)) # michele asked to change it
         nn <- head(y,h)
-        nn$timePointYears <- (year-1):(end+1)
+        #nn$timePointYears <- (year-1):(end+1)
+        nn$timePointYears <- (year):(end+1) # michele asked to change it
         nn$Value <- rev(predict(hw,n.ahead=h))
         nn$flagObservationStatus <- rep('F', h)
         nn$flagMethod <- rep('e', h)
@@ -168,20 +180,24 @@ p5 <- lapply(p4[1:length(p4)], function(x){ # and now apply the holt winters fun
   
   lapply(x, function(y){
     # y$Value <- (y$Value-mean(y$Value, na.rm=T))/sd(y$Value,na.rm=T)
-    end <- ifelse(as.numeric(head(y$timePointYears,1)) >= year-1 , year - 1, as.numeric(head(y$timePointYears,1)))
+    # end <- ifelse(as.numeric(head(y$timePointYears,1)) >= year-1 , year - 1, as.numeric(head(y$timePointYears,1))) 
+    end <- ifelse(as.numeric(head(y$timePointYears,1)) >= year , year, as.numeric(head(y$timePointYears,1))) # michele asked to change it
     if (end < minYear){
       return(y)
     } else if (length(y$Value) < 10){
       return(y)
       
-    } else if(end >= (year-1)){ 
+    # } else if(end >= (year-1)){ 
+    } else if(end >= (year)){ # michele asked to change
       return(y)
     } else{
       tryCatch({
       #  hw <- HoltWinters(ts(rev(y$Value[1:10])), gamma=F)
-        h <- length((year-1):(end+1))
+        # h <- length((year-1):(end+1)) 
+        h <- length((year):(end+1)) # michele asked to change it
         nn <- head(y,h)
-        nn$timePointYears <- (year-1):(end+1)
+        # nn$timePointYears <- (year-1):(end+1)
+        nn$timePointYears <- (year):(end+1) # michele asked to change it
         nn$Value <- rep(y$Value[1],h) #rev(predict(hw,n.ahead=h))
         nn$flagObservationStatus <- rep('F', h)
         nn$flagMethod <- rep('e', h)
@@ -235,7 +251,6 @@ erdt <- GetData(erKey, flags = F)
 
 erdt[,c('measuredElement', 'to_currency')] <- NULL
 
-
 pp_converted <- convert_currency(priceData = pp_forecasted, erdt = erdt, sessionElement = 'SLC')
 
 pp2save <- pp_converted[ !is.na(Value)]
@@ -248,4 +263,6 @@ stats <- SaveData(domain = domain,
                   chunkSize = 50000,
                   waitTimeout = 100000)
 message(paste0('Data has been uploaded'))
+
+# write.csv(bubu, file = "hw_forecasted.csv", row.names = FALSE)
 
